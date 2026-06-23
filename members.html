@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Members — SMOP Lab</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .tab-bar {
+      display: flex; gap: .5rem; margin-bottom: 3rem;
+      border-bottom: 1px solid var(--gray-200); padding-bottom: 0;
+    }
+    .tab {
+      font-size: .875rem; font-weight: 600; color: var(--gray-400);
+      padding: .65rem 1.25rem; border-bottom: 2px solid transparent;
+      cursor: pointer; transition: all var(--transition);
+      margin-bottom: -1px; background: none; border-top: none;
+      border-left: none; border-right: none;
+    }
+    .tab.active { color: var(--blue); border-bottom-color: var(--blue); }
+    .tab:hover { color: var(--gray-700); }
+
+    .member-section { margin-bottom: 3.5rem; }
+    .member-section-title {
+      font-family: var(--font-heading); font-weight: 700; font-size: .82rem;
+      letter-spacing: .08em; text-transform: uppercase; color: var(--gray-400);
+      margin-bottom: 1.25rem; padding-bottom: .5rem;
+      border-bottom: 1px solid var(--gray-200);
+    }
+    .member-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 1.25rem; }
+
+    .member-card {
+      background: var(--white); border: 1px solid var(--gray-200);
+      border-radius: var(--radius-md); overflow: hidden;
+      transition: all var(--transition);
+    }
+    .member-card:hover { box-shadow: var(--shadow-md); transform: translateY(-3px); border-color: var(--gray-300); }
+    .member-avatar {
+      background: linear-gradient(135deg, var(--gray-100) 0%, var(--gray-200) 100%);
+      aspect-ratio: 1/1; display: flex; align-items: center;
+      justify-content: center; font-size: 2.5rem; color: var(--gray-300);
+    }
+    .member-info { padding: 1.1rem; }
+    .member-name { font-family: var(--font-heading); font-weight: 700; font-size: .95rem; color: var(--navy); margin-bottom: .2rem; }
+    .member-name-kr { font-size: .78rem; color: var(--gray-400); margin-bottom: .6rem; }
+    .member-role { display: inline-block; font-size: .7rem; font-weight: 700; }
+    .member-interest { font-size: .78rem; color: var(--gray-600); margin-top: .6rem; line-height: 1.5; }
+    .member-email { font-size: .75rem; color: var(--gray-400); margin-top: .5rem; }
+    .member-email a { color: var(--blue); }
+    .member-email a:hover { text-decoration: underline; }
+
+    .alumni-list { display: flex; flex-direction: column; gap: 0; }
+    .alumni-item {
+      display: flex; align-items: center; gap: 1.5rem;
+      padding: .9rem 0; border-bottom: 1px solid var(--gray-100);
+    }
+    .alumni-item:last-child { border-bottom: none; }
+    .alumni-year { min-width: 50px; font-size: .78rem; font-weight: 700; color: var(--gray-400); }
+    .alumni-name { font-weight: 600; font-size: .88rem; color: var(--navy); flex: 1; }
+    .alumni-where { font-size: .8rem; color: var(--gray-600); }
+
+    #panel-alumni { display: none; }
+
+    @media (max-width: 960px) { .member-grid { grid-template-columns: repeat(3,1fr); } }
+    @media (max-width: 680px) { .member-grid { grid-template-columns: repeat(2,1fr); } }
+    @media (max-width: 420px) { .member-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">SMOP<span class="logo-dot">.</span>Lab</a>
+    <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="professor.html">Professor</a></li>
+      <li><a href="members.html" class="active">Members</a></li>
+      <li><a href="publications.html">Publications</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page-header">
+  <div class="page-header-inner">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a><span>/</span><span>Members</span>
+    </div>
+    <h1>Lab Members</h1>
+    <p>The people who make SMOP Lab great</p>
+  </div>
+</div>
+
+<section>
+  <div class="section-inner">
+    <div class="tab-bar">
+      <button class="tab active" onclick="switchTab('current', this)">Current Members</button>
+      <button class="tab" onclick="switchTab('alumni', this)">Alumni</button>
+    </div>
+
+    <!-- CURRENT MEMBERS -->
+    <div id="panel-current">
+
+      <!-- Postdoctoral -->
+      <div class="member-section">
+        <p class="member-section-title">Postdoctoral Researchers</p>
+        <div class="member-grid">
+          <div class="member-card">
+            <div class="member-avatar">👤</div>
+            <div class="member-info">
+              <p class="member-name">[Name]</p>
+              <p class="member-name-kr">[Korean Name]</p>
+              <span class="tag tag-purple member-role">Postdoctoral Researcher</span>
+              <p class="member-interest">Research Interest: [Add here]</p>
+              <p class="member-email"><a href="#">[email]@korea.ac.kr</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PhD -->
+      <div class="member-section">
+        <p class="member-section-title">Ph.D. Candidates</p>
+        <div class="member-grid">
+          <div class="member-card">
+            <div class="member-avatar">👤</div>
+            <div class="member-info">
+              <p class="member-name">[Name]</p>
+              <p class="member-name-kr">[Korean Name]</p>
+              <span class="tag tag-blue member-role">Ph.D. Candidate</span>
+              <p class="member-interest">Research Interest: [Add here]</p>
+              <p class="member-email"><a href="#">[email]@korea.ac.kr</a></p>
+            </div>
+          </div>
+          <div class="member-card">
+            <div class="member-avatar">👤</div>
+            <div class="member-info">
+              <p class="member-name">[Name]</p>
+              <p class="member-name-kr">[Korean Name]</p>
+              <span class="tag tag-blue member-role">Ph.D. Candidate</span>
+              <p class="member-interest">Research Interest: [Add here]</p>
+              <p class="member-email"><a href="#">[email]@korea.ac.kr</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Master's -->
+      <div class="member-section">
+        <p class="member-section-title">Master's Students</p>
+        <div class="member-grid">
+          <div class="member-card">
+            <div class="member-avatar">👤</div>
+            <div class="member-info">
+              <p class="member-name">Minseo Park</p>
+              <p class="member-name-kr">박민서</p>
+              <span class="tag tag-teal member-role">Master's Student</span>
+              <p class="member-interest">Research Interest: [Add here]</p>
+              <p class="member-email"><a href="mailto:miiiin@korea.ac.kr">miiiin@korea.ac.kr</a></p>
+            </div>
+          </div>
+          <div class="member-card">
+            <div class="member-avatar">👤</div>
+            <div class="member-info">
+              <p class="member-name">[Name]</p>
+              <p class="member-name-kr">[Korean Name]</p>
+              <span class="tag tag-teal member-role">Master's Student</span>
+              <p class="member-interest">Research Interest: [Add here]</p>
+              <p class="member-email"><a href="#">[email]@korea.ac.kr</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Undergraduate -->
+      <div class="member-section">
+        <p class="member-section-title">Undergraduate Researchers</p>
+        <div class="member-grid">
+          <div class="member-card">
+            <div class="member-avatar">👤</div>
+            <div class="member-info">
+              <p class="member-name">[Name]</p>
+              <p class="member-name-kr">[Korean Name]</p>
+              <span class="tag tag-green member-role">Undergraduate Researcher</span>
+              <p class="member-interest">Research Interest: [Add here]</p>
+              <p class="member-email"><a href="#">[email]@korea.ac.kr</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ALUMNI -->
+    <div id="panel-alumni">
+      <p class="section-sub" style="margin-bottom:2rem;">Former members of SMOP Lab and their current positions.</p>
+      <div class="alumni-list">
+        <div class="alumni-item">
+          <span class="alumni-year">2024</span>
+          <span class="alumni-name">[Name] · <span style="font-weight:400; color:var(--gray-600)">Ph.D.</span></span>
+          <span class="alumni-where">→ [Current position / company]</span>
+        </div>
+        <div class="alumni-item">
+          <span class="alumni-year">2023</span>
+          <span class="alumni-name">[Name] · <span style="font-weight:400; color:var(--gray-600)">M.S.</span></span>
+          <span class="alumni-where">→ [Current position / company]</span>
+        </div>
+        <div class="alumni-item">
+          <span class="alumni-year">2022</span>
+          <span class="alumni-name">[Name] · <span style="font-weight:400; color:var(--gray-600)">Ph.D.</span></span>
+          <span class="alumni-where">→ [Current position / company]</span>
+        </div>
+        <div class="alumni-item">
+          <span class="alumni-year">2022</span>
+          <span class="alumni-name">[Name] · <span style="font-weight:400; color:var(--gray-600)">M.S.</span></span>
+          <span class="alumni-where">→ [Current position / company]</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <p class="footer-brand">SMOP Lab</p>
+      <p class="footer-tagline">Smart Mobility Operations and Planning Laboratory<br>Korea University, Seoul, Korea</p>
+      <p class="footer-info">
+        📧 <a href="mailto:s_kang@korea.ac.kr">s_kang@korea.ac.kr</a><br>
+        📞 +82-2-3290-4862<br>
+        📍 신공학관, Korea University, Seoul
+      </p>
+    </div>
+    <div class="footer-col">
+      <h4>Pages</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="professor.html">Professor</a></li>
+        <li><a href="members.html">Members</a></li>
+        <li><a href="publications.html">Publications</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>&nbsp;</h4>
+      <ul>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+  <p class="footer-copy">© 2025 SMOP Lab · Korea University. All rights reserved.</p>
+</footer>
+
+<script>
+function switchTab(panel, btn) {
+  document.getElementById('panel-current').style.display = panel === 'current' ? 'block' : 'none';
+  document.getElementById('panel-alumni').style.display = panel === 'alumni' ? 'block' : 'none';
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  btn.classList.add('active');
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — SMOP Lab</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .contact-layout {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 4rem; margin-top: 3rem; align-items: start;
+    }
+
+    /* Info side */
+    .contact-block { margin-bottom: 2.5rem; }
+    .contact-block-title {
+      font-family: var(--font-heading); font-weight: 700; font-size: .82rem;
+      letter-spacing: .08em; text-transform: uppercase; color: var(--blue);
+      margin-bottom: 1rem; padding-bottom: .5rem;
+      border-bottom: 2px solid var(--blue-pale);
+    }
+    .contact-row {
+      display: flex; gap: 1rem; padding: .75rem 0;
+      border-bottom: 1px solid var(--gray-100); align-items: flex-start;
+    }
+    .contact-row:last-child { border-bottom: none; }
+    .contact-icon {
+      width: 36px; height: 36px; background: var(--blue-pale);
+      border-radius: var(--radius-xs); display: flex; align-items: center;
+      justify-content: center; font-size: 1rem; flex-shrink: 0;
+    }
+    .contact-label { font-size: .75rem; font-weight: 600; color: var(--gray-400); text-transform: uppercase; letter-spacing: .06em; margin-bottom: .1rem; }
+    .contact-value { font-size: .875rem; color: var(--navy); font-weight: 500; }
+    .contact-value a { color: var(--blue); }
+    .contact-value a:hover { text-decoration: underline; }
+
+    /* Map placeholder */
+    .map-embed {
+      width: 100%; height: 280px; background: var(--gray-100);
+      border-radius: var(--radius-md); border: 1px solid var(--gray-200);
+      display: flex; flex-direction: column; align-items: center;
+      justify-content: center; gap: .5rem; overflow: hidden;
+      margin-top: 1.5rem;
+    }
+    .map-embed iframe { width: 100%; height: 100%; border: none; display: block; }
+
+    /* Form side */
+    .form-card {
+      background: var(--gray-50); border: 1px solid var(--gray-200);
+      border-radius: var(--radius-lg); padding: 2.5rem;
+    }
+    .form-title { font-family: var(--font-heading); font-weight: 800; font-size: 1.25rem; color: var(--navy); margin-bottom: .5rem; }
+    .form-desc { font-size: .875rem; color: var(--gray-600); line-height: 1.7; margin-bottom: 2rem; }
+    .form-group { margin-bottom: 1.25rem; }
+    label { display: block; font-size: .78rem; font-weight: 600; color: var(--gray-700); margin-bottom: .4rem; letter-spacing: .02em; }
+    input, select, textarea {
+      width: 100%; padding: .7rem .9rem;
+      border: 1.5px solid var(--gray-200); border-radius: var(--radius-xs);
+      font-family: var(--font-body); font-size: .875rem; color: var(--gray-800);
+      background: var(--white); transition: border-color var(--transition), box-shadow var(--transition);
+      outline: none; resize: vertical;
+    }
+    input:focus, select:focus, textarea:focus {
+      border-color: var(--blue);
+      box-shadow: 0 0 0 3px rgba(26,92,248,.12);
+    }
+    textarea { min-height: 120px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .form-submit {
+      width: 100%; background: var(--blue); color: #fff;
+      padding: .85rem; font-size: .9rem; font-weight: 700;
+      border-radius: var(--radius-xs); border: none;
+      cursor: pointer; transition: all var(--transition);
+      font-family: var(--font-body); margin-top: .5rem;
+    }
+    .form-submit:hover { background: var(--blue-hover); transform: translateY(-1px); box-shadow: 0 4px 20px rgba(26,92,248,.35); }
+    .form-note { font-size: .75rem; color: var(--gray-400); text-align: center; margin-top: .85rem; }
+
+    /* Recruiting callout */
+    .recruit-callout {
+      background: linear-gradient(135deg, #0a1628 0%, #1a3a8a 100%);
+      border-radius: var(--radius-md); padding: 2rem;
+      margin-top: 2.5rem; color: #fff;
+    }
+    .recruit-callout h3 { font-family: var(--font-heading); font-weight: 700; font-size: 1rem; margin-bottom: .5rem; }
+    .recruit-callout p { font-size: .83rem; color: rgba(255,255,255,.65); line-height: 1.7; }
+    .recruit-callout ul { margin-top: .75rem; padding-left: 1.1rem; list-style: disc; }
+    .recruit-callout li { font-size: .82rem; color: rgba(255,255,255,.7); margin-bottom: .25rem; }
+
+    @media (max-width: 860px) {
+      .contact-layout { grid-template-columns: 1fr; gap: 2.5rem; }
+      .form-row { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">SMOP<span class="logo-dot">.</span>Lab</a>
+    <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="professor.html">Professor</a></li>
+      <li><a href="members.html">Members</a></li>
+      <li><a href="publications.html">Publications</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page-header">
+  <div class="page-header-inner">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a><span>/</span><span>Contact</span>
+    </div>
+    <h1>Contact Us</h1>
+    <p>We'd love to hear from prospective students, collaborators, and visitors</p>
+  </div>
+</div>
+
+<section>
+  <div class="section-inner">
+    <div class="contact-layout">
+
+      <!-- LEFT: Info -->
+      <div>
+        <div class="contact-block">
+          <p class="contact-block-title">Contact Information</p>
+          <div class="contact-row">
+            <div class="contact-icon">📧</div>
+            <div>
+              <p class="contact-label">Email</p>
+              <p class="contact-value"><a href="mailto:s_kang@korea.ac.kr">s_kang@korea.ac.kr</a></p>
+            </div>
+          </div>
+          <div class="contact-row">
+            <div class="contact-icon">📞</div>
+            <div>
+              <p class="contact-label">Phone</p>
+              <p class="contact-value">+82-2-3290-4862</p>
+            </div>
+          </div>
+          <div class="contact-row">
+            <div class="contact-icon">📍</div>
+            <div>
+              <p class="contact-label">Address</p>
+              <p class="contact-value">신공학관 (Engineering Building)<br>Korea University, Anam-ro 145<br>Seongbuk-gu, Seoul 02841, Korea</p>
+            </div>
+          </div>
+          <div class="contact-row">
+            <div class="contact-icon">🏛️</div>
+            <div>
+              <p class="contact-label">Department</p>
+              <p class="contact-value">School of Civil, Environmental<br>&amp; Architectural Engineering</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="recruit-callout">
+          <h3>🎓 We Are Recruiting!</h3>
+          <p>We are actively looking for motivated students at all levels to join SMOP Lab. If you are passionate about transportation engineering and data-driven research, please reach out!</p>
+          <ul>
+            <li>Ph.D. Students (fully funded)</li>
+            <li>Master's Students (thesis-track)</li>
+            <li>Undergraduate Researchers</li>
+            <li>Postdoctoral Researchers</li>
+          </ul>
+        </div>
+
+        <div class="map-embed" style="margin-top:1.5rem;">
+          <!-- Replace with actual Google Maps embed if desired -->
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3161.948!2d127.0283!3d37.5894!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357cbce6f4e8e2d5%3A0x8fd5b3d8ca02f2b6!2sKorea%20University!5e0!3m2!1sen!2skr!4v1234567890"
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+
+      <!-- RIGHT: Form -->
+      <div>
+        <div class="form-card">
+          <h2 class="form-title">Send Us a Message</h2>
+          <p class="form-desc">
+            Whether you're a prospective student, a collaborator, or just curious about our research —
+            fill out the form and we'll get back to you as soon as possible.
+          </p>
+          <form onsubmit="handleSubmit(event)">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Full Name *</label>
+                <input type="text" id="name" placeholder="Your name" required />
+              </div>
+              <div class="form-group">
+                <label for="affiliation">Affiliation</label>
+                <input type="text" id="affiliation" placeholder="University / Company" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" placeholder="your@email.com" required />
+            </div>
+            <div class="form-group">
+              <label for="subject">Purpose of Contact *</label>
+              <select id="subject" required>
+                <option value="" disabled selected>Select a topic</option>
+                <option value="phd">Prospective Ph.D. Student</option>
+                <option value="ms">Prospective Master's Student</option>
+                <option value="ug">Undergraduate Research Interest</option>
+                <option value="postdoc">Postdoctoral Position</option>
+                <option value="collab">Research Collaboration</option>
+                <option value="visit">Lab Visit</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Message *</label>
+              <textarea id="message" placeholder="Tell us about yourself and your research interests..." required></textarea>
+            </div>
+            <button type="submit" class="form-submit">Send Message →</button>
+            <p class="form-note">We typically respond within 2–3 business days.</p>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <p class="footer-brand">SMOP Lab</p>
+      <p class="footer-tagline">Smart Mobility Operations and Planning Laboratory<br>Korea University, Seoul, Korea</p>
+      <p class="footer-info">
+        📧 <a href="mailto:s_kang@korea.ac.kr">s_kang@korea.ac.kr</a><br>
+        📞 +82-2-3290-4862<br>
+        📍 신공학관, Korea University, Seoul
+      </p>
+    </div>
+    <div class="footer-col">
+      <h4>Pages</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="professor.html">Professor</a></li>
+        <li><a href="members.html">Members</a></li>
+        <li><a href="publications.html">Publications</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>&nbsp;</h4>
+      <ul>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+  <p class="footer-copy">© 2025 SMOP Lab · Korea University. All rights reserved.</p>
+</footer>
+
+<script>
+function handleSubmit(e) {
+  e.preventDefault();
+  alert('Thank you for your message! We will get back to you soon.\n\n(Note: To activate this form, connect it to a backend service like Formspree or EmailJS.)');
+}
+</script>
+
+</body>
+</html>
