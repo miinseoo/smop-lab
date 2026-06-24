@@ -38,7 +38,7 @@ html { scroll-behavior: smooth; }
 body {
   font-family: var(--font-body);
   color: var(--ink);
-  background: var(--white);
+  background: #F4F5F4;
   line-height: 1.75;
   font-size: 1.1rem;
   -webkit-font-smoothing: antialiased;
@@ -79,7 +79,7 @@ ul { list-style: none; }
 .nav-toggle span { display: block; width: 22px; height: 2px; background: var(--ink); margin: 5px 0; transition: var(--transition); border-radius: 2px; }
 
 /* ── FOOTER ───────────────────────── */
-footer { background: var(--navy); padding: 3.5rem 2rem 2rem; }
+footer { background: #F4F5F4; padding: 3.5rem 2rem 2rem; }
 .footer-inner {
   max-width: 1200px; margin: 0 auto;
   display: grid; grid-template-columns: 2fr 1fr 1fr;
