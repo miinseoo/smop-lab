@@ -27,20 +27,20 @@
     .proj-card:hover { box-shadow: var(--shadow-md); border-color: var(--gray-300); transform: translateY(-2px); }
     .proj-top { display: flex; justify-content: space-between; align-items: flex-start; gap: .75rem; margin-bottom: .85rem; }
     .proj-period {
-      font-size: .72rem; font-weight: 600; color: var(--gray-500);
+      font-size: .82rem; font-weight: 600; color: var(--gray-500);
       background: var(--gray-100); border-radius: var(--radius-full);
       padding: .2rem .65rem; white-space: nowrap; flex-shrink: 0;
     }
     .proj-title {
       font-family: var(--font-heading); font-weight: 700;
-      font-size: .9rem; color: var(--navy); line-height: 1.45;
+      font-size: 1rem; color: var(--navy); line-height: 1.45;
       margin-bottom: .4rem;
     }
-    .proj-agency { font-size: .8rem; color: var(--gray-500); margin-bottom: .6rem; }
-    .proj-desc { font-size: .8rem; color: var(--gray-600); line-height: 1.6; }
+    .proj-agency { font-size: .9rem; color: var(--gray-500); margin-bottom: .6rem; }
+    .proj-desc { font-size: .9rem; color: var(--gray-600); line-height: 1.6; }
     .proj-status {
       display: inline-flex; align-items: center; gap: .35rem;
-      font-size: .7rem; font-weight: 600; margin-top: .75rem;
+      font-size: .8rem; font-weight: 600; margin-top: .75rem;
     }
     .proj-status::before { content: '●'; font-size: .55rem; }
     .active { color: #16a34a; }
@@ -368,5 +368,38 @@
   <p class="footer-copy">© 2025 SMOP Lab · Korea University. All rights reserved.</p>
 </footer>
 
+<script>
+const currentYear = new Date().getFullYear();
+
+// 연도별 프로젝트 수 자동 계산
+document.querySelectorAll('.year-group').forEach(group => {
+  const cards = group.querySelectorAll('.proj-card');
+  const countEl = group.querySelector('.year-count');
+  if (countEl) {
+    const n = cards.length;
+    countEl.textContent = `${n} project${n !== 1 ? 's' : ''}`;
+  }
+});
+
+// 기간 텍스트로 ongoing/completed 자동 판단
+document.querySelectorAll('.proj-card').forEach(card => {
+  const periodEl = card.querySelector('.proj-period');
+  const statusEl = card.querySelector('.proj-status');
+  if (!periodEl || !statusEl) return;
+
+  const parts = periodEl.textContent.trim().split(/[–\-]/);
+  const endYear = parseInt(parts[parts.length - 1].trim());
+
+  if (!isNaN(endYear)) {
+    if (endYear >= currentYear) {
+      statusEl.className = 'proj-status active';
+      statusEl.textContent = 'Ongoing';
+    } else {
+      statusEl.className = 'proj-status completed';
+      statusEl.textContent = 'Completed';
+    }
+  }
+});
+</script>
 </body>
 </html>

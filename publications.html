@@ -38,24 +38,24 @@
     }
     .pub-item:last-child { border-bottom: none; }
     .pub-num {
-      min-width: 32px; font-size: .78rem; font-weight: 700;
+      min-width: 32px; font-size: .85rem; font-weight: 700;
       color: var(--gray-300); padding-top: .1rem; text-align: right;
       flex-shrink: 0;
     }
     .pub-body { flex: 1; }
     .pub-title {
-      font-weight: 600; font-size: 1rem; color: var(--navy);
+      font-weight: 600; font-size: 1.08rem; color: var(--navy);
       line-height: 1.55; margin-bottom: .4rem;
     }
-    .pub-authors { font-size: .9rem; color: var(--gray-600); margin-bottom: .3rem; line-height: 1.55; }
+    .pub-authors { font-size: .98rem; color: var(--gray-600); margin-bottom: .3rem; line-height: 1.55; }
     .pub-authors strong { color: var(--navy); }
     .pub-venue {
-      font-size: .88rem; color: var(--gray-500); font-style: italic; margin-bottom: .5rem;
+      font-size: .95rem; color: var(--gray-500); font-style: italic; margin-bottom: .5rem;
     }
     .pub-tags { display: flex; gap: .4rem; flex-wrap: wrap; }
 
     .category-title {
-      font-family: var(--font-heading); font-weight: 700; font-size: .82rem;
+      font-family: var(--font-heading); font-weight: 700; font-size: 1.1rem;
       letter-spacing: .08em; text-transform: uppercase; color: var(--gray-500);
       margin: 2rem 0 .75rem; display: flex; align-items: center; gap: .5rem;
     }
@@ -613,5 +613,24 @@
   <p class="footer-copy">© 2025 SMOP Lab · Korea University. All rights reserved.</p>
 </footer>
 
+<script>
+document.querySelectorAll('.year-group').forEach(group => {
+  const items = group.querySelectorAll('.pub-item');
+  const domesticCount = group.querySelectorAll('.tag-orange').length;
+  const intlCount = items.length - domesticCount;
+  const countEl = group.querySelector('.year-count');
+  if (!countEl) return;
+
+  const allIntlAccepted = intlCount > 0 && [...items].filter(item =>
+    !item.querySelector('.tag-orange') &&
+    item.querySelector('.pub-venue')?.textContent.includes('Accepted')
+  ).length === intlCount;
+
+  let text = String(intlCount);
+  if (allIntlAccepted) text += ' accepted';
+  if (domesticCount > 0) text += ` + ${domesticCount} domestic`;
+  countEl.textContent = text;
+});
+</script>
 </body>
 </html>

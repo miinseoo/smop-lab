@@ -14,7 +14,7 @@
     /* Info side */
     .contact-block { margin-bottom: 2.5rem; }
     .contact-block-title {
-      font-family: var(--font-heading); font-weight: 700; font-size: .82rem;
+      font-family: var(--font-heading); font-weight: 700; font-size: 1.1rem;
       letter-spacing: .08em; text-transform: uppercase; color: var(--gray-500);
       margin-bottom: 1rem; padding-bottom: .5rem;
       border-bottom: 1px solid var(--gray-200);
@@ -24,8 +24,8 @@
       border-bottom: 1px solid var(--gray-100); align-items: flex-start;
     }
     .contact-row:last-child { border-bottom: none; }
-    .contact-label { font-size: .75rem; font-weight: 600; color: var(--gray-400); text-transform: uppercase; letter-spacing: .06em; margin-bottom: .1rem; }
-    .contact-value { font-size: .875rem; color: var(--navy); font-weight: 500; }
+    .contact-label { font-size: .82rem; font-weight: 600; color: var(--gray-400); text-transform: uppercase; letter-spacing: .06em; margin-bottom: .1rem; }
+    .contact-value { font-size: 1rem; color: var(--navy); font-weight: 500; }
     .contact-value a { color: var(--navy); }
     .contact-value a:hover { text-decoration: underline; }
 
@@ -73,14 +73,13 @@
 
     /* Recruiting callout */
     .recruit-callout {
-      background: var(--navy);
-      border-radius: var(--radius-md); padding: 2rem;
-      margin-top: 2.5rem; color: #fff;
+      border-top: 1.5px solid var(--gray-200);
+      padding-top: 1.75rem; margin-top: 2.5rem;
     }
-    .recruit-callout h3 { font-family: var(--font-heading); font-weight: 700; font-size: 1rem; margin-bottom: .5rem; }
-    .recruit-callout p { font-size: .83rem; color: rgba(255,255,255,.65); line-height: 1.7; }
-    .recruit-callout ul { margin-top: .75rem; padding-left: 1.1rem; list-style: disc; }
-    .recruit-callout li { font-size: .82rem; color: rgba(255,255,255,.7); margin-bottom: .25rem; }
+    .recruit-callout h3 { font-family: var(--font-heading); font-weight: 700; font-size: 1.1rem; color: var(--navy); margin-bottom: .5rem; }
+    .recruit-callout p { font-size: .92rem; color: var(--gray-600); line-height: 1.75; margin-bottom: 1.25rem; }
+    .recruit-roles-inline { font-size: .9rem; color: var(--ink); }
+    .recruit-roles-inline span { color: var(--gray-300); margin: 0 .5rem; }
 
     @media (max-width: 860px) {
       .contact-layout { grid-template-columns: 1fr; gap: 2.5rem; }
@@ -154,13 +153,10 @@
 
         <div class="recruit-callout">
           <h3>We Are Recruiting</h3>
-          <p>We are actively looking for motivated students at all levels to join SMOP Lab. If you are passionate about transportation engineering and data-driven research, please reach out!</p>
-          <ul>
-            <li>Ph.D. Students (fully funded)</li>
-            <li>Master's Students (thesis-track)</li>
-            <li>Undergraduate Researchers</li>
-            <li>Postdoctoral Researchers</li>
-          </ul>
+          <p>We are actively looking for motivated students at all levels to join SMOP Lab. If you are passionate about transportation engineering and data-driven research, please reach out.</p>
+          <p class="recruit-roles-inline">
+            Ph.D. Students<span>/</span>Master's Students<span>/</span>Undergraduate Researchers<span>/</span>Postdoctoral Researchers
+          </p>
         </div>
 
         <div class="map-embed" style="margin-top:1.5rem;">
