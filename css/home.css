@@ -52,14 +52,14 @@
 .news-head { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 2rem; }
 .news-list { display: flex; flex-direction: column; }
 .news-item {
-  display: grid; grid-template-columns: 120px 1fr;
-  gap: 2rem; padding: 1.5rem 0; border-bottom: 1px solid var(--gray-100);
+  display: grid; grid-template-columns: 140px 1fr;
+  gap: 2rem; padding: 2rem 0; border-bottom: 1px solid var(--gray-100);
 }
 .news-item:last-child { border-bottom: none; }
-.news-date { font-size: .8rem; font-weight: 600; color: var(--gray-400); letter-spacing: .03em; padding-top: .2rem; }
-.news-title { font-size: 1.05rem; font-weight: 600; color: var(--navy); line-height: 1.5; margin-bottom: .35rem; }
+.news-date { font-size: 1rem; font-weight: 700; color: var(--gray-400); letter-spacing: .03em; padding-top: .25rem; }
+.news-title { font-size: 1.2rem; font-weight: 600; color: var(--navy); line-height: 1.5; margin-bottom: .5rem; }
 .news-title em { font-style: italic; font-weight: 400; }
-.news-desc { font-size: .95rem; color: var(--gray-600); line-height: 1.7; }
+.news-desc { font-size: 1.05rem; color: var(--gray-600); line-height: 1.7; }
 
 /* RECRUITING */
 .recruiting { background: var(--navy); color: #fff; }

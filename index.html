@@ -67,7 +67,6 @@
   <div class="section-inner">
     <div class="news-head">
       <h2 class="section-title" style="margin-bottom:0;">Recent News</h2>
-      <a href="publications/" class="btn btn-outline">All Publications →</a>
     </div>
     <div class="news-list" id="news-list"></div>
   </div>
@@ -105,22 +104,16 @@
 <div id="footer-root"></div>
 <script src="components/footer.js"></script>
 
-<script src="data/publications.js"></script>
+<script src="data/news.js"></script>
 <script>
-// publications.js의 PUBLICATIONS 배열에서 최신 4개 자동 렌더링
-const recent = PUBLICATIONS.slice(0, 4);
-document.getElementById("news-list").innerHTML = recent.map(p => {
-  const authors = p.authors.join("; ");
-  const venue = p.accepted ? p.venue + " · Accepted" : p.venue;
-  return `
-    <div class="news-item">
-      <span class="news-date">${p.yearLabel}</span>
-      <div class="news-body">
-        <p class="news-title">${p.title}</p>
-        <p class="news-desc">${authors} — <em>${venue}</em></p>
-      </div>
-    </div>`;
-}).join("");
+document.getElementById("news-list").innerHTML = NEWS.slice(0, 4).map(n => `
+  <div class="news-item">
+    <span class="news-date">${n.date}</span>
+    <div class="news-body">
+      <p class="news-title">${n.title}</p>
+      <p class="news-desc">${n.desc}</p>
+    </div>
+  </div>`).join("");
 </script>
 
 </body>
