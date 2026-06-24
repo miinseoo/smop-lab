@@ -28,7 +28,7 @@
     </div>
 
     <div id="panel-current"></div>
-    <div id="panel-alumni">
+    <div id="panel-alumni" style="display:none">
       <p class="section-sub" style="margin-bottom:2rem;">Former members of SMOP Lab and their current positions.</p>
       <div class="alumni-list" id="alumni-list"></div>
     </div>
@@ -95,14 +95,11 @@ function renderAlumni() {
 renderCurrent();
 renderAlumni();
 
-// 초기 상태: current 탭만 보이도록
-document.getElementById("panel-alumni").style.display = "none";
-
 function switchTab(panel, btn) {
   document.querySelectorAll(".tab").forEach(t => t.classList.remove("active"));
   btn.classList.add("active");
-  document.getElementById("panel-current").style.display = panel === "current" ? "block" : "none";
-  document.getElementById("panel-alumni").style.display  = panel === "alumni"  ? "block" : "none";
+  document.getElementById("panel-current").style.display = panel === "current" ? "" : "none";
+  document.getElementById("panel-alumni").style.display  = panel === "alumni"  ? "" : "none";
 }
 </script>
 
