@@ -3,14 +3,14 @@
    ================================================================
 
    사진 추가 방법:
-   1. 이미지 파일을 images/ 폴더에 넣기
+   1. 이미지 파일을 images/gallery/ 폴더에 넣기
    2. 아래 GALLERY 배열 맨 앞(최신순)에 추가:
 
    {
      title:    "사진 제목",
      date:     "2025",
      category: "lab-life" | "conferences" | "field-trips" | "celebrations",
-     image:    "images/갤러리사진.jpg",   // 없으면 null (placeholder 표시)
+     image:    "images/gallery/파일명.jpg",   // 없으면 null (placeholder 표시)
      size:     null | "wide" | "tall",
                // null  → 1×1 (기본)
                // "wide" → 가로 2칸

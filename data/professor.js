@@ -11,7 +11,7 @@ const PROFESSOR = {
   name:   "Seungmo Kang",
   nameKr: "강승모",
   title:  "Professor<br>School of Civil, Environmental & Architectural Engineering<br>Korea University",
-  photo:  null,   // 사진 추가 시: "images/professor.jpg"
+  photo:  null,   // 사진 추가 시: "images/professor/photo.jpg"
   email:  "s_kang@korea.ac.kr",
   phone:  "+82-2-3290-4862",
   office: "신공학관, Korea University",
