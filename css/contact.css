@@ -1,6 +1,8 @@
 /* ── contact/index.html 페이지 전용 스타일 ── */
 
-.contact-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; margin-top: 3rem; align-items: start; }
+section { padding-top: 2.5rem; }
+
+.contact-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; margin-top: 0; align-items: start; }
 
 /* Info side */
 .contact-block { margin-bottom: 2.5rem; }
