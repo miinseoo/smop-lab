@@ -2,7 +2,7 @@
    SMOP LAB — Monochrome
    =========================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
 
 :root {
   --navy:     #0a1628;
@@ -17,7 +17,7 @@
   --gray-50:  #f8fafc;
   --white:    #ffffff;
 
-  --font-heading: 'Plus Jakarta Sans', sans-serif;
+  --font-heading: 'Instrument Sans', sans-serif;
   --font-body:    'Inter', sans-serif;
 
   --shadow-sm: 0 1px 3px rgba(0,0,0,.07), 0 1px 2px rgba(0,0,0,.05);
@@ -61,12 +61,28 @@ ul { list-style: none; }
   display: flex; align-items: center; justify-content: space-between;
 }
 .nav-logo {
-  font-family: var(--font-body);
-  font-weight: 700; font-size: .85rem;
-  color: var(--navy); letter-spacing: .12em;
-  text-transform: uppercase;
+  display: flex; align-items: center; gap: .75rem;
+  text-decoration: none;
 }
-.nav-logo .logo-dot { color: var(--gray-400); }
+.logo-icon {
+  display: flex; flex-direction: column;
+  line-height: .95; font-family: var(--font-heading);
+  font-weight: 700; font-size: 1.35rem; letter-spacing: -.5px;
+  position: relative; padding-bottom: 6px;
+}
+.logo-icon::after {
+  content: '';
+  position: absolute; bottom: 0; left: 0; right: 0;
+  height: 2.5px; background: #7c2d12; border-radius: 1px;
+}
+.logo-sm { color: #1d6fd6; }
+.logo-op { color: #6b7280; }
+.logo-text {
+  font-family: var(--font-heading); font-weight: 600;
+  font-size: .75rem; color: var(--navy); line-height: 1.35;
+  letter-spacing: 0;
+}
+.logo-text span { display: block; color: var(--gray-400); }
 .nav-links { display: flex; gap: .1rem; }
 .nav-links a {
   font-size: .72rem; font-weight: 600; letter-spacing: .1em;
@@ -90,7 +106,7 @@ footer { background: var(--navy); padding: 3.5rem 2rem 2rem; }
   gap: 3rem; padding-bottom: 2.5rem;
   border-bottom: 1px solid rgba(255,255,255,.08);
 }
-.footer-brand { font-family: var(--font-heading); font-weight: 800; font-size: 1.15rem; color: var(--white); margin-bottom: .5rem; }
+.footer-brand { font-family: var(--font-heading); font-weight: 700; font-size: 1.15rem; color: var(--white); margin-bottom: .5rem; }
 .footer-tagline { font-size: .88rem; color: rgba(255,255,255,.4); line-height: 1.7; margin-bottom: 1rem; }
 .footer-info { font-size: .85rem; color: rgba(255,255,255,.45); line-height: 1.9; }
 .footer-info a:hover { color: rgba(255,255,255,.8); }
@@ -114,8 +130,8 @@ section { padding: 6rem 2rem; }
 .section-title {
   font-family: var(--font-heading);
   font-size: clamp(2.2rem, 3.5vw, 3rem);
-  font-weight: 800; color: var(--navy);
-  line-height: 1.15; letter-spacing: -.3px; margin-bottom: .75rem;
+  font-weight: 700; color: var(--navy);
+  line-height: 1.15; letter-spacing: -.2px; margin-bottom: .75rem;
 }
 .section-sub {
   font-size: 1.05rem; color: var(--gray-600);
@@ -165,7 +181,7 @@ section { padding: 6rem 2rem; }
 .page-header h1 {
   font-family: var(--font-heading);
   font-size: clamp(2.6rem, 5.5vw, 4.2rem);
-  font-weight: 800; line-height: 1.1; color: var(--navy);
+  font-weight: 700; line-height: 1.1; color: var(--navy);
 }
 .page-header p { margin-top: .75rem; font-size: 1rem; color: var(--gray-500); max-width: 560px; line-height: 1.75; }
 .breadcrumb { display: flex; align-items: center; gap: .4rem; font-size: .78rem; color: var(--gray-300); margin-bottom: 1.25rem; }

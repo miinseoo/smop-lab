@@ -16,11 +16,11 @@
       cursor: pointer; transition: all var(--transition);
     }
     .filter-btn.active,
-    .filter-btn:hover { border-color: var(--blue); color: var(--blue); background: var(--blue-pale); }
+    .filter-btn:hover { border-color: var(--navy); color: var(--navy); background: var(--gray-100); }
 
     .year-group { margin-bottom: 3rem; }
     .year-label {
-      font-family: var(--font-heading); font-weight: 800;
+      font-family: var(--font-heading); font-weight: 700;
       font-size: 1.5rem; color: var(--navy);
       margin-bottom: 1.25rem; padding-bottom: .75rem;
       border-bottom: 2px solid var(--gray-200);
@@ -44,19 +44,19 @@
     }
     .pub-body { flex: 1; }
     .pub-title {
-      font-weight: 600; font-size: .9rem; color: var(--navy);
-      line-height: 1.5; margin-bottom: .35rem;
+      font-weight: 600; font-size: 1rem; color: var(--navy);
+      line-height: 1.55; margin-bottom: .4rem;
     }
-    .pub-authors { font-size: .8rem; color: var(--gray-600); margin-bottom: .3rem; line-height: 1.5; }
+    .pub-authors { font-size: .9rem; color: var(--gray-600); margin-bottom: .3rem; line-height: 1.55; }
     .pub-authors strong { color: var(--navy); }
     .pub-venue {
-      font-size: .8rem; color: var(--gray-500); font-style: italic; margin-bottom: .5rem;
+      font-size: .88rem; color: var(--gray-500); font-style: italic; margin-bottom: .5rem;
     }
     .pub-tags { display: flex; gap: .4rem; flex-wrap: wrap; }
 
     .category-title {
       font-family: var(--font-heading); font-weight: 700; font-size: .82rem;
-      letter-spacing: .08em; text-transform: uppercase; color: var(--blue);
+      letter-spacing: .08em; text-transform: uppercase; color: var(--gray-500);
       margin: 2rem 0 .75rem; display: flex; align-items: center; gap: .5rem;
     }
     .category-title::before { content: ''; flex: 1; height: 1px; background: var(--gray-200); }
@@ -67,7 +67,7 @@
 
 <nav class="navbar">
   <div class="nav-inner">
-    <a href="index.html" class="nav-logo">SMOP<span class="logo-dot">.</span>Lab</a>
+    <a href="index.html" class="nav-logo"><div class="logo-icon"><div class="logo-sm">SM</div><div class="logo-op">OP</div></div></a>
     <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Toggle menu">
       <span></span><span></span><span></span>
     </button>
@@ -122,7 +122,7 @@
         <div class="pub-num">2</div>
         <div class="pub-body">
           <p class="pub-title">Diffusion process-based model for Network Trajectory Propagation</p>
-          <p class="pub-authors">Sleiman, Wissam; et al.</p>
+          <p class="pub-authors">Sleiman, Wissam; Haque, Mohaiminul; Amin, Mohammad Saiful; Beigi, Pedram; Khoueiry, Michel; <strong>Kang, Seungmo</strong>; Hamdar, Samer</p>
           <p class="pub-venue">IEEE Transactions on Intelligent Transportation Systems · Accepted</p>
           <div class="pub-tags"><span class="tag tag-blue">International Journal</span><span class="tag">SCI</span></div>
         </div>
@@ -137,7 +137,7 @@
         <div class="pub-num">3</div>
         <div class="pub-body">
           <p class="pub-title">BO4Mob: Bayesian Optimization Benchmarks for High-Dimensional Urban Mobility Problem</p>
-          <p class="pub-authors">Ryu, Seunghee; et al.</p>
+          <p class="pub-authors">Ryu, Seunghee; Kwon, Donghoon; Choi, Seongjin; Deshwal, Aryan; <strong>Kang, Seungmo</strong>; Osorio, Carolina</p>
           <p class="pub-venue">NeurIPS 2025</p>
           <div class="pub-tags"><span class="tag tag-purple">Conference</span></div>
         </div>
@@ -170,7 +170,7 @@
         <div class="pub-num">6</div>
         <div class="pub-body">
           <p class="pub-title">Development of Optimal Real-Time Metro Operation Strategy</p>
-          <p class="pub-authors">Oh, Yoonseok; et al.</p>
+          <p class="pub-authors">Oh, Yoonseok; Kwak, Ho-Chan; <strong>Kang, Seungmo</strong></p>
           <p class="pub-venue">IET Intelligent Transport Systems · Vol. 18, Issue 12, pp. 2440–2458</p>
           <div class="pub-tags"><span class="tag tag-blue">International Journal</span><span class="tag">SCI</span></div>
         </div>
@@ -179,7 +179,7 @@
         <div class="pub-num">7</div>
         <div class="pub-body">
           <p class="pub-title">Differential Dynamics of Transit Use Resilience During COVID-19</p>
-          <p class="pub-authors">Choi, Won Gyun; et al.</p>
+          <p class="pub-authors">Choi, Won Gyun; Ryu, Seunghee; Jung, Paul H.; <strong>Kang, Seungmo</strong></p>
           <p class="pub-venue">IEEE Access · Vol. 12, pp. 8721–8743</p>
           <div class="pub-tags"><span class="tag tag-blue">International Journal</span><span class="tag">SCI</span></div>
         </div>
@@ -194,7 +194,7 @@
         <div class="pub-num">8</div>
         <div class="pub-body">
           <p class="pub-title">Multi-objective Approach to Transit Network Design with Variable Demand</p>
-          <p class="pub-authors">Park, Su Jin; et al.</p>
+          <p class="pub-authors">Park, Su Jin; <strong>Kang, Seungmo</strong>; Byon, Young-Ji; Kho, Seung-Young</p>
           <p class="pub-venue">Journal of Advanced Transportation · Vol. 2022, Article ID 5887985</p>
           <div class="pub-tags"><span class="tag tag-blue">International Journal</span><span class="tag">SCI</span></div>
         </div>
@@ -203,7 +203,7 @@
         <div class="pub-num">9</div>
         <div class="pub-body">
           <p class="pub-title">Rebalancing Docked Bicycle Sharing System</p>
-          <p class="pub-authors">Seo, Young-Hyun; et al.</p>
+          <p class="pub-authors">Seo, Young-Hyun; Kim, Dong-Kyu; <strong>Kang, Seungmo</strong>; Byon, Young-Ji; Kho, Seung-Young</p>
           <p class="pub-venue">Journal of Advanced Transportation · Vol. 2022, Article ID 2780711</p>
           <div class="pub-tags"><span class="tag tag-blue">International Journal</span><span class="tag">SCI</span></div>
         </div>
@@ -227,7 +227,7 @@
         <div class="pub-num">11</div>
         <div class="pub-body">
           <p class="pub-title">Urban Transit Network Optimization under Variable Demand</p>
-          <p class="pub-authors">Almasi, Mohammad Hadi; et al.</p>
+          <p class="pub-authors">Almasi, Mohammad Hadi; Oh, Yoonseok; Sadollah, Ali; Byon, Young-Ji; <strong>Kang, Seungmo</strong></p>
           <p class="pub-venue">International Journal of Sustainable Transportation · Vol. 15, Issue 5, pp. 386–406</p>
           <div class="pub-tags"><span class="tag tag-blue">International Journal</span><span class="tag">SSCI</span></div>
         </div>
@@ -251,7 +251,7 @@
         <div class="pub-num">13</div>
         <div class="pub-body">
           <p class="pub-title">Investigation of Effects of Inherent Variation on Urban Travel Speed Prediction</p>
-          <p class="pub-authors">Park, Ho-Chul; et al.</p>
+          <p class="pub-authors">Park, Ho-Chul; <strong>Kang, Seungmo</strong>; Kho, Seung-Young; Kim, Dong-Kyu</p>
           <p class="pub-venue">ASCE Journal of Transportation Engineering, Part A · Vol. 146, Issue 5, 04020027</p>
           <div class="pub-tags"><span class="tag tag-blue">International Journal</span><span class="tag">SCI</span></div>
         </div>
@@ -260,7 +260,7 @@
         <div class="pub-num">14</div>
         <div class="pub-body">
           <p class="pub-title">Dwell Time Estimation using Real-Time Train Operation</p>
-          <p class="pub-authors">Oh, Yoonseok; et al.</p>
+          <p class="pub-authors">Oh, Yoonseok; Byon, Young-Ji; Song, Ji Young; Kwak, Ho-Chan; <strong>Kang, Seungmo</strong></p>
           <p class="pub-venue">Applied Sciences · Vol. 10, Issue 2, No. 476</p>
           <div class="pub-tags"><span class="tag tag-blue">International Journal</span><span class="tag">SCI</span></div>
         </div>
@@ -269,7 +269,7 @@
         <div class="pub-num">15</div>
         <div class="pub-body">
           <p class="pub-title">An Optimal Screening Method of Hotspot Identification</p>
-          <p class="pub-authors">Lee, Jinwoo; et al.</p>
+          <p class="pub-authors">Lee, Jinwoo; Chung, Koohong; Papakonstantinou, Ilia; <strong>Kang, Seungmo</strong>; Kim, Dong-Kyu</p>
           <p class="pub-venue">Accident Analysis and Prevention · Vol. 135, Article 105357</p>
           <div class="pub-tags"><span class="tag tag-blue">International Journal</span><span class="tag">SCI</span></div>
         </div>
@@ -284,7 +284,7 @@
         <div class="pub-num">16</div>
         <div class="pub-body">
           <p class="pub-title">Enhanced Application of Principal Component Analysis in Machine Learning</p>
-          <p class="pub-authors">Choi, Yoon-Young; et al.</p>
+          <p class="pub-authors">Choi, Yoon-Young; Shon, Heeseung; Byon, Young-Ji; Kim, Dong-Kyu; <strong>Kang, Seungmo</strong></p>
           <p class="pub-venue">Applied Sciences · Vol. 9, Issue 10, No. 2149</p>
           <div class="pub-tags"><span class="tag tag-blue">International Journal</span><span class="tag">SCI</span></div>
         </div>
@@ -325,7 +325,7 @@
         <div class="pub-num">20</div>
         <div class="pub-body">
           <p class="pub-title">Optimal Coordination Strategy for Integrated Multimodal Transit</p>
-          <p class="pub-authors">Almasi, Mohammad Hadi; et al.</p>
+          <p class="pub-authors">Almasi, Mohammad Hadi; Sadollah, Ali; Oh, Yoonseok; Kim, Dong-Kyu; <strong>Kang, Seungmo</strong></p>
           <p class="pub-venue">Sustainability · Vol. 10, Issue 3, No. 734</p>
           <div class="pub-tags"><span class="tag tag-blue">International Journal</span><span class="tag">SCI</span></div>
         </div>
@@ -340,7 +340,7 @@
         <div class="pub-num">21</div>
         <div class="pub-body">
           <p class="pub-title">Evaluating the Impact of Sudden Collapse of Major Freeway Connectors</p>
-          <p class="pub-authors">Oh, Yoonseok; et al.</p>
+          <p class="pub-authors">Oh, Yoonseok; Chung, Koohong; Kim, Cheolsun; Park, Shin Hyoung; <strong>Kang, Seungmo</strong></p>
           <p class="pub-venue">Applied Sciences · Vol. 7, Issue 7, No. 726 · 2017</p>
           <div class="pub-tags"><span class="tag tag-blue">International Journal</span><span class="tag">SCI</span></div>
         </div>
@@ -349,7 +349,7 @@
         <div class="pub-num">22</div>
         <div class="pub-body">
           <p class="pub-title">Meta-Heuristic Approaches for High-Demand Facility Locations</p>
-          <p class="pub-authors">Hwang, Taesung; et al.</p>
+          <p class="pub-authors">Hwang, Taesung; Lee, Minho; Lee, Chungwon; <strong>Kang, Seungmo</strong></p>
           <p class="pub-venue">Journal of Environmental Engineering and Landscape Management · Vol. 24, Issue 4, pp. 233–244 · 2016</p>
           <div class="pub-tags"><span class="tag tag-blue">International Journal</span><span class="tag">SCI</span></div>
         </div>
@@ -358,7 +358,7 @@
         <div class="pub-num">23</div>
         <div class="pub-body">
           <p class="pub-title">Evaluating and Addressing Regression to the Mean Phenomenon</p>
-          <p class="pub-authors">Lee, Jinwoo; et al.</p>
+          <p class="pub-authors">Lee, Jinwoo; Chung, Koohong; <strong>Kang, Seungmo</strong></p>
           <p class="pub-venue">Accident Analysis and Prevention · Vol. 97, pp. 49–56 · 2016</p>
           <div class="pub-tags"><span class="tag tag-blue">International Journal</span><span class="tag">SCI</span></div>
         </div>
@@ -367,7 +367,7 @@
         <div class="pub-num">24</div>
         <div class="pub-body">
           <p class="pub-title">Optimization of Improved Intermodal Transit Model</p>
-          <p class="pub-authors">Almasi, Mohammad Hadi; et al.</p>
+          <p class="pub-authors">Almasi, Mohammad Hadi; Sadollah, Ali; <strong>Kang, Seungmo</strong>; Karim, Mohamed Rehan</p>
           <p class="pub-venue">Sustainability · Vol. 8, Issue 6, No. 537 · 2016</p>
           <div class="pub-tags"><span class="tag tag-blue">International Journal</span><span class="tag">SCI</span></div>
         </div>
@@ -376,7 +376,7 @@
         <div class="pub-num">25</div>
         <div class="pub-body">
           <p class="pub-title">Dynamically Determining the Toll Plaza Capacity</p>
-          <p class="pub-authors">Kim, Cheolsun; et al.</p>
+          <p class="pub-authors">Kim, Cheolsun; Kim, Dong-Kyu; Kho, Seung-Young; <strong>Kang, Seungmo</strong>; Chung, Koohong</p>
           <p class="pub-venue">Applied Sciences · Vol. 6, Issue 3, No. 87 · 2016</p>
           <div class="pub-tags"><span class="tag tag-blue">International Journal</span><span class="tag">SCI</span></div>
         </div>
@@ -385,7 +385,7 @@
         <div class="pub-num">26</div>
         <div class="pub-body">
           <p class="pub-title">Measurement of Desirable Minimum One-Way Bike Lane Width</p>
-          <p class="pub-authors">Lee, Chungwon; et al.</p>
+          <p class="pub-authors">Lee, Chungwon; Shin, Hee Cheol; <strong>Kang, Seungmo</strong>; Lee, Jung-Beom</p>
           <p class="pub-venue">KSCE Journal of Civil Engineering · Vol. 20, Issue 2, pp. 881–889 · 2016</p>
           <div class="pub-tags"><span class="tag tag-blue">International Journal</span><span class="tag">SCI</span></div>
         </div>
@@ -400,7 +400,7 @@
         <div class="pub-num">27</div>
         <div class="pub-body">
           <p class="pub-title">Spatial Analysis Methods for Identifying Hazardous Locations</p>
-          <p class="pub-authors">Park, Shin Hyoung; et al.</p>
+          <p class="pub-authors">Park, Shin Hyoung; Jang, Kitae; Kim, Dong-Kyu; Kho, Seung-Young; <strong>Kang, Seungmo</strong></p>
           <p class="pub-venue">Scientia Iranica · Vol. 22, No. 4, pp. 1594–1603 · 2015</p>
           <div class="pub-tags"><span class="tag tag-blue">International Journal</span></div>
         </div>
@@ -409,7 +409,7 @@
         <div class="pub-num">28</div>
         <div class="pub-body">
           <p class="pub-title">Network Forensic Evidence Generation and Verification Scheme</p>
-          <p class="pub-authors">Kim, Hyungseok; et al.</p>
+          <p class="pub-authors">Kim, Hyungseok; Kim, Eunjin; <strong>Kang, Seungmo</strong>; Kim, Huy Kang</p>
           <p class="pub-venue">Telecommunication Systems · Vol. 60, Issue 2, pp. 261–273 · 2015</p>
           <div class="pub-tags"><span class="tag tag-blue">International Journal</span><span class="tag">SCI</span></div>
         </div>
@@ -418,7 +418,7 @@
         <div class="pub-num">29</div>
         <div class="pub-body">
           <p class="pub-title">Evaluation of Pedestrian Safety: Pedestrian Crash Hot Spots</p>
-          <p class="pub-authors">Jang, Kitae; et al.</p>
+          <p class="pub-authors">Jang, Kitae; Park, Shin Hyoung; Kang, Sanghyeok; Song, Ki Han; <strong>Kang, Seungmo</strong>; Chung, Sungbong</p>
           <p class="pub-venue">Transportation Research Record · No. 2393, pp. 104–116 · 2013</p>
           <div class="pub-tags"><span class="tag tag-blue">International Journal</span><span class="tag">SCI</span></div>
         </div>
@@ -427,7 +427,7 @@
         <div class="pub-num">30</div>
         <div class="pub-body">
           <p class="pub-title">Impact of Traffic States on Freeway Crash Involvement Rates</p>
-          <p class="pub-authors">Yeo, Hwasoo; et al.</p>
+          <p class="pub-authors">Yeo, Hwasoo; Jang, Kitae; Skabardonis, Alexander; <strong>Kang, Seungmo</strong></p>
           <p class="pub-venue">Accident Analysis and Prevention · Vol. 50, pp. 713–723 · 2013</p>
           <div class="pub-tags"><span class="tag tag-blue">International Journal</span><span class="tag">SCI</span></div>
         </div>
@@ -469,7 +469,7 @@
         <div class="pub-num">34</div>
         <div class="pub-body">
           <p class="pub-title">Biofuel Refinery Location and Supply Chain Planning</p>
-          <p class="pub-authors">Bai, Yun; et al.</p>
+          <p class="pub-authors">Bai, Yun; Hwang, Taesung; <strong>Kang, Seungmo</strong>; Ouyang, Yanfeng</p>
           <p class="pub-venue">Transportation Research Part B · Vol. 45, Issue 1, pp. 162–175 · 2011</p>
           <div class="pub-tags"><span class="tag tag-blue">International Journal</span><span class="tag">SCI</span></div>
         </div>
@@ -478,7 +478,7 @@
         <div class="pub-num">35</div>
         <div class="pub-body">
           <p class="pub-title">A Heuristic Approach to Railroad Track Maintenance Scheduling</p>
-          <p class="pub-authors">Peng, Fan; et al.</p>
+          <p class="pub-authors">Peng, Fan; <strong>Kang, Seungmo</strong>; Li, Xiaopeng; Ouyang, Yanfeng; Somani, Kamalesh; Acharya, Dharma</p>
           <p class="pub-venue">Computer-Aided Civil and Infrastructure Engineering · Vol. 26, Issue 2, pp. 129–145 · 2011</p>
           <div class="pub-tags"><span class="tag tag-blue">International Journal</span><span class="tag">SCI</span></div>
         </div>
@@ -495,7 +495,7 @@
       <div class="pub-item">
         <div class="pub-num">37</div>
         <div class="pub-body">
-          <p class="pub-title">강승모; 권용석; 박창호 — Conjugate Gradient 법을 이용한 경로기반 통행배정 알고리즘의 구축</p>
+          <p class="pub-title">Conjugate Gradient 법을 이용한 경로기반 통행배정 알고리즘의 구축</p>
           <p class="pub-authors"><strong>강승모</strong>; 권용석; 박창호</p>
           <p class="pub-venue">대한교통학회지 · Vol. 18, No. 5, pp. 99–107 · 2000</p>
           <div class="pub-tags"><span class="tag tag-orange">Domestic Journal</span></div>
@@ -511,7 +511,7 @@
         <div class="pub-num">BC1</div>
         <div class="pub-body">
           <p class="pub-title">Macroscopic Fundamental Diagram Validation for Collision Formation</p>
-          <p class="pub-authors">Silverstein, Claire E.; et al.</p>
+          <p class="pub-authors">Silverstein, Claire E.; Hamdar, Samer H.; <strong>Kang, Seungmo</strong>; Jang, Kitae</p>
           <p class="pub-venue">Traffic and Granular Flow '17 · Springer, pp. 107–116 · 2019</p>
           <div class="pub-tags"><span class="tag tag-green">Book Chapter</span></div>
         </div>
@@ -520,7 +520,7 @@
         <div class="pub-num">BC2</div>
         <div class="pub-body">
           <p class="pub-title">Optimizing the Biofuel Infrastructure: Transportation Networks and Biorefinery Locations</p>
-          <p class="pub-authors"><strong>Kang, Seungmo</strong>; et al.</p>
+          <p class="pub-authors"><strong>Kang, Seungmo</strong>; Önal, Hayri; Ouyang, Yanfeng; Scheffran, Jürgen; Tursun, Ü. Deniz</p>
           <p class="pub-venue">Handbook of Bioenergy Economics and Policy · Springer, pp. 151–173 · 2009</p>
           <div class="pub-tags"><span class="tag tag-green">Book Chapter</span></div>
         </div>
@@ -587,9 +587,9 @@
       <p class="footer-brand">SMOP Lab</p>
       <p class="footer-tagline">Smart Mobility Operations and Planning Laboratory<br>Korea University, Seoul, Korea</p>
       <p class="footer-info">
-        📧 <a href="mailto:s_kang@korea.ac.kr">s_kang@korea.ac.kr</a><br>
-        📞 +82-2-3290-4862<br>
-        📍 신공학관, Korea University, Seoul
+        <a href="mailto:s_kang@korea.ac.kr">s_kang@korea.ac.kr</a><br>
+        +82-2-3290-4862<br>
+        신공학관, Korea University, Seoul
       </p>
     </div>
     <div class="footer-col">

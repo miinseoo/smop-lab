@@ -7,75 +7,70 @@
   <link rel="stylesheet" href="style.css" />
   <style>
     .prof-grid {
-      display: grid; grid-template-columns: 300px 1fr;
+      display: grid; grid-template-columns: 280px 1fr;
       gap: 4rem; align-items: start; margin-top: 3.5rem;
     }
     .prof-sidebar { position: sticky; top: 86px; }
     .prof-photo {
       width: 100%; aspect-ratio: 3/4; background: var(--gray-100);
       border-radius: var(--radius-md); overflow: hidden; margin-bottom: 1.5rem;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 4rem; color: var(--gray-300);
       border: 1px solid var(--gray-200);
     }
-    .prof-name { font-family: var(--font-heading); font-weight: 800; font-size: 1.4rem; color: var(--navy); }
-    .prof-title { font-size: .875rem; color: var(--gray-600); margin-top: .25rem; line-height: 1.5; }
+    .prof-name { font-family: var(--font-heading); font-weight: 700; font-size: 1.5rem; color: var(--navy); }
+    .prof-title { font-size: .95rem; color: var(--gray-600); margin-top: .3rem; line-height: 1.6; }
     .prof-contacts { margin-top: 1.25rem; display: flex; flex-direction: column; gap: .5rem; }
     .contact-pill {
       display: flex; align-items: center; gap: .6rem;
-      font-size: .8rem; color: var(--gray-600); padding: .5rem .75rem;
+      font-size: .85rem; color: var(--gray-600); padding: .5rem .75rem;
       background: var(--gray-50); border: 1px solid var(--gray-200);
       border-radius: var(--radius-xs); transition: all var(--transition);
     }
-    .contact-pill:hover { border-color: var(--blue); color: var(--blue); background: var(--blue-pale); }
+    .contact-pill:hover { border-color: var(--navy); color: var(--navy); background: var(--gray-100); }
     .contact-pill svg { flex-shrink: 0; }
 
     .prof-main { display: flex; flex-direction: column; gap: 3rem; }
     .prof-section-title {
-      font-family: var(--font-heading); font-weight: 700; font-size: 1.05rem;
+      font-family: var(--font-heading); font-weight: 700; font-size: 1.15rem;
       color: var(--navy); margin-bottom: 1.25rem;
-      padding-bottom: .75rem; border-bottom: 2px solid var(--gray-200);
-      display: flex; align-items: center; gap: .6rem;
+      padding-bottom: .75rem; border-bottom: 1px solid var(--gray-200);
     }
-    .prof-section-title::before { content: ''; width: 4px; height: 18px; background: var(--blue); border-radius: 2px; }
 
-    .bio-text { font-size: .93rem; color: var(--gray-600); line-height: 1.85; }
+    .bio-text { font-size: 1.05rem; color: var(--gray-600); line-height: 1.9; }
 
-    .edu-item { display: flex; gap: 1.25rem; padding: .9rem 0; border-bottom: 1px solid var(--gray-100); }
+    .edu-item { display: flex; gap: 1.5rem; padding: 1rem 0; border-bottom: 1px solid var(--gray-100); }
     .edu-item:last-child { border-bottom: none; }
     .edu-degree {
       min-width: 48px; font-family: var(--font-heading);
-      font-weight: 800; font-size: .78rem; color: var(--blue);
-      background: var(--blue-pale); border-radius: var(--radius-xs);
+      font-weight: 700; font-size: .8rem; color: var(--gray-500);
+      background: var(--gray-100); border-radius: var(--radius-xs);
       padding: .35rem .5rem; text-align: center; height: fit-content;
       flex-shrink: 0; letter-spacing: .03em;
     }
     .edu-info { flex: 1; }
-    .edu-school { font-weight: 600; font-size: .9rem; color: var(--navy); margin-bottom: .15rem; }
-    .edu-field { font-size: .82rem; color: var(--gray-600); }
-    .edu-year { font-size: .8rem; color: var(--gray-400); margin-top: .1rem; }
+    .edu-school { font-weight: 600; font-size: 1rem; color: var(--navy); margin-bottom: .2rem; }
+    .edu-field { font-size: .9rem; color: var(--gray-600); }
+    .edu-year { font-size: .85rem; color: var(--gray-400); margin-top: .15rem; }
 
-    .career-item { display: flex; gap: 1.25rem; padding: .9rem 0; border-bottom: 1px solid var(--gray-100); }
+    .career-item { display: flex; gap: 1.5rem; padding: 1rem 0; border-bottom: 1px solid var(--gray-100); }
     .career-item:last-child { border-bottom: none; }
     .career-year {
-      min-width: 90px; font-size: .78rem; font-weight: 600;
+      min-width: 110px; font-size: .85rem; font-weight: 500;
       color: var(--gray-400); padding-top: .15rem; flex-shrink: 0;
     }
-    .career-role { font-weight: 600; font-size: .9rem; color: var(--navy); margin-bottom: .2rem; }
-    .career-org { font-size: .82rem; color: var(--gray-600); }
+    .career-role { font-weight: 600; font-size: 1rem; color: var(--navy); margin-bottom: .2rem; }
+    .career-org { font-size: .9rem; color: var(--gray-600); }
 
-    .award-item { display: flex; align-items: flex-start; gap: 1rem; padding: .85rem 0; border-bottom: 1px solid var(--gray-100); }
+    .award-item { display: flex; gap: 1.5rem; padding: 1rem 0; border-bottom: 1px solid var(--gray-100); }
     .award-item:last-child { border-bottom: none; }
-    .award-icon { font-size: 1.2rem; flex-shrink: 0; margin-top: .1rem; }
-    .award-name { font-weight: 600; font-size: .875rem; color: var(--navy); }
-    .award-org { font-size: .8rem; color: var(--gray-600); margin-top: .15rem; }
+    .award-year { min-width: 44px; font-size: .82rem; color: var(--gray-400); font-weight: 500; padding-top: .15rem; flex-shrink: 0; }
+    .award-name { font-weight: 600; font-size: 1rem; color: var(--navy); }
+    .award-org { font-size: .9rem; color: var(--gray-600); margin-top: .2rem; }
 
-    .interest-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: .75rem; }
+    .interest-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: .6rem; }
     .interest-pill {
-      padding: .7rem 1rem; background: var(--gray-50);
+      padding: .8rem 1.1rem; background: var(--gray-50);
       border: 1px solid var(--gray-200); border-radius: var(--radius-sm);
-      font-size: .82rem; font-weight: 500; color: var(--gray-700);
-      display: flex; align-items: center; gap: .5rem;
+      font-size: .95rem; font-weight: 500; color: var(--gray-700);
     }
 
     @media (max-width: 800px) {
@@ -90,7 +85,7 @@
 
 <nav class="navbar">
   <div class="nav-inner">
-    <a href="index.html" class="nav-logo">SMOP<span class="logo-dot">.</span>Lab</a>
+    <a href="index.html" class="nav-logo"><div class="logo-icon"><div class="logo-sm">SM</div><div class="logo-op">OP</div></div></a>
     <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Toggle menu">
       <span></span><span></span><span></span>
     </button>
@@ -122,7 +117,7 @@
 
       <!-- SIDEBAR -->
       <div class="prof-sidebar">
-        <div class="prof-photo">👤</div>
+        <div class="prof-photo"></div>
         <p class="prof-name">Seungmo Kang</p>
         <p class="prof-title">Professor<br>School of Civil, Environmental &amp; Architectural Engineering<br>Korea University</p>
         <div class="prof-contacts">
@@ -165,14 +160,14 @@
         <div>
           <h2 class="prof-section-title">Research Interests</h2>
           <div class="interest-grid">
-            <div class="interest-pill">🚦 Transportation Planning &amp; Operations</div>
-            <div class="interest-pill">📦 Logistics &amp; Vehicle Routing</div>
-            <div class="interest-pill">🚌 Public Transit Optimization</div>
-            <div class="interest-pill">🤖 Machine Learning in Transportation</div>
-            <div class="interest-pill">📍 Location-Based Services</div>
-            <div class="interest-pill">⚡ Sustainable Mobility Systems</div>
-            <div class="interest-pill">🛡️ Transportation Safety Analysis</div>
-            <div class="interest-pill">📊 Big Data &amp; Travel Behavior</div>
+            <div class="interest-pill">Transportation Planning &amp; Operations</div>
+            <div class="interest-pill">Logistics &amp; Vehicle Routing</div>
+            <div class="interest-pill">Public Transit Optimization</div>
+            <div class="interest-pill">Machine Learning in Transportation</div>
+            <div class="interest-pill">Location-Based Services</div>
+            <div class="interest-pill">Sustainable Mobility Systems</div>
+            <div class="interest-pill">Transportation Safety Analysis</div>
+            <div class="interest-pill">Big Data &amp; Travel Behavior</div>
           </div>
         </div>
 
@@ -258,24 +253,24 @@
           <h2 class="prof-section-title">Awards &amp; Honors</h2>
           <div>
             <div class="award-item">
-              <div class="award-icon">🏆</div>
+              <div class="award-year">2020</div>
               <div>
                 <p class="award-name">Certificate of Achievement</p>
-                <p class="award-org">World Road Association (PIARC) · 2020</p>
+                <p class="award-org">World Road Association (PIARC)</p>
               </div>
             </div>
             <div class="award-item">
-              <div class="award-icon">🎖️</div>
+              <div class="award-year">2019</div>
               <div>
                 <p class="award-name">Minister's Citation</p>
-                <p class="award-org">Ministry of Land, Infrastructure and Transport, South Korea · 2019</p>
+                <p class="award-org">Ministry of Land, Infrastructure and Transport, South Korea</p>
               </div>
             </div>
             <div class="award-item">
-              <div class="award-icon">📄</div>
+              <div class="award-year">2014</div>
               <div>
                 <p class="award-name">Best Research Paper Award</p>
-                <p class="award-org">Korea Society of Transportation · 2014</p>
+                <p class="award-org">Korea Society of Transportation</p>
               </div>
             </div>
           </div>
@@ -292,9 +287,9 @@
       <p class="footer-brand">SMOP Lab</p>
       <p class="footer-tagline">Smart Mobility Operations and Planning Laboratory<br>Korea University, Seoul, Korea</p>
       <p class="footer-info">
-        📧 <a href="mailto:s_kang@korea.ac.kr">s_kang@korea.ac.kr</a><br>
-        📞 +82-2-3290-4862<br>
-        📍 신공학관, Korea University, Seoul
+        <a href="mailto:s_kang@korea.ac.kr">s_kang@korea.ac.kr</a><br>
+        +82-2-3290-4862<br>
+        신공학관, Korea University, Seoul
       </p>
     </div>
     <div class="footer-col">
