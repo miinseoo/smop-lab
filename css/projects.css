@@ -3,8 +3,8 @@
 .year-group { margin-bottom: 3rem; }
 .year-label {
   font-family: var(--font-heading); font-weight: 700;
-  font-size: 1.4rem; color: var(--navy); margin-bottom: 1.25rem;
-  padding-bottom: .75rem; border-bottom: 2px solid var(--gray-200);
+  font-size: 1.7rem; color: #747474; margin-bottom: 1.25rem;
+  padding-bottom: .75rem; border-bottom: 2px solid #80350E;
   display: flex; align-items: center; gap: .75rem;
 }
 .year-count {
@@ -18,7 +18,6 @@
   border-radius: 6px; padding: 1.5rem;
   transition: all var(--transition); position: relative;
 }
-.proj-card:hover { box-shadow: var(--shadow-md); border-color: var(--gray-300); transform: translateY(-2px); }
 .proj-top { display: flex; justify-content: space-between; align-items: flex-start; gap: .75rem; margin-bottom: .85rem; }
 .proj-period {
   font-size: .82rem; font-weight: 600; color: var(--gray-500);
