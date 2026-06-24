@@ -69,7 +69,7 @@ ul { list-style: none; }
   text-transform: uppercase;
   color: var(--gray-500);
   padding: .45rem .9rem;
-  border-bottom: 2px solid transparent;
+  border-bottom: 3px solid transparent;
   transition: color var(--transition), border-color var(--transition);
   white-space: nowrap;
 }
