@@ -60,29 +60,8 @@ ul { list-style: none; }
   padding: 0 2rem; height: 68px;
   display: flex; align-items: center; justify-content: space-between;
 }
-.nav-logo {
-  display: flex; align-items: center; gap: .75rem;
-  text-decoration: none;
-}
-.logo-icon {
-  display: flex; flex-direction: column;
-  line-height: .95; font-family: var(--font-heading);
-  font-weight: 700; font-size: 1.35rem; letter-spacing: -.5px;
-  position: relative; padding-bottom: 6px;
-}
-.logo-icon::after {
-  content: '';
-  position: absolute; bottom: 0; left: 0; right: 0;
-  height: 2.5px; background: #7c2d12; border-radius: 1px;
-}
-.logo-sm { color: #1d6fd6; }
-.logo-op { color: #6b7280; }
-.logo-text {
-  font-family: var(--font-heading); font-weight: 600;
-  font-size: .75rem; color: var(--navy); line-height: 1.35;
-  letter-spacing: 0;
-}
-.logo-text span { display: block; color: var(--gray-400); }
+.nav-logo { display: flex; align-items: center; text-decoration: none; }
+.nav-logo-img { height: 36px; width: auto; display: block; }
 .nav-links { display: flex; gap: .1rem; }
 .nav-links a {
   font-family: var(--font-heading);
