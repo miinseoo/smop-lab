@@ -10,7 +10,8 @@
       display: flex; gap: .5rem; flex-wrap: wrap; margin-bottom: 2.5rem;
     }
     .filter-btn {
-      font-size: .78rem; font-weight: 600; padding: .4rem 1rem;
+      font-family: var(--font-heading);
+      font-size: .95rem; font-weight: 600; padding: .45rem 1.2rem;
       border-radius: var(--radius-full); border: 1.5px solid var(--gray-200);
       background: var(--white); color: var(--gray-600);
       cursor: pointer; transition: all var(--transition);
@@ -21,24 +22,27 @@
     .gallery-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      grid-auto-rows: 220px;
+      grid-auto-rows: 240px;
       gap: 1rem;
     }
     .gallery-item {
-      background: var(--gray-100); border-radius: var(--radius-md);
+      background: var(--gray-100); border-radius: 6px;
       overflow: hidden; cursor: pointer; position: relative;
       transition: all var(--transition);
       display: flex; align-items: center; justify-content: center;
     }
     .gallery-item.wide { grid-column: span 2; }
     .gallery-item.tall { grid-row: span 2; }
+    .gallery-item.hidden { display: none; }
+    .gallery-item img { width: 100%; height: 100%; object-fit: cover; display: block; }
     .gallery-item:hover { transform: scale(1.02); box-shadow: var(--shadow-lg); }
     .gallery-item:hover .gallery-overlay { opacity: 1; }
+
     .gallery-placeholder {
-      font-size: 3rem; color: var(--gray-300);
       display: flex; flex-direction: column; align-items: center; gap: .5rem;
     }
-    .gallery-placeholder p { font-size: .75rem; color: var(--gray-400); font-weight: 500; }
+    .gallery-placeholder p { font-size: .9rem; color: var(--gray-400); font-weight: 500; }
+
     .gallery-overlay {
       position: absolute; inset: 0;
       background: rgba(10,22,40,.6);
@@ -49,18 +53,21 @@
     }
     .gallery-overlay-title {
       font-family: var(--font-heading); font-weight: 700;
-      font-size: .9rem; color: #fff; margin-bottom: .25rem;
+      font-size: 1.05rem; color: #fff; margin-bottom: .3rem;
     }
-    .gallery-overlay-date { font-size: .75rem; color: rgba(255,255,255,.6); }
+    .gallery-overlay-date { font-size: .88rem; color: rgba(255,255,255,.6); }
 
-    /* Add photo instruction box */
     .add-photo-notice {
       background: var(--gray-50); border: 1.5px dashed var(--gray-300);
-      border-radius: var(--radius-md); padding: 1.5rem 2rem;
-      text-align: center; margin-bottom: 2rem;
+      border-radius: 6px; padding: 1.5rem 2rem;
+      margin-bottom: 2rem;
     }
-    .add-photo-notice p { font-size: .875rem; color: var(--gray-600); font-weight: 500; }
-    .add-photo-notice span { display: block; font-size: .8rem; color: var(--gray-400); margin-top: .25rem; font-weight: 400; }
+    .add-photo-notice strong { font-size: 1rem; color: var(--navy); display: block; margin-bottom: .5rem; }
+    .add-photo-notice p { font-size: .92rem; color: var(--gray-600); line-height: 1.75; }
+    .add-photo-notice code {
+      background: var(--gray-200); padding: .1rem .4rem;
+      border-radius: 4px; font-size: .88rem; color: var(--navy);
+    }
 
     @media (max-width: 768px) {
       .gallery-grid { grid-template-columns: repeat(2,1fr); grid-auto-rows: 180px; }
@@ -106,21 +113,26 @@
   <div class="section-inner">
 
     <div class="add-photo-notice">
-      <p>📸 사진을 추가하려면 이미지 파일을 <code>images/</code> 폴더에 넣고 아래 카드의 배경이나 &lt;img&gt; 태그로 연결해주세요.</p>
-      <span>Replace placeholder cards below with actual &lt;img&gt; tags or CSS background-image URLs.</span>
+      <strong>사진 추가 방법</strong>
+      <p>
+        1. 이미지 파일을 <code>images/</code> 폴더에 넣기<br>
+        2. 아래 예시처럼 <code>.gallery-item</code> 블록 추가 — <code>data-category</code>에 카테고리 지정<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;카테고리: <code>lab-life</code> &nbsp;/&nbsp; <code>conferences</code> &nbsp;/&nbsp; <code>field-trips</code> &nbsp;/&nbsp; <code>celebrations</code><br>
+        3. <code>wide</code> 클래스 → 가로 2칸 &nbsp;/&nbsp; <code>tall</code> 클래스 → 세로 2칸
+      </p>
     </div>
 
     <div class="filter-bar">
-      <button class="filter-btn active">All</button>
-      <button class="filter-btn">Lab Life</button>
-      <button class="filter-btn">Conferences</button>
-      <button class="filter-btn">Field Trips</button>
-      <button class="filter-btn">Celebrations</button>
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="lab-life">Lab Life</button>
+      <button class="filter-btn" data-filter="conferences">Conferences</button>
+      <button class="filter-btn" data-filter="field-trips">Field Trips</button>
+      <button class="filter-btn" data-filter="celebrations">Celebrations</button>
     </div>
 
     <div class="gallery-grid">
 
-      <div class="gallery-item wide">
+      <div class="gallery-item wide" data-category="lab-life">
         <div class="gallery-placeholder"><p>Lab Group Photo 2025</p></div>
         <div class="gallery-overlay">
           <p class="gallery-overlay-title">SMOP Lab Group Photo 2025</p>
@@ -128,7 +140,7 @@
         </div>
       </div>
 
-      <div class="gallery-item tall">
+      <div class="gallery-item tall" data-category="celebrations">
         <div class="gallery-placeholder"><p>Award Ceremony</p></div>
         <div class="gallery-overlay">
           <p class="gallery-overlay-title">Award Ceremony</p>
@@ -136,7 +148,7 @@
         </div>
       </div>
 
-      <div class="gallery-item">
+      <div class="gallery-item" data-category="conferences">
         <div class="gallery-placeholder"><p>Conference</p></div>
         <div class="gallery-overlay">
           <p class="gallery-overlay-title">Conference Presentation</p>
@@ -144,7 +156,7 @@
         </div>
       </div>
 
-      <div class="gallery-item">
+      <div class="gallery-item" data-category="lab-life">
         <div class="gallery-placeholder"><p>Lab Dinner</p></div>
         <div class="gallery-overlay">
           <p class="gallery-overlay-title">Lab Dinner</p>
@@ -152,7 +164,7 @@
         </div>
       </div>
 
-      <div class="gallery-item wide">
+      <div class="gallery-item wide" data-category="field-trips">
         <div class="gallery-placeholder"><p>Field Survey</p></div>
         <div class="gallery-overlay">
           <p class="gallery-overlay-title">Field Research Survey</p>
@@ -160,7 +172,7 @@
         </div>
       </div>
 
-      <div class="gallery-item">
+      <div class="gallery-item" data-category="celebrations">
         <div class="gallery-placeholder"><p>Graduation</p></div>
         <div class="gallery-overlay">
           <p class="gallery-overlay-title">Graduation Celebration</p>
@@ -168,7 +180,7 @@
         </div>
       </div>
 
-      <div class="gallery-item">
+      <div class="gallery-item" data-category="lab-life">
         <div class="gallery-placeholder"><p>Seminar</p></div>
         <div class="gallery-overlay">
           <p class="gallery-overlay-title">Lab Seminar</p>
@@ -176,7 +188,7 @@
         </div>
       </div>
 
-      <div class="gallery-item">
+      <div class="gallery-item" data-category="conferences">
         <div class="gallery-placeholder"><p>Workshop</p></div>
         <div class="gallery-overlay">
           <p class="gallery-overlay-title">International Workshop</p>
@@ -184,7 +196,7 @@
         </div>
       </div>
 
-      <div class="gallery-item">
+      <div class="gallery-item" data-category="lab-life">
         <div class="gallery-placeholder"><p>Lab Photo 2024</p></div>
         <div class="gallery-overlay">
           <p class="gallery-overlay-title">Lab Group Photo 2024</p>
@@ -227,6 +239,24 @@
   </div>
   <p class="footer-copy">© 2025 SMOP Lab · Korea University. All rights reserved.</p>
 </footer>
+
+<script>
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+
+    const filter = btn.dataset.filter;
+    document.querySelectorAll('.gallery-item').forEach(item => {
+      if (filter === 'all' || item.dataset.category === filter) {
+        item.classList.remove('hidden');
+      } else {
+        item.classList.add('hidden');
+      }
+    });
+  });
+});
+</script>
 
 </body>
 </html>
