@@ -161,7 +161,7 @@ section { padding: 6rem 2rem; }
 .page-header h1 {
   font-family: var(--font-heading);
   font-size: clamp(2.6rem, 5.5vw, 4.2rem);
-  font-weight: 700; line-height: 1.1; color: var(--navy);
+  font-weight: 700; line-height: 1.1; color: #215F9A;
 }
 .page-header p { margin-top: .75rem; font-size: 1rem; color: var(--gray-500); max-width: 560px; line-height: 1.75; }
 .breadcrumb { display: flex; align-items: center; gap: .4rem; font-size: .78rem; color: var(--gray-300); margin-bottom: 1.25rem; }
