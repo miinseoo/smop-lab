@@ -6,57 +6,33 @@
   <title>Professor — SMOP Lab</title>
   <link rel="stylesheet" href="../style.css" />
   <style>
-    .prof-grid {
-      display: grid; grid-template-columns: 280px 1fr;
-      gap: 4rem; align-items: start; margin-top: 3.5rem;
-    }
+    .prof-grid { display: grid; grid-template-columns: 280px 1fr; gap: 4rem; align-items: start; margin-top: 3.5rem; }
     .prof-sidebar { position: sticky; top: 86px; }
-    .prof-photo {
-      width: 100%; aspect-ratio: 3/4; background: var(--gray-100);
-      border-radius: var(--radius-md); overflow: hidden; margin-bottom: 1.5rem;
-      border: 1px solid var(--gray-200);
-    }
+    .prof-photo { width: 100%; aspect-ratio: 3/4; background: var(--gray-100); border-radius: var(--radius-md); overflow: hidden; margin-bottom: 1.5rem; border: 1px solid var(--gray-200); }
+    .prof-photo img { width: 100%; height: 100%; object-fit: cover; }
     .prof-name { font-family: var(--font-heading); font-weight: 700; font-size: 1.5rem; color: var(--navy); }
     .prof-title { font-size: .95rem; color: var(--gray-600); margin-top: .3rem; line-height: 1.6; }
     .prof-contacts { margin-top: 1.25rem; display: flex; flex-direction: column; gap: .5rem; }
-    .contact-pill {
-      display: flex; align-items: center; gap: .6rem;
-      font-size: .85rem; color: var(--gray-600); padding: .5rem .75rem;
-      background: var(--gray-50); border: 1px solid var(--gray-200);
-      border-radius: var(--radius-xs); transition: all var(--transition);
-    }
+    .contact-pill { display: flex; align-items: center; gap: .6rem; font-size: .85rem; color: var(--gray-600); padding: .5rem .75rem; background: var(--gray-50); border: 1px solid var(--gray-200); border-radius: var(--radius-xs); transition: all var(--transition); }
     .contact-pill:hover { border-color: var(--navy); color: var(--navy); background: var(--gray-100); }
     .contact-pill svg { flex-shrink: 0; }
 
     .prof-main { display: flex; flex-direction: column; gap: 3rem; }
-    .prof-section-title {
-      font-family: var(--font-heading); font-weight: 700; font-size: 1.1rem;
-      color: var(--navy); margin-bottom: 1.25rem;
-      padding-bottom: .75rem; border-bottom: 1px solid var(--gray-200);
-    }
+    .prof-section-title { font-family: var(--font-heading); font-weight: 700; font-size: 1.1rem; color: var(--navy); margin-bottom: 1.25rem; padding-bottom: .75rem; border-bottom: 1px solid var(--gray-200); }
 
     .bio-text { font-size: 1.05rem; color: var(--gray-600); line-height: 1.9; }
+    .bio-text + .bio-text { margin-top: 1rem; }
 
     .edu-item { display: flex; gap: 1.5rem; padding: 1rem 0; border-bottom: 1px solid var(--gray-100); }
     .edu-item:last-child { border-bottom: none; }
-    .edu-degree {
-      min-width: 48px; font-family: var(--font-heading);
-      font-weight: 700; font-size: .8rem; color: var(--gray-500);
-      background: var(--gray-100); border-radius: var(--radius-xs);
-      padding: .35rem .5rem; text-align: center; height: fit-content;
-      flex-shrink: 0; letter-spacing: .03em;
-    }
-    .edu-info { flex: 1; }
+    .edu-degree { min-width: 48px; font-family: var(--font-heading); font-weight: 700; font-size: .8rem; color: var(--gray-500); background: var(--gray-100); border-radius: var(--radius-xs); padding: .35rem .5rem; text-align: center; height: fit-content; flex-shrink: 0; letter-spacing: .03em; }
     .edu-school { font-weight: 600; font-size: 1rem; color: var(--navy); margin-bottom: .2rem; }
     .edu-field { font-size: .9rem; color: var(--gray-600); }
     .edu-year { font-size: .85rem; color: var(--gray-400); margin-top: .15rem; }
 
     .career-item { display: flex; gap: 1.5rem; padding: 1rem 0; border-bottom: 1px solid var(--gray-100); }
     .career-item:last-child { border-bottom: none; }
-    .career-year {
-      min-width: 110px; font-size: .85rem; font-weight: 500;
-      color: var(--gray-400); padding-top: .15rem; flex-shrink: 0;
-    }
+    .career-year { min-width: 110px; font-size: .85rem; font-weight: 500; color: var(--gray-400); padding-top: .15rem; flex-shrink: 0; }
     .career-role { font-weight: 600; font-size: 1rem; color: var(--navy); margin-bottom: .2rem; }
     .career-org { font-size: .9rem; color: var(--gray-600); }
 
@@ -67,11 +43,7 @@
     .award-org { font-size: .9rem; color: var(--gray-600); margin-top: .2rem; }
 
     .interest-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: .6rem; }
-    .interest-pill {
-      padding: .8rem 1.1rem; background: var(--gray-50);
-      border: 1px solid var(--gray-200); border-radius: var(--radius-sm);
-      font-size: .95rem; font-weight: 500; color: var(--gray-700);
-    }
+    .interest-pill { padding: .8rem 1.1rem; background: var(--gray-50); border: 1px solid var(--gray-200); border-radius: var(--radius-sm); font-size: .95rem; font-weight: 500; color: var(--gray-700); }
 
     @media (max-width: 800px) {
       .prof-grid { grid-template-columns: 1fr; }
@@ -103,9 +75,7 @@
 
 <div class="page-header">
   <div class="page-header-inner">
-    <div class="breadcrumb">
-      <a href="../">Home</a><span>/</span><span>Professor</span>
-    </div>
+    <div class="breadcrumb"><a href="../">Home</a><span>/</span><span>Professor</span></div>
     <h1>Professor</h1>
     <p>Meet the director of the SMOP Lab</p>
   </div>
@@ -114,169 +84,8 @@
 <section>
   <div class="section-inner">
     <div class="prof-grid">
-
-      <!-- SIDEBAR -->
-      <div class="prof-sidebar">
-        <div class="prof-photo"></div>
-        <p class="prof-name">Seungmo Kang</p>
-        <p class="prof-title">Professor<br>School of Civil, Environmental &amp; Architectural Engineering<br>Korea University</p>
-        <div class="prof-contacts">
-          <a href="mailto:s_kang@korea.ac.kr" class="contact-pill">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-            s_kang@korea.ac.kr
-          </a>
-          <div class="contact-pill">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.15 12 19.79 19.79 0 0 1 1.07 3.18 2 2 0 0 1 3.05 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 16z"/></svg>
-            +82-2-3290-4862
-          </div>
-          <div class="contact-pill">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-            신공학관, Korea University
-          </div>
-        </div>
-      </div>
-
-      <!-- MAIN -->
-      <div class="prof-main">
-
-        <div>
-          <h2 class="prof-section-title">Biography</h2>
-          <p class="bio-text">
-            Prof. Seungmo Kang is a Professor in the School of Civil, Environmental and Architectural
-            Engineering at Korea University. His research focuses on developing mathematical models
-            and optimization algorithms to address challenging problems in transportation and logistics,
-            with particular emphasis on improving movement efficiency through vehicle routing,
-            resource allocation, and network design.
-          </p>
-          <p class="bio-text" style="margin-top:1rem;">
-            He has published extensively in leading international journals including
-            <em>Transportation Research Part B</em>, <em>IEEE Transactions on Intelligent Transportation Systems</em>,
-            <em>Accident Analysis and Prevention</em>, and <em>European Journal of Operational Research</em>.
-            Prof. Kang currently serves as Vice President of the Korean Society of Transportation (2025–2027)
-            and Associate Dean of University College at Korea University (2025–present).
-          </p>
-        </div>
-
-        <div>
-          <h2 class="prof-section-title">Research Interests</h2>
-          <div class="interest-grid">
-            <div class="interest-pill">Transportation Planning &amp; Operations</div>
-            <div class="interest-pill">Logistics &amp; Vehicle Routing</div>
-            <div class="interest-pill">Public Transit Optimization</div>
-            <div class="interest-pill">Machine Learning in Transportation</div>
-            <div class="interest-pill">Location-Based Services</div>
-            <div class="interest-pill">Sustainable Mobility Systems</div>
-            <div class="interest-pill">Transportation Safety Analysis</div>
-            <div class="interest-pill">Big Data &amp; Travel Behavior</div>
-          </div>
-        </div>
-
-        <div>
-          <h2 class="prof-section-title">Education</h2>
-          <div>
-            <div class="edu-item">
-              <div class="edu-degree">Ph.D.</div>
-              <div class="edu-info">
-                <p class="edu-school">University of Illinois at Urbana-Champaign</p>
-                <p class="edu-field">Civil Engineering</p>
-                <p class="edu-year">2008</p>
-              </div>
-            </div>
-            <div class="edu-item">
-              <div class="edu-degree">M.S.</div>
-              <div class="edu-info">
-                <p class="edu-school">Seoul National University</p>
-                <p class="edu-field">Civil Engineering</p>
-                <p class="edu-year">2000</p>
-              </div>
-            </div>
-            <div class="edu-item">
-              <div class="edu-degree">B.S.</div>
-              <div class="edu-info">
-                <p class="edu-school">Seoul National University</p>
-                <p class="edu-field">Civil Engineering</p>
-                <p class="edu-year">1998</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div>
-          <h2 class="prof-section-title">Academic &amp; Professional Career</h2>
-          <div>
-            <div class="career-item">
-              <div class="career-year">2025 – present</div>
-              <div>
-                <p class="career-role">Vice President</p>
-                <p class="career-org">Korean Society of Transportation</p>
-              </div>
-            </div>
-            <div class="career-item">
-              <div class="career-year">2025 – present</div>
-              <div>
-                <p class="career-role">Associate Dean, University College</p>
-                <p class="career-org">Korea University</p>
-              </div>
-            </div>
-            <div class="career-item">
-              <div class="career-year">2019 – present</div>
-              <div>
-                <p class="career-role">Professor</p>
-                <p class="career-org">School of Civil, Environmental &amp; Architectural Engineering, Korea University</p>
-              </div>
-            </div>
-            <div class="career-item">
-              <div class="career-year">2014 – 2019</div>
-              <div>
-                <p class="career-role">Associate Professor</p>
-                <p class="career-org">School of Civil, Environmental &amp; Architectural Engineering, Korea University</p>
-              </div>
-            </div>
-            <div class="career-item">
-              <div class="career-year">2008 – 2010</div>
-              <div>
-                <p class="career-role">Postdoctoral Research Associate</p>
-                <p class="career-org">Energy Biosciences Institute, University of Illinois at Urbana-Champaign</p>
-              </div>
-            </div>
-            <div class="career-item">
-              <div class="career-year">2000 – 2003</div>
-              <div>
-                <p class="career-role">Civil Engineering Supervisor</p>
-                <p class="career-org">Republic of Korea Navy</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div>
-          <h2 class="prof-section-title">Awards &amp; Honors</h2>
-          <div>
-            <div class="award-item">
-              <div class="award-year">2020</div>
-              <div>
-                <p class="award-name">Certificate of Achievement</p>
-                <p class="award-org">World Road Association (PIARC)</p>
-              </div>
-            </div>
-            <div class="award-item">
-              <div class="award-year">2019</div>
-              <div>
-                <p class="award-name">Minister's Citation</p>
-                <p class="award-org">Ministry of Land, Infrastructure and Transport, South Korea</p>
-              </div>
-            </div>
-            <div class="award-item">
-              <div class="award-year">2014</div>
-              <div>
-                <p class="award-name">Best Research Paper Award</p>
-                <p class="award-org">Korea Society of Transportation</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
+      <div class="prof-sidebar" id="prof-sidebar"></div>
+      <div class="prof-main" id="prof-main"></div>
     </div>
   </div>
 </section>
@@ -312,6 +121,86 @@
   </div>
   <p class="footer-copy">© 2025 SMOP Lab · Korea University. All rights reserved.</p>
 </footer>
+
+<script src="../data/professor.js"></script>
+<script>
+const P = PROFESSOR;
+
+// Sidebar
+document.getElementById("prof-sidebar").innerHTML = `
+  <div class="prof-photo">${P.photo ? `<img src="../${P.photo}" alt="${P.name}">` : ""}</div>
+  <p class="prof-name">${P.name}</p>
+  <p class="prof-title">${P.title}</p>
+  <div class="prof-contacts">
+    <a href="mailto:${P.email}" class="contact-pill">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+      ${P.email}
+    </a>
+    <div class="contact-pill">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.15 12 19.79 19.79 0 0 1 1.07 3.18 2 2 0 0 1 3.05 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 16z"/></svg>
+      ${P.phone}
+    </div>
+    <div class="contact-pill">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+      ${P.office}
+    </div>
+  </div>`;
+
+// Main content
+const bio = P.bio.map(p => `<p class="bio-text">${p}</p>`).join("");
+
+const interests = P.interests.map(i => `<div class="interest-pill">${i}</div>`).join("");
+
+const education = P.education.map(e => `
+  <div class="edu-item">
+    <div class="edu-degree">${e.degree}</div>
+    <div class="edu-info">
+      <p class="edu-school">${e.school}</p>
+      <p class="edu-field">${e.field}</p>
+      <p class="edu-year">${e.year}</p>
+    </div>
+  </div>`).join("");
+
+const career = P.career.map(c => `
+  <div class="career-item">
+    <div class="career-year">${c.period}</div>
+    <div>
+      <p class="career-role">${c.role}</p>
+      <p class="career-org">${c.org}</p>
+    </div>
+  </div>`).join("");
+
+const awards = P.awards.map(a => `
+  <div class="award-item">
+    <div class="award-year">${a.year}</div>
+    <div>
+      <p class="award-name">${a.name}</p>
+      <p class="award-org">${a.org}</p>
+    </div>
+  </div>`).join("");
+
+document.getElementById("prof-main").innerHTML = `
+  <div>
+    <h2 class="prof-section-title">Biography</h2>
+    ${bio}
+  </div>
+  <div>
+    <h2 class="prof-section-title">Research Interests</h2>
+    <div class="interest-grid">${interests}</div>
+  </div>
+  <div>
+    <h2 class="prof-section-title">Education</h2>
+    <div>${education}</div>
+  </div>
+  <div>
+    <h2 class="prof-section-title">Academic & Professional Career</h2>
+    <div>${career}</div>
+  </div>
+  <div>
+    <h2 class="prof-section-title">Awards & Honors</h2>
+    <div>${awards}</div>
+  </div>`;
+</script>
 
 </body>
 </html>
