@@ -6,11 +6,10 @@
   <title>Publications — SMOP Lab</title>
   <link rel="stylesheet" href="../style.css" />
   <style>
-    .filter-bar {
-      display: flex; gap: .5rem; flex-wrap: wrap; margin-bottom: 2.5rem;
-    }
+    .filter-bar { display: flex; gap: .5rem; flex-wrap: wrap; margin-bottom: 2.5rem; }
     .filter-btn {
-      font-size: .78rem; font-weight: 600; padding: .4rem 1rem;
+      font-family: var(--font-heading);
+      font-size: .9rem; font-weight: 600; padding: .4rem 1rem;
       border-radius: var(--radius-full); border: 1.5px solid var(--gray-200);
       background: var(--white); color: var(--gray-600);
       cursor: pointer; transition: all var(--transition);
@@ -31,36 +30,24 @@
       background: var(--gray-100); border-radius: var(--radius-full);
       padding: .2rem .65rem;
     }
-
     .pub-item {
       display: flex; gap: 1.5rem; padding: 1.25rem 0;
       border-bottom: 1px solid var(--gray-100); align-items: flex-start;
     }
     .pub-item:last-child { border-bottom: none; }
-    .pub-num {
-      min-width: 32px; font-size: .85rem; font-weight: 700;
-      color: var(--gray-300); padding-top: .1rem; text-align: right;
-      flex-shrink: 0;
-    }
+    .pub-num { min-width: 32px; font-size: .85rem; font-weight: 700; color: var(--gray-300); padding-top: .1rem; text-align: right; flex-shrink: 0; }
     .pub-body { flex: 1; }
-    .pub-title {
-      font-weight: 600; font-size: 1.08rem; color: var(--navy);
-      line-height: 1.55; margin-bottom: .4rem;
-    }
+    .pub-title { font-weight: 600; font-size: 1.08rem; color: var(--navy); line-height: 1.55; margin-bottom: .4rem; }
     .pub-authors { font-size: .98rem; color: var(--gray-600); margin-bottom: .3rem; line-height: 1.55; }
     .pub-authors strong { color: var(--navy); }
-    .pub-venue {
-      font-size: .95rem; color: var(--gray-500); font-style: italic; margin-bottom: .5rem;
-    }
+    .pub-venue { font-size: .95rem; color: var(--gray-500); font-style: italic; margin-bottom: .5rem; }
     .pub-tags { display: flex; gap: .4rem; flex-wrap: wrap; }
-
     .category-title {
       font-family: var(--font-heading); font-weight: 700; font-size: 1.1rem;
       letter-spacing: .08em; text-transform: uppercase; color: var(--gray-500);
       margin: 2rem 0 .75rem; display: flex; align-items: center; gap: .5rem;
     }
-    .category-title::before { content: ''; flex: 1; height: 1px; background: var(--gray-200); }
-    .category-title::after { content: ''; flex: 1; height: 1px; background: var(--gray-200); }
+    .category-title::before, .category-title::after { content: ''; flex: 1; height: 1px; background: var(--gray-200); }
   </style>
 </head>
 <body>
@@ -85,499 +72,23 @@
 
 <div class="page-header">
   <div class="page-header-inner">
-    <div class="breadcrumb">
-      <a href="../">Home</a><span>/</span><span>Publications</span>
-    </div>
+    <div class="breadcrumb"><a href="../">Home</a><span>/</span><span>Publications</span></div>
     <h1>Publications</h1>
-    <p>40+ peer-reviewed articles, book chapters, and patents</p>
+    <p>Peer-reviewed articles, book chapters, and patents</p>
   </div>
 </div>
 
 <section>
   <div class="section-inner">
-
     <div class="filter-bar">
-      <button class="filter-btn active">All</button>
-      <button class="filter-btn">International Journals</button>
-      <button class="filter-btn">Domestic Journals</button>
-      <button class="filter-btn">Conferences</button>
-      <button class="filter-btn">Book Chapters</button>
-      <button class="filter-btn">Patents</button>
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="journal">International Journals</button>
+      <button class="filter-btn" data-filter="domestic">Domestic Journals</button>
+      <button class="filter-btn" data-filter="conference">Conferences</button>
+      <button class="filter-btn" data-filter="book-chapter">Book Chapters</button>
+      <button class="filter-btn" data-filter="patent">Patents</button>
     </div>
-
-    <!-- 2026 -->
-    <div class="year-group">
-      <h2 class="year-label">2026 <span class="year-count">2 accepted</span></h2>
-
-      <div class="pub-item">
-        <div class="pub-num">1</div>
-        <div class="pub-body">
-          <p class="pub-title">Pickup and Delivery Problem with Synchronous and Asynchronous Transshipment for Q-Commerce Delivery</p>
-          <p class="pub-authors">Park, Hyun; Park, Hyuncheol; <strong>Kang, Seungmo</strong></p>
-          <p class="pub-venue">Transportation Research Record · Accepted</p>
-          <div class="pub-tags"><span class="tag tag-blue">International Journal</span><span class="tag">SCI</span></div>
-        </div>
-      </div>
-      <div class="pub-item">
-        <div class="pub-num">2</div>
-        <div class="pub-body">
-          <p class="pub-title">Diffusion process-based model for Network Trajectory Propagation</p>
-          <p class="pub-authors">Sleiman, Wissam; Haque, Mohaiminul; Amin, Mohammad Saiful; Beigi, Pedram; Khoueiry, Michel; <strong>Kang, Seungmo</strong>; Hamdar, Samer</p>
-          <p class="pub-venue">IEEE Transactions on Intelligent Transportation Systems · Accepted</p>
-          <div class="pub-tags"><span class="tag tag-blue">International Journal</span><span class="tag">SCI</span></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 2025 -->
-    <div class="year-group">
-      <h2 class="year-label">2025 <span class="year-count">3</span></h2>
-
-      <div class="pub-item">
-        <div class="pub-num">3</div>
-        <div class="pub-body">
-          <p class="pub-title">BO4Mob: Bayesian Optimization Benchmarks for High-Dimensional Urban Mobility Problem</p>
-          <p class="pub-authors">Ryu, Seunghee; Kwon, Donghoon; Choi, Seongjin; Deshwal, Aryan; <strong>Kang, Seungmo</strong>; Osorio, Carolina</p>
-          <p class="pub-venue">NeurIPS 2025</p>
-          <div class="pub-tags"><span class="tag tag-purple">Conference</span></div>
-        </div>
-      </div>
-      <div class="pub-item">
-        <div class="pub-num">4</div>
-        <div class="pub-body">
-          <p class="pub-title">Optimizing shelter locations for bus evacuation</p>
-          <p class="pub-authors">Woo, Seong-Jong; <strong>Kang, Seungmo</strong></p>
-          <p class="pub-venue">IET Intelligent Transport Systems · Vol. 19, Issue 1, e70020</p>
-          <div class="pub-tags"><span class="tag tag-blue">International Journal</span><span class="tag">SCI</span></div>
-        </div>
-      </div>
-      <div class="pub-item">
-        <div class="pub-num">5</div>
-        <div class="pub-body">
-          <p class="pub-title">Multiobjective Transit Network Design with Travel Time Reliability</p>
-          <p class="pub-authors">Park, Su Jin; <strong>Kang, Seungmo</strong></p>
-          <p class="pub-venue">IEEE Access · Vol. 13, pp. 47938–47954</p>
-          <div class="pub-tags"><span class="tag tag-blue">International Journal</span><span class="tag">SCI</span></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 2024 -->
-    <div class="year-group">
-      <h2 class="year-label">2024 <span class="year-count">2</span></h2>
-
-      <div class="pub-item">
-        <div class="pub-num">6</div>
-        <div class="pub-body">
-          <p class="pub-title">Development of Optimal Real-Time Metro Operation Strategy</p>
-          <p class="pub-authors">Oh, Yoonseok; Kwak, Ho-Chan; <strong>Kang, Seungmo</strong></p>
-          <p class="pub-venue">IET Intelligent Transport Systems · Vol. 18, Issue 12, pp. 2440–2458</p>
-          <div class="pub-tags"><span class="tag tag-blue">International Journal</span><span class="tag">SCI</span></div>
-        </div>
-      </div>
-      <div class="pub-item">
-        <div class="pub-num">7</div>
-        <div class="pub-body">
-          <p class="pub-title">Differential Dynamics of Transit Use Resilience During COVID-19</p>
-          <p class="pub-authors">Choi, Won Gyun; Ryu, Seunghee; Jung, Paul H.; <strong>Kang, Seungmo</strong></p>
-          <p class="pub-venue">IEEE Access · Vol. 12, pp. 8721–8743</p>
-          <div class="pub-tags"><span class="tag tag-blue">International Journal</span><span class="tag">SCI</span></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 2022 -->
-    <div class="year-group">
-      <h2 class="year-label">2022 <span class="year-count">2 + 1 domestic</span></h2>
-
-      <div class="pub-item">
-        <div class="pub-num">8</div>
-        <div class="pub-body">
-          <p class="pub-title">Multi-objective Approach to Transit Network Design with Variable Demand</p>
-          <p class="pub-authors">Park, Su Jin; <strong>Kang, Seungmo</strong>; Byon, Young-Ji; Kho, Seung-Young</p>
-          <p class="pub-venue">Journal of Advanced Transportation · Vol. 2022, Article ID 5887985</p>
-          <div class="pub-tags"><span class="tag tag-blue">International Journal</span><span class="tag">SCI</span></div>
-        </div>
-      </div>
-      <div class="pub-item">
-        <div class="pub-num">9</div>
-        <div class="pub-body">
-          <p class="pub-title">Rebalancing Docked Bicycle Sharing System</p>
-          <p class="pub-authors">Seo, Young-Hyun; Kim, Dong-Kyu; <strong>Kang, Seungmo</strong>; Byon, Young-Ji; Kho, Seung-Young</p>
-          <p class="pub-venue">Journal of Advanced Transportation · Vol. 2022, Article ID 2780711</p>
-          <div class="pub-tags"><span class="tag tag-blue">International Journal</span><span class="tag">SCI</span></div>
-        </div>
-      </div>
-      <div class="pub-item">
-        <div class="pub-num">10</div>
-        <div class="pub-body">
-          <p class="pub-title">토지이용패턴과 사회경제지표가 지하철 수요 변화에 미치는 영향</p>
-          <p class="pub-authors">민하루; 서영현; <strong>강승모</strong></p>
-          <p class="pub-venue">한국철도학회 논문집 · Vol. 25, No. 5, pp. 386–397</p>
-          <div class="pub-tags"><span class="tag tag-orange">Domestic Journal</span></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 2021 -->
-    <div class="year-group">
-      <h2 class="year-label">2021 <span class="year-count">1 + 1 domestic</span></h2>
-
-      <div class="pub-item">
-        <div class="pub-num">11</div>
-        <div class="pub-body">
-          <p class="pub-title">Urban Transit Network Optimization under Variable Demand</p>
-          <p class="pub-authors">Almasi, Mohammad Hadi; Oh, Yoonseok; Sadollah, Ali; Byon, Young-Ji; <strong>Kang, Seungmo</strong></p>
-          <p class="pub-venue">International Journal of Sustainable Transportation · Vol. 15, Issue 5, pp. 386–406</p>
-          <div class="pub-tags"><span class="tag tag-blue">International Journal</span><span class="tag">SSCI</span></div>
-        </div>
-      </div>
-      <div class="pub-item">
-        <div class="pub-num">12</div>
-        <div class="pub-body">
-          <p class="pub-title">역사 선택 확률 기반 고속철도 통행배정 알고리즘 개발</p>
-          <p class="pub-authors">서영현; 송지영; 곽호찬; 유승희; <strong>강승모</strong></p>
-          <p class="pub-venue">한국철도학회 논문집 · Vol. 24, No. 9, pp. 818–827</p>
-          <div class="pub-tags"><span class="tag tag-orange">Domestic Journal</span></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 2020 -->
-    <div class="year-group">
-      <h2 class="year-label">2020 <span class="year-count">3</span></h2>
-
-      <div class="pub-item">
-        <div class="pub-num">13</div>
-        <div class="pub-body">
-          <p class="pub-title">Investigation of Effects of Inherent Variation on Urban Travel Speed Prediction</p>
-          <p class="pub-authors">Park, Ho-Chul; <strong>Kang, Seungmo</strong>; Kho, Seung-Young; Kim, Dong-Kyu</p>
-          <p class="pub-venue">ASCE Journal of Transportation Engineering, Part A · Vol. 146, Issue 5, 04020027</p>
-          <div class="pub-tags"><span class="tag tag-blue">International Journal</span><span class="tag">SCI</span></div>
-        </div>
-      </div>
-      <div class="pub-item">
-        <div class="pub-num">14</div>
-        <div class="pub-body">
-          <p class="pub-title">Dwell Time Estimation using Real-Time Train Operation</p>
-          <p class="pub-authors">Oh, Yoonseok; Byon, Young-Ji; Song, Ji Young; Kwak, Ho-Chan; <strong>Kang, Seungmo</strong></p>
-          <p class="pub-venue">Applied Sciences · Vol. 10, Issue 2, No. 476</p>
-          <div class="pub-tags"><span class="tag tag-blue">International Journal</span><span class="tag">SCI</span></div>
-        </div>
-      </div>
-      <div class="pub-item">
-        <div class="pub-num">15</div>
-        <div class="pub-body">
-          <p class="pub-title">An Optimal Screening Method of Hotspot Identification</p>
-          <p class="pub-authors">Lee, Jinwoo; Chung, Koohong; Papakonstantinou, Ilia; <strong>Kang, Seungmo</strong>; Kim, Dong-Kyu</p>
-          <p class="pub-venue">Accident Analysis and Prevention · Vol. 135, Article 105357</p>
-          <div class="pub-tags"><span class="tag tag-blue">International Journal</span><span class="tag">SCI</span></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 2019 -->
-    <div class="year-group">
-      <h2 class="year-label">2019 <span class="year-count">1 + 3 domestic</span></h2>
-
-      <div class="pub-item">
-        <div class="pub-num">16</div>
-        <div class="pub-body">
-          <p class="pub-title">Enhanced Application of Principal Component Analysis in Machine Learning</p>
-          <p class="pub-authors">Choi, Yoon-Young; Shon, Heeseung; Byon, Young-Ji; Kim, Dong-Kyu; <strong>Kang, Seungmo</strong></p>
-          <p class="pub-venue">Applied Sciences · Vol. 9, Issue 10, No. 2149</p>
-          <div class="pub-tags"><span class="tag tag-blue">International Journal</span><span class="tag">SCI</span></div>
-        </div>
-      </div>
-      <div class="pub-item">
-        <div class="pub-num">17</div>
-        <div class="pub-body">
-          <p class="pub-title">도시철도 장치고장 사고 감소에 따른 사회적 편익 산정 방안</p>
-          <p class="pub-authors">배현근; 곽호찬; 최윤영; 오윤석; <strong>강승모</strong></p>
-          <p class="pub-venue">한국도시철도학회논문집 · Vol. 7, No. 2, pp. 255–263</p>
-          <div class="pub-tags"><span class="tag tag-orange">Domestic Journal</span></div>
-        </div>
-      </div>
-      <div class="pub-item">
-        <div class="pub-num">18</div>
-        <div class="pub-body">
-          <p class="pub-title">철도사고 감소를 통한 지체시간 감소 및 신뢰성 향상 편익 산정 기법</p>
-          <p class="pub-authors">최윤영; 배현근; <strong>강승모</strong>; 송지영</p>
-          <p class="pub-venue">한국철도학회 논문집 · Vol. 22, No. 4, pp. 336–347</p>
-          <div class="pub-tags"><span class="tag tag-orange">Domestic Journal</span></div>
-        </div>
-      </div>
-      <div class="pub-item">
-        <div class="pub-num">19</div>
-        <div class="pub-body">
-          <p class="pub-title">휴업손해비용과 위자료를 반영한 철도 교통사고비용 개선에 관한 연구</p>
-          <p class="pub-authors">김진주; 최윤영; <strong>강승모</strong>; 이인묵</p>
-          <p class="pub-venue">한국철도학회 논문집 · Vol. 22, No. 1, pp. 90–100</p>
-          <div class="pub-tags"><span class="tag tag-orange">Domestic Journal</span></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 2018 -->
-    <div class="year-group">
-      <h2 class="year-label">2018 <span class="year-count">1</span></h2>
-      <div class="pub-item">
-        <div class="pub-num">20</div>
-        <div class="pub-body">
-          <p class="pub-title">Optimal Coordination Strategy for Integrated Multimodal Transit</p>
-          <p class="pub-authors">Almasi, Mohammad Hadi; Sadollah, Ali; Oh, Yoonseok; Kim, Dong-Kyu; <strong>Kang, Seungmo</strong></p>
-          <p class="pub-venue">Sustainability · Vol. 10, Issue 3, No. 734</p>
-          <div class="pub-tags"><span class="tag tag-blue">International Journal</span><span class="tag">SCI</span></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 2016–2017 -->
-    <div class="year-group">
-      <h2 class="year-label">2016–2017 <span class="year-count">6</span></h2>
-
-      <div class="pub-item">
-        <div class="pub-num">21</div>
-        <div class="pub-body">
-          <p class="pub-title">Evaluating the Impact of Sudden Collapse of Major Freeway Connectors</p>
-          <p class="pub-authors">Oh, Yoonseok; Chung, Koohong; Kim, Cheolsun; Park, Shin Hyoung; <strong>Kang, Seungmo</strong></p>
-          <p class="pub-venue">Applied Sciences · Vol. 7, Issue 7, No. 726 · 2017</p>
-          <div class="pub-tags"><span class="tag tag-blue">International Journal</span><span class="tag">SCI</span></div>
-        </div>
-      </div>
-      <div class="pub-item">
-        <div class="pub-num">22</div>
-        <div class="pub-body">
-          <p class="pub-title">Meta-Heuristic Approaches for High-Demand Facility Locations</p>
-          <p class="pub-authors">Hwang, Taesung; Lee, Minho; Lee, Chungwon; <strong>Kang, Seungmo</strong></p>
-          <p class="pub-venue">Journal of Environmental Engineering and Landscape Management · Vol. 24, Issue 4, pp. 233–244 · 2016</p>
-          <div class="pub-tags"><span class="tag tag-blue">International Journal</span><span class="tag">SCI</span></div>
-        </div>
-      </div>
-      <div class="pub-item">
-        <div class="pub-num">23</div>
-        <div class="pub-body">
-          <p class="pub-title">Evaluating and Addressing Regression to the Mean Phenomenon</p>
-          <p class="pub-authors">Lee, Jinwoo; Chung, Koohong; <strong>Kang, Seungmo</strong></p>
-          <p class="pub-venue">Accident Analysis and Prevention · Vol. 97, pp. 49–56 · 2016</p>
-          <div class="pub-tags"><span class="tag tag-blue">International Journal</span><span class="tag">SCI</span></div>
-        </div>
-      </div>
-      <div class="pub-item">
-        <div class="pub-num">24</div>
-        <div class="pub-body">
-          <p class="pub-title">Optimization of Improved Intermodal Transit Model</p>
-          <p class="pub-authors">Almasi, Mohammad Hadi; Sadollah, Ali; <strong>Kang, Seungmo</strong>; Karim, Mohamed Rehan</p>
-          <p class="pub-venue">Sustainability · Vol. 8, Issue 6, No. 537 · 2016</p>
-          <div class="pub-tags"><span class="tag tag-blue">International Journal</span><span class="tag">SCI</span></div>
-        </div>
-      </div>
-      <div class="pub-item">
-        <div class="pub-num">25</div>
-        <div class="pub-body">
-          <p class="pub-title">Dynamically Determining the Toll Plaza Capacity</p>
-          <p class="pub-authors">Kim, Cheolsun; Kim, Dong-Kyu; Kho, Seung-Young; <strong>Kang, Seungmo</strong>; Chung, Koohong</p>
-          <p class="pub-venue">Applied Sciences · Vol. 6, Issue 3, No. 87 · 2016</p>
-          <div class="pub-tags"><span class="tag tag-blue">International Journal</span><span class="tag">SCI</span></div>
-        </div>
-      </div>
-      <div class="pub-item">
-        <div class="pub-num">26</div>
-        <div class="pub-body">
-          <p class="pub-title">Measurement of Desirable Minimum One-Way Bike Lane Width</p>
-          <p class="pub-authors">Lee, Chungwon; Shin, Hee Cheol; <strong>Kang, Seungmo</strong>; Lee, Jung-Beom</p>
-          <p class="pub-venue">KSCE Journal of Civil Engineering · Vol. 20, Issue 2, pp. 881–889 · 2016</p>
-          <div class="pub-tags"><span class="tag tag-blue">International Journal</span><span class="tag">SCI</span></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 2013–2015 -->
-    <div class="year-group">
-      <h2 class="year-label">2013–2015 <span class="year-count">5</span></h2>
-
-      <div class="pub-item">
-        <div class="pub-num">27</div>
-        <div class="pub-body">
-          <p class="pub-title">Spatial Analysis Methods for Identifying Hazardous Locations</p>
-          <p class="pub-authors">Park, Shin Hyoung; Jang, Kitae; Kim, Dong-Kyu; Kho, Seung-Young; <strong>Kang, Seungmo</strong></p>
-          <p class="pub-venue">Scientia Iranica · Vol. 22, No. 4, pp. 1594–1603 · 2015</p>
-          <div class="pub-tags"><span class="tag tag-blue">International Journal</span></div>
-        </div>
-      </div>
-      <div class="pub-item">
-        <div class="pub-num">28</div>
-        <div class="pub-body">
-          <p class="pub-title">Network Forensic Evidence Generation and Verification Scheme</p>
-          <p class="pub-authors">Kim, Hyungseok; Kim, Eunjin; <strong>Kang, Seungmo</strong>; Kim, Huy Kang</p>
-          <p class="pub-venue">Telecommunication Systems · Vol. 60, Issue 2, pp. 261–273 · 2015</p>
-          <div class="pub-tags"><span class="tag tag-blue">International Journal</span><span class="tag">SCI</span></div>
-        </div>
-      </div>
-      <div class="pub-item">
-        <div class="pub-num">29</div>
-        <div class="pub-body">
-          <p class="pub-title">Evaluation of Pedestrian Safety: Pedestrian Crash Hot Spots</p>
-          <p class="pub-authors">Jang, Kitae; Park, Shin Hyoung; Kang, Sanghyeok; Song, Ki Han; <strong>Kang, Seungmo</strong>; Chung, Sungbong</p>
-          <p class="pub-venue">Transportation Research Record · No. 2393, pp. 104–116 · 2013</p>
-          <div class="pub-tags"><span class="tag tag-blue">International Journal</span><span class="tag">SCI</span></div>
-        </div>
-      </div>
-      <div class="pub-item">
-        <div class="pub-num">30</div>
-        <div class="pub-body">
-          <p class="pub-title">Impact of Traffic States on Freeway Crash Involvement Rates</p>
-          <p class="pub-authors">Yeo, Hwasoo; Jang, Kitae; Skabardonis, Alexander; <strong>Kang, Seungmo</strong></p>
-          <p class="pub-venue">Accident Analysis and Prevention · Vol. 50, pp. 713–723 · 2013</p>
-          <div class="pub-tags"><span class="tag tag-blue">International Journal</span><span class="tag">SCI</span></div>
-        </div>
-      </div>
-      <div class="pub-item">
-        <div class="pub-num">31</div>
-        <div class="pub-body">
-          <p class="pub-title">지역간 철도의 노선계획 최적화 모형</p>
-          <p class="pub-authors">오동규; 고승영; <strong>강승모</strong></p>
-          <p class="pub-venue">대한교통학회지 · Vol. 31, No. 2, pp. 80–89 · 2013</p>
-          <div class="pub-tags"><span class="tag tag-orange">Domestic Journal</span></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 2008–2012 -->
-    <div class="year-group">
-      <h2 class="year-label">2008–2012 <span class="year-count">6</span></h2>
-
-      <div class="pub-item">
-        <div class="pub-num">32</div>
-        <div class="pub-body">
-          <p class="pub-title">Adaptive Dynamic Programming Approach to Multi-Purpose Location-Based Concierge Service</p>
-          <p class="pub-authors"><strong>Kang, Seungmo</strong>; Kim, Tschangho John</p>
-          <p class="pub-venue">IET Intelligent Transport Systems · Vol. 5, Issue 4, pp. 277–285 · 2011</p>
-          <div class="pub-tags"><span class="tag tag-blue">International Journal</span><span class="tag">SCI</span></div>
-        </div>
-      </div>
-      <div class="pub-item">
-        <div class="pub-num">33</div>
-        <div class="pub-body">
-          <p class="pub-title">The Traveling Purchaser Problem with Stochastic Prices</p>
-          <p class="pub-authors"><strong>Kang, Seungmo</strong>; Ouyang, Yanfeng</p>
-          <p class="pub-venue">European Journal of Operational Research · Vol. 209, Issue 3, pp. 265–272 · 2011</p>
-          <div class="pub-tags"><span class="tag tag-blue">International Journal</span><span class="tag">SCI</span></div>
-        </div>
-      </div>
-      <div class="pub-item">
-        <div class="pub-num">34</div>
-        <div class="pub-body">
-          <p class="pub-title">Biofuel Refinery Location and Supply Chain Planning</p>
-          <p class="pub-authors">Bai, Yun; Hwang, Taesung; <strong>Kang, Seungmo</strong>; Ouyang, Yanfeng</p>
-          <p class="pub-venue">Transportation Research Part B · Vol. 45, Issue 1, pp. 162–175 · 2011</p>
-          <div class="pub-tags"><span class="tag tag-blue">International Journal</span><span class="tag">SCI</span></div>
-        </div>
-      </div>
-      <div class="pub-item">
-        <div class="pub-num">35</div>
-        <div class="pub-body">
-          <p class="pub-title">A Heuristic Approach to Railroad Track Maintenance Scheduling</p>
-          <p class="pub-authors">Peng, Fan; <strong>Kang, Seungmo</strong>; Li, Xiaopeng; Ouyang, Yanfeng; Somani, Kamalesh; Acharya, Dharma</p>
-          <p class="pub-venue">Computer-Aided Civil and Infrastructure Engineering · Vol. 26, Issue 2, pp. 129–145 · 2011</p>
-          <div class="pub-tags"><span class="tag tag-blue">International Journal</span><span class="tag">SCI</span></div>
-        </div>
-      </div>
-      <div class="pub-item">
-        <div class="pub-num">36</div>
-        <div class="pub-body">
-          <p class="pub-title">Optimal Operations of Transportation Fleet for Unloading Activities</p>
-          <p class="pub-authors"><strong>Kang, Seungmo</strong>; Medina, Juan C.; Ouyang, Yanfeng</p>
-          <p class="pub-venue">Transportation Research Part B · Vol. 42, Issue 10, pp. 970–984 · 2008</p>
-          <div class="pub-tags"><span class="tag tag-blue">International Journal</span><span class="tag">SCI</span></div>
-        </div>
-      </div>
-      <div class="pub-item">
-        <div class="pub-num">37</div>
-        <div class="pub-body">
-          <p class="pub-title">Conjugate Gradient 법을 이용한 경로기반 통행배정 알고리즘의 구축</p>
-          <p class="pub-authors"><strong>강승모</strong>; 권용석; 박창호</p>
-          <p class="pub-venue">대한교통학회지 · Vol. 18, No. 5, pp. 99–107 · 2000</p>
-          <div class="pub-tags"><span class="tag tag-orange">Domestic Journal</span></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- BOOK CHAPTERS -->
-    <div class="year-group">
-      <p class="category-title">Book Chapters</p>
-
-      <div class="pub-item">
-        <div class="pub-num">BC1</div>
-        <div class="pub-body">
-          <p class="pub-title">Macroscopic Fundamental Diagram Validation for Collision Formation</p>
-          <p class="pub-authors">Silverstein, Claire E.; Hamdar, Samer H.; <strong>Kang, Seungmo</strong>; Jang, Kitae</p>
-          <p class="pub-venue">Traffic and Granular Flow '17 · Springer, pp. 107–116 · 2019</p>
-          <div class="pub-tags"><span class="tag tag-green">Book Chapter</span></div>
-        </div>
-      </div>
-      <div class="pub-item">
-        <div class="pub-num">BC2</div>
-        <div class="pub-body">
-          <p class="pub-title">Optimizing the Biofuel Infrastructure: Transportation Networks and Biorefinery Locations</p>
-          <p class="pub-authors"><strong>Kang, Seungmo</strong>; Önal, Hayri; Ouyang, Yanfeng; Scheffran, Jürgen; Tursun, Ü. Deniz</p>
-          <p class="pub-venue">Handbook of Bioenergy Economics and Policy · Springer, pp. 151–173 · 2009</p>
-          <div class="pub-tags"><span class="tag tag-green">Book Chapter</span></div>
-        </div>
-      </div>
-      <div class="pub-item">
-        <div class="pub-num">BC3</div>
-        <div class="pub-body">
-          <p class="pub-title">Location-Based Services: Enabling Technologies and a Concierge Service Model</p>
-          <p class="pub-authors"><strong>Kang, Seungmo</strong>; Kim, Tschangho John; Jang, Sung-Gheel</p>
-          <p class="pub-venue">Societies and Cities in the Age of Instant Access · Springer, pp. 227–239 · 2007</p>
-          <div class="pub-tags"><span class="tag tag-green">Book Chapter</span></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- PATENTS -->
-    <div class="year-group">
-      <p class="category-title">Patents</p>
-
-      <div class="pub-item">
-        <div class="pub-num">P1</div>
-        <div class="pub-body">
-          <p class="pub-title">재난 시 교통수단 별 대피 경로 산출 방법</p>
-          <p class="pub-authors">박수진; <strong>강승모</strong>; 서영현</p>
-          <p class="pub-venue">Registration No. 1024679720000 · Filed 2021-01-20, Registered 2022-11-14</p>
-          <div class="pub-tags"><span class="tag">Patent</span></div>
-        </div>
-      </div>
-      <div class="pub-item">
-        <div class="pub-num">P2</div>
-        <div class="pub-body">
-          <p class="pub-title">도로혼잡과 수요변화를 고려한 대중교통의 노선망 구축 방법</p>
-          <p class="pub-authors">박수진; <strong>강승모</strong>; 우성종</p>
-          <p class="pub-venue">Registration No. 1027060640000 · Filed 2021-12-13, Registered 2024-09-09</p>
-          <div class="pub-tags"><span class="tag">Patent</span></div>
-        </div>
-      </div>
-      <div class="pub-item">
-        <div class="pub-num">P3</div>
-        <div class="pub-body">
-          <p class="pub-title">실시간 수요 및 사용자 선호도를 고려한 모빌리티 서비스 방법</p>
-          <p class="pub-authors">박수진; <strong>강승모</strong>; 박현철; 박현</p>
-          <p class="pub-venue">Filed 2024-02-29 (pending)</p>
-          <div class="pub-tags"><span class="tag">Patent</span></div>
-        </div>
-      </div>
-      <div class="pub-item">
-        <div class="pub-num">P4</div>
-        <div class="pub-body">
-          <p class="pub-title">대중교통과 무인 비행체를 결합한 물품 배송 최적화 방법 및 시스템</p>
-          <p class="pub-authors">박수진; <strong>강승모</strong>; 유승희; 권동훈</p>
-          <p class="pub-venue">Filed 2024-03-27 (pending)</p>
-          <div class="pub-tags"><span class="tag">Patent</span></div>
-        </div>
-      </div>
-    </div>
-
+    <div id="pub-list"></div>
   </div>
 </section>
 
@@ -613,24 +124,88 @@
   <p class="footer-copy">© 2025 SMOP Lab · Korea University. All rights reserved.</p>
 </footer>
 
+<script src="../data/publications.js"></script>
 <script>
-document.querySelectorAll('.year-group').forEach(group => {
-  const items = group.querySelectorAll('.pub-item');
-  const domesticCount = group.querySelectorAll('.tag-orange').length;
-  const intlCount = items.length - domesticCount;
-  const countEl = group.querySelector('.year-count');
-  if (!countEl) return;
+const TAG_CLASS = {
+  "International Journal": "tag-blue",
+  "Domestic Journal": "tag-orange",
+  "Conference": "tag-purple",
+  "Book Chapter": "tag-green",
+  "Patent": "",
+  "SCI": "", "SSCI": "",
+};
 
-  const allIntlAccepted = intlCount > 0 && [...items].filter(item =>
-    !item.querySelector('.tag-orange') &&
-    item.querySelector('.pub-venue')?.textContent.includes('Accepted')
-  ).length === intlCount;
+const SPECIAL_LABELS = { "book-chapter": "Book Chapters", "patent": "Patents" };
 
-  let text = String(intlCount);
-  if (allIntlAccepted) text += ' accepted';
-  if (domesticCount > 0) text += ` + ${domesticCount} domestic`;
-  countEl.textContent = text;
+function renderAuthors(authors) {
+  return authors.map(a => a === "Kang, Seungmo" || a === "강승모"
+    ? `<strong>${a}</strong>` : a).join("; ");
+}
+
+function renderTags(tags) {
+  return tags.map(t => `<span class="tag ${TAG_CLASS[t] || ''}">${t}</span>`).join("");
+}
+
+function render(filter) {
+  const items = filter === "all" ? PUBLICATIONS : PUBLICATIONS.filter(p => p.type === filter);
+
+  // group by yearLabel
+  const groups = {};
+  items.forEach(p => {
+    const key = p.yearLabel;
+    if (!groups[key]) groups[key] = [];
+    groups[key].push(p);
+  });
+
+  let html = "";
+  const seen = new Set();
+  items.forEach(p => {
+    if (seen.has(p.yearLabel)) return;
+    seen.add(p.yearLabel);
+    const grp = groups[p.yearLabel];
+    const isSpecial = SPECIAL_LABELS[p.type];
+    const label = isSpecial
+      ? `<p class="category-title">${p.yearLabel}</p>`
+      : (() => {
+          const domestic = grp.filter(x => x.type === "domestic").length;
+          const intl = grp.length - domestic;
+          const allAccepted = grp.filter(x => x.type !== "domestic" && x.accepted).length === intl && intl > 0;
+          let cnt = String(intl);
+          if (allAccepted) cnt += " accepted";
+          if (domestic > 0) cnt += ` + ${domestic} domestic`;
+          return `<h2 class="year-label">${p.yearLabel} <span class="year-count">${cnt}</span></h2>`;
+        })();
+
+    html += `<div class="year-group">${label}`;
+    grp.forEach(pub => {
+      const venue = pub.accepted ? pub.venue + " · Accepted" : pub.venue;
+      html += `
+        <div class="pub-item">
+          <div class="pub-num">${pub.id}</div>
+          <div class="pub-body">
+            <p class="pub-title">${pub.title}</p>
+            <p class="pub-authors">${renderAuthors(pub.authors)}</p>
+            <p class="pub-venue">${venue}</p>
+            <div class="pub-tags">${renderTags(pub.tags)}</div>
+          </div>
+        </div>`;
+    });
+    html += `</div>`;
+  });
+
+  document.getElementById("pub-list").innerHTML = html;
+}
+
+render("all");
+
+document.querySelectorAll(".filter-btn").forEach(btn => {
+  btn.addEventListener("click", () => {
+    document.querySelectorAll(".filter-btn").forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+    render(btn.dataset.filter);
+  });
 });
 </script>
+
 </body>
 </html>

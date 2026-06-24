@@ -6,9 +6,7 @@
   <title>Gallery — SMOP Lab</title>
   <link rel="stylesheet" href="../style.css" />
   <style>
-    .filter-bar {
-      display: flex; gap: .5rem; flex-wrap: wrap; margin-bottom: 2.5rem;
-    }
+    .filter-bar { display: flex; gap: .5rem; flex-wrap: wrap; margin-bottom: 2.5rem; }
     .filter-btn {
       font-family: var(--font-heading);
       font-size: .95rem; font-weight: 600; padding: .45rem 1.2rem;
@@ -16,20 +14,13 @@
       background: var(--white); color: var(--gray-600);
       cursor: pointer; transition: all var(--transition);
     }
-    .filter-btn.active,
-    .filter-btn:hover { border-color: var(--navy); color: var(--navy); background: var(--gray-100); }
+    .filter-btn.active, .filter-btn:hover { border-color: var(--navy); color: var(--navy); background: var(--gray-100); }
 
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-auto-rows: 240px;
-      gap: 1rem;
-    }
+    .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); grid-auto-rows: 240px; gap: 1rem; }
     .gallery-item {
       background: var(--gray-100); border-radius: 6px;
       overflow: hidden; cursor: pointer; position: relative;
-      transition: all var(--transition);
-      display: flex; align-items: center; justify-content: center;
+      transition: all var(--transition); display: flex; align-items: center; justify-content: center;
     }
     .gallery-item.wide { grid-column: span 2; }
     .gallery-item.tall { grid-row: span 2; }
@@ -37,46 +28,23 @@
     .gallery-item img { width: 100%; height: 100%; object-fit: cover; display: block; }
     .gallery-item:hover { transform: scale(1.02); box-shadow: var(--shadow-lg); }
     .gallery-item:hover .gallery-overlay { opacity: 1; }
-
-    .gallery-placeholder {
-      display: flex; flex-direction: column; align-items: center; gap: .5rem;
-    }
+    .gallery-placeholder { display: flex; flex-direction: column; align-items: center; gap: .5rem; }
     .gallery-placeholder p { font-size: .9rem; color: var(--gray-400); font-weight: 500; }
-
     .gallery-overlay {
-      position: absolute; inset: 0;
-      background: rgba(10,22,40,.6);
-      display: flex; flex-direction: column;
-      align-items: center; justify-content: center;
-      opacity: 0; transition: opacity var(--transition);
-      padding: 1.5rem; text-align: center;
+      position: absolute; inset: 0; background: rgba(10,22,40,.6);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      opacity: 0; transition: opacity var(--transition); padding: 1.5rem; text-align: center;
     }
-    .gallery-overlay-title {
-      font-family: var(--font-heading); font-weight: 700;
-      font-size: 1.05rem; color: #fff; margin-bottom: .3rem;
-    }
+    .gallery-overlay-title { font-family: var(--font-heading); font-weight: 700; font-size: 1.05rem; color: #fff; margin-bottom: .3rem; }
     .gallery-overlay-date { font-size: .88rem; color: rgba(255,255,255,.6); }
 
-    .add-photo-notice {
-      background: var(--gray-50); border: 1.5px dashed var(--gray-300);
-      border-radius: 6px; padding: 1.5rem 2rem;
-      margin-bottom: 2rem;
-    }
+    .add-photo-notice { background: var(--gray-50); border: 1.5px dashed var(--gray-300); border-radius: 6px; padding: 1.5rem 2rem; margin-bottom: 2rem; }
     .add-photo-notice strong { font-size: 1rem; color: var(--navy); display: block; margin-bottom: .5rem; }
     .add-photo-notice p { font-size: .92rem; color: var(--gray-600); line-height: 1.75; }
-    .add-photo-notice code {
-      background: var(--gray-200); padding: .1rem .4rem;
-      border-radius: 4px; font-size: .88rem; color: var(--navy);
-    }
+    .add-photo-notice code { background: var(--gray-200); padding: .1rem .4rem; border-radius: 4px; font-size: .88rem; color: var(--navy); }
 
-    @media (max-width: 768px) {
-      .gallery-grid { grid-template-columns: repeat(2,1fr); grid-auto-rows: 180px; }
-      .gallery-item.wide { grid-column: span 1; }
-    }
-    @media (max-width: 480px) {
-      .gallery-grid { grid-template-columns: 1fr; grid-auto-rows: 200px; }
-      .gallery-item.tall { grid-row: span 1; }
-    }
+    @media (max-width: 768px) { .gallery-grid { grid-template-columns: repeat(2,1fr); grid-auto-rows: 180px; } .gallery-item.wide { grid-column: span 1; } }
+    @media (max-width: 480px) { .gallery-grid { grid-template-columns: 1fr; grid-auto-rows: 200px; } .gallery-item.tall { grid-row: span 1; } }
   </style>
 </head>
 <body>
@@ -101,9 +69,7 @@
 
 <div class="page-header">
   <div class="page-header-inner">
-    <div class="breadcrumb">
-      <a href="../">Home</a><span>/</span><span>Gallery</span>
-    </div>
+    <div class="breadcrumb"><a href="../">Home</a><span>/</span><span>Gallery</span></div>
     <h1>Gallery</h1>
     <p>Lab activities, conferences, and memorable moments</p>
   </div>
@@ -113,12 +79,13 @@
   <div class="section-inner">
 
     <div class="add-photo-notice">
-      <strong>사진 추가 방법</strong>
+      <strong>사진 추가 방법 — data/gallery.js 파일만 수정하면 됩니다</strong>
       <p>
         1. 이미지 파일을 <code>images/</code> 폴더에 넣기<br>
-        2. 아래 예시처럼 <code>.gallery-item</code> 블록 추가 — <code>data-category</code>에 카테고리 지정<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;카테고리: <code>lab-life</code> &nbsp;/&nbsp; <code>conferences</code> &nbsp;/&nbsp; <code>field-trips</code> &nbsp;/&nbsp; <code>celebrations</code><br>
-        3. <code>wide</code> 클래스 → 가로 2칸 &nbsp;/&nbsp; <code>tall</code> 클래스 → 세로 2칸
+        2. <code>data/gallery.js</code>를 열어 GALLERY 배열 맨 앞에 항목 추가:<br>
+        &nbsp;&nbsp;&nbsp;<code>{ title:"제목", date:"2025", category:"lab-life", image:"images/파일.jpg", size:null }</code><br>
+        카테고리: <code>lab-life</code> / <code>conferences</code> / <code>field-trips</code> / <code>celebrations</code><br>
+        size: <code>null</code>(기본) / <code>"wide"</code>(가로 2칸) / <code>"tall"</code>(세로 2칸)
       </p>
     </div>
 
@@ -130,81 +97,7 @@
       <button class="filter-btn" data-filter="celebrations">Celebrations</button>
     </div>
 
-    <div class="gallery-grid">
-
-      <div class="gallery-item wide" data-category="lab-life">
-        <div class="gallery-placeholder"><p>Lab Group Photo 2025</p></div>
-        <div class="gallery-overlay">
-          <p class="gallery-overlay-title">SMOP Lab Group Photo 2025</p>
-          <p class="gallery-overlay-date">2025</p>
-        </div>
-      </div>
-
-      <div class="gallery-item tall" data-category="celebrations">
-        <div class="gallery-placeholder"><p>Award Ceremony</p></div>
-        <div class="gallery-overlay">
-          <p class="gallery-overlay-title">Award Ceremony</p>
-          <p class="gallery-overlay-date">2025</p>
-        </div>
-      </div>
-
-      <div class="gallery-item" data-category="conferences">
-        <div class="gallery-placeholder"><p>Conference</p></div>
-        <div class="gallery-overlay">
-          <p class="gallery-overlay-title">Conference Presentation</p>
-          <p class="gallery-overlay-date">NeurIPS 2025</p>
-        </div>
-      </div>
-
-      <div class="gallery-item" data-category="lab-life">
-        <div class="gallery-placeholder"><p>Lab Dinner</p></div>
-        <div class="gallery-overlay">
-          <p class="gallery-overlay-title">Lab Dinner</p>
-          <p class="gallery-overlay-date">2025</p>
-        </div>
-      </div>
-
-      <div class="gallery-item wide" data-category="field-trips">
-        <div class="gallery-placeholder"><p>Field Survey</p></div>
-        <div class="gallery-overlay">
-          <p class="gallery-overlay-title">Field Research Survey</p>
-          <p class="gallery-overlay-date">2024</p>
-        </div>
-      </div>
-
-      <div class="gallery-item" data-category="celebrations">
-        <div class="gallery-placeholder"><p>Graduation</p></div>
-        <div class="gallery-overlay">
-          <p class="gallery-overlay-title">Graduation Celebration</p>
-          <p class="gallery-overlay-date">2024</p>
-        </div>
-      </div>
-
-      <div class="gallery-item" data-category="lab-life">
-        <div class="gallery-placeholder"><p>Seminar</p></div>
-        <div class="gallery-overlay">
-          <p class="gallery-overlay-title">Lab Seminar</p>
-          <p class="gallery-overlay-date">2024</p>
-        </div>
-      </div>
-
-      <div class="gallery-item" data-category="conferences">
-        <div class="gallery-placeholder"><p>Workshop</p></div>
-        <div class="gallery-overlay">
-          <p class="gallery-overlay-title">International Workshop</p>
-          <p class="gallery-overlay-date">2024</p>
-        </div>
-      </div>
-
-      <div class="gallery-item" data-category="lab-life">
-        <div class="gallery-placeholder"><p>Lab Photo 2024</p></div>
-        <div class="gallery-overlay">
-          <p class="gallery-overlay-title">Lab Group Photo 2024</p>
-          <p class="gallery-overlay-date">2024</p>
-        </div>
-      </div>
-
-    </div>
+    <div class="gallery-grid" id="gallery-grid"></div>
   </div>
 </section>
 
@@ -240,20 +133,34 @@
   <p class="footer-copy">© 2025 SMOP Lab · Korea University. All rights reserved.</p>
 </footer>
 
+<script src="../data/gallery.js"></script>
 <script>
-document.querySelectorAll('.filter-btn').forEach(btn => {
-  btn.addEventListener('click', () => {
-    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
+function renderGallery(filter) {
+  const items = filter === "all" ? GALLERY : GALLERY.filter(g => g.category === filter);
+  const html = items.map(g => {
+    const sizeClass = g.size ? ` ${g.size}` : "";
+    const inner = g.image
+      ? `<img src="../${g.image}" alt="${g.title}">`
+      : `<div class="gallery-placeholder"><p>${g.title}</p></div>`;
+    return `
+      <div class="gallery-item${sizeClass}" data-category="${g.category}">
+        ${inner}
+        <div class="gallery-overlay">
+          <p class="gallery-overlay-title">${g.title}</p>
+          <p class="gallery-overlay-date">${g.date}</p>
+        </div>
+      </div>`;
+  }).join("");
+  document.getElementById("gallery-grid").innerHTML = html;
+}
 
-    const filter = btn.dataset.filter;
-    document.querySelectorAll('.gallery-item').forEach(item => {
-      if (filter === 'all' || item.dataset.category === filter) {
-        item.classList.remove('hidden');
-      } else {
-        item.classList.add('hidden');
-      }
-    });
+renderGallery("all");
+
+document.querySelectorAll(".filter-btn").forEach(btn => {
+  btn.addEventListener("click", () => {
+    document.querySelectorAll(".filter-btn").forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+    renderGallery(btn.dataset.filter);
   });
 });
 </script>

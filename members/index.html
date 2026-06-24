@@ -6,61 +6,44 @@
   <title>Members — SMOP Lab</title>
   <link rel="stylesheet" href="../style.css" />
   <style>
-    .tab-bar {
-      display: flex; gap: .5rem; margin-bottom: 3rem;
-      border-bottom: 1px solid var(--gray-200); padding-bottom: 0;
-    }
+    .tab-bar { display: flex; gap: .5rem; margin-bottom: 3rem; border-bottom: 1px solid var(--gray-200); }
     .tab {
       font-size: 1.05rem; font-weight: 600; color: var(--gray-400);
       padding: .65rem 1.25rem; border-bottom: 2px solid transparent;
       cursor: pointer; transition: all var(--transition);
-      margin-bottom: -1px; background: none; border-top: none;
-      border-left: none; border-right: none;
+      margin-bottom: -1px; background: none; border-top: none; border-left: none; border-right: none;
     }
-    .tab.active { color: var(--blue); border-bottom-color: var(--blue); }
+    .tab.active { color: var(--navy); border-bottom-color: var(--navy); }
     .tab:hover { color: var(--gray-700); }
 
     .member-section { margin-bottom: 3.5rem; }
     .member-section-title {
       font-family: var(--font-heading); font-weight: 700; font-size: 1.25rem;
       letter-spacing: .06em; text-transform: uppercase; color: var(--gray-400);
-      margin-bottom: 1.25rem; padding-bottom: .5rem;
-      border-bottom: 1px solid var(--gray-200);
+      margin-bottom: 1.25rem; padding-bottom: .5rem; border-bottom: 1px solid var(--gray-200);
     }
     .member-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 1.25rem; }
-
-    .member-card {
-      background: var(--white); border: 1px solid var(--gray-200);
-      border-radius: 6px; overflow: hidden;
-      transition: all var(--transition);
-    }
+    .member-card { background: var(--white); border: 1px solid var(--gray-200); border-radius: 6px; overflow: hidden; transition: all var(--transition); }
     .member-card:hover { box-shadow: var(--shadow-md); transform: translateY(-3px); border-color: var(--gray-300); }
-    .member-avatar {
-      background: linear-gradient(135deg, var(--gray-100) 0%, var(--gray-200) 100%);
-      aspect-ratio: 1/1; display: flex; align-items: center;
-      justify-content: center; font-size: 2.5rem; color: var(--gray-300);
-    }
+    .member-avatar { background: linear-gradient(135deg, var(--gray-100) 0%, var(--gray-200) 100%); aspect-ratio: 1/1; overflow: hidden; }
+    .member-avatar img { width: 100%; height: 100%; object-fit: cover; }
     .member-info { padding: 1.1rem; }
     .member-name { font-family: var(--font-heading); font-weight: 700; font-size: 1.05rem; color: var(--navy); margin-bottom: .2rem; }
     .member-name-kr { font-size: .88rem; color: var(--gray-400); margin-bottom: .6rem; }
     .member-role { display: inline-block; font-size: .8rem; font-weight: 700; }
     .member-interest { font-size: .88rem; color: var(--gray-600); margin-top: .6rem; line-height: 1.5; }
     .member-email { font-size: .85rem; color: var(--gray-400); margin-top: .5rem; }
-    .member-email a { color: var(--blue); }
+    .member-email a { color: var(--navy); }
     .member-email a:hover { text-decoration: underline; }
 
     .alumni-list { display: flex; flex-direction: column; gap: 0; }
-    .alumni-item {
-      display: flex; align-items: center; gap: 1.5rem;
-      padding: .9rem 0; border-bottom: 1px solid var(--gray-100);
-    }
+    .alumni-item { display: flex; align-items: center; gap: 1.5rem; padding: .9rem 0; border-bottom: 1px solid var(--gray-100); }
     .alumni-item:last-child { border-bottom: none; }
     .alumni-year { min-width: 50px; font-size: .78rem; font-weight: 700; color: var(--gray-400); }
     .alumni-name { font-weight: 600; font-size: .88rem; color: var(--navy); flex: 1; }
     .alumni-where { font-size: .8rem; color: var(--gray-600); }
 
     #panel-alumni { display: none; }
-
     @media (max-width: 960px) { .member-grid { grid-template-columns: repeat(3,1fr); } }
     @media (max-width: 680px) { .member-grid { grid-template-columns: repeat(2,1fr); } }
     @media (max-width: 420px) { .member-grid { grid-template-columns: 1fr; } }
@@ -88,11 +71,9 @@
 
 <div class="page-header">
   <div class="page-header-inner">
-    <div class="breadcrumb">
-      <a href="../">Home</a><span>/</span><span>Members</span>
-    </div>
+    <div class="breadcrumb"><a href="../">Home</a><span>/</span><span>Members</span></div>
     <h1>Lab Members</h1>
-    <p>The people who make SMOP Lab great</p>
+    <p>The people behind SMOP Lab's research</p>
   </div>
 </div>
 
@@ -103,126 +84,11 @@
       <button class="tab" onclick="switchTab('alumni', this)">Alumni</button>
     </div>
 
-    <!-- CURRENT MEMBERS -->
-    <div id="panel-current">
-
-      <!-- Postdoctoral -->
-      <div class="member-section">
-        <p class="member-section-title">Postdoctoral Researchers</p>
-        <div class="member-grid">
-          <div class="member-card">
-            <div class="member-avatar"></div>
-            <div class="member-info">
-              <p class="member-name">[Name]</p>
-              <p class="member-name-kr">[Korean Name]</p>
-              <span class="tag tag-purple member-role">Postdoctoral Researcher</span>
-              <p class="member-interest">Research Interest: [Add here]</p>
-              <p class="member-email"><a href="#">[email]@korea.ac.kr</a></p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- PhD -->
-      <div class="member-section">
-        <p class="member-section-title">Ph.D. Candidates</p>
-        <div class="member-grid">
-          <div class="member-card">
-            <div class="member-avatar"></div>
-            <div class="member-info">
-              <p class="member-name">[Name]</p>
-              <p class="member-name-kr">[Korean Name]</p>
-              <span class="tag tag-blue member-role">Ph.D. Candidate</span>
-              <p class="member-interest">Research Interest: [Add here]</p>
-              <p class="member-email"><a href="#">[email]@korea.ac.kr</a></p>
-            </div>
-          </div>
-          <div class="member-card">
-            <div class="member-avatar"></div>
-            <div class="member-info">
-              <p class="member-name">[Name]</p>
-              <p class="member-name-kr">[Korean Name]</p>
-              <span class="tag tag-blue member-role">Ph.D. Candidate</span>
-              <p class="member-interest">Research Interest: [Add here]</p>
-              <p class="member-email"><a href="#">[email]@korea.ac.kr</a></p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Master's -->
-      <div class="member-section">
-        <p class="member-section-title">Master's Students</p>
-        <div class="member-grid">
-          <div class="member-card">
-            <div class="member-avatar"></div>
-            <div class="member-info">
-              <p class="member-name">Minseo Park</p>
-              <p class="member-name-kr">박민서</p>
-              <span class="tag tag-teal member-role">Master's Student</span>
-              <p class="member-interest">Research Interest: [Add here]</p>
-              <p class="member-email"><a href="mailto:miiiin@korea.ac.kr">miiiin@korea.ac.kr</a></p>
-            </div>
-          </div>
-          <div class="member-card">
-            <div class="member-avatar"></div>
-            <div class="member-info">
-              <p class="member-name">[Name]</p>
-              <p class="member-name-kr">[Korean Name]</p>
-              <span class="tag tag-teal member-role">Master's Student</span>
-              <p class="member-interest">Research Interest: [Add here]</p>
-              <p class="member-email"><a href="#">[email]@korea.ac.kr</a></p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Undergraduate -->
-      <div class="member-section">
-        <p class="member-section-title">Undergraduate Researchers</p>
-        <div class="member-grid">
-          <div class="member-card">
-            <div class="member-avatar"></div>
-            <div class="member-info">
-              <p class="member-name">[Name]</p>
-              <p class="member-name-kr">[Korean Name]</p>
-              <span class="tag tag-green member-role">Undergraduate Researcher</span>
-              <p class="member-interest">Research Interest: [Add here]</p>
-              <p class="member-email"><a href="#">[email]@korea.ac.kr</a></p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- ALUMNI -->
+    <div id="panel-current"></div>
     <div id="panel-alumni">
       <p class="section-sub" style="margin-bottom:2rem;">Former members of SMOP Lab and their current positions.</p>
-      <div class="alumni-list">
-        <div class="alumni-item">
-          <span class="alumni-year">2024</span>
-          <span class="alumni-name">[Name] · <span style="font-weight:400; color:var(--gray-600)">Ph.D.</span></span>
-          <span class="alumni-where">→ [Current position / company]</span>
-        </div>
-        <div class="alumni-item">
-          <span class="alumni-year">2023</span>
-          <span class="alumni-name">[Name] · <span style="font-weight:400; color:var(--gray-600)">M.S.</span></span>
-          <span class="alumni-where">→ [Current position / company]</span>
-        </div>
-        <div class="alumni-item">
-          <span class="alumni-year">2022</span>
-          <span class="alumni-name">[Name] · <span style="font-weight:400; color:var(--gray-600)">Ph.D.</span></span>
-          <span class="alumni-where">→ [Current position / company]</span>
-        </div>
-        <div class="alumni-item">
-          <span class="alumni-year">2022</span>
-          <span class="alumni-name">[Name] · <span style="font-weight:400; color:var(--gray-600)">M.S.</span></span>
-          <span class="alumni-where">→ [Current position / company]</span>
-        </div>
-      </div>
+      <div class="alumni-list" id="alumni-list"></div>
     </div>
-
   </div>
 </section>
 
@@ -258,12 +124,65 @@
   <p class="footer-copy">© 2025 SMOP Lab · Korea University. All rights reserved.</p>
 </footer>
 
+<script src="../data/members.js"></script>
 <script>
+const ROLE_CONFIG = {
+  postdoc:  { label: "Postdoctoral Researchers", tag: "tag-purple", badge: "Postdoctoral Researcher" },
+  phd:      { label: "Ph.D. Candidates",         tag: "tag-blue",   badge: "Ph.D. Candidate" },
+  masters:  { label: "Master's Students",         tag: "tag-teal",   badge: "Master's Student" },
+  undergrad:{ label: "Undergraduate Researchers", tag: "tag-green",  badge: "Undergraduate Researcher" },
+};
+const ROLE_ORDER = ["postdoc","phd","masters","undergrad"];
+
+// render current members
+function renderCurrent() {
+  let html = "";
+  ROLE_ORDER.forEach(role => {
+    const members = CURRENT_MEMBERS.filter(m => m.role === role);
+    if (!members.length) return;
+    const cfg = ROLE_CONFIG[role];
+    html += `<div class="member-section"><p class="member-section-title">${cfg.label}</p><div class="member-grid">`;
+    members.forEach(m => {
+      const avatar = m.photo
+        ? `<img src="../${m.photo}" alt="${m.name}">`
+        : "";
+      html += `
+        <div class="member-card">
+          <div class="member-avatar">${avatar}</div>
+          <div class="member-info">
+            <p class="member-name">${m.name}</p>
+            <p class="member-name-kr">${m.nameKr}</p>
+            <span class="tag ${cfg.tag} member-role">${cfg.badge}</span>
+            <p class="member-interest">${m.interest}</p>
+            <p class="member-email"><a href="mailto:${m.email}">${m.email}</a></p>
+          </div>
+        </div>`;
+    });
+    html += `</div></div>`;
+  });
+  document.getElementById("panel-current").innerHTML = html;
+}
+
+// render alumni
+function renderAlumni() {
+  const sorted = [...ALUMNI].sort((a,b) => b.year - a.year);
+  const html = sorted.map(a => `
+    <div class="alumni-item">
+      <span class="alumni-year">${a.year}</span>
+      <span class="alumni-name">${a.name}${a.nameKr ? ` · <span style="font-weight:400;color:var(--gray-500)">${a.nameKr}</span>` : ""} · <span style="font-weight:400;color:var(--gray-600)">${a.degree}</span></span>
+      <span class="alumni-where">→ ${a.position}</span>
+    </div>`).join("");
+  document.getElementById("alumni-list").innerHTML = html;
+}
+
+renderCurrent();
+renderAlumni();
+
 function switchTab(panel, btn) {
-  document.getElementById('panel-current').style.display = panel === 'current' ? 'block' : 'none';
-  document.getElementById('panel-alumni').style.display = panel === 'alumni' ? 'block' : 'none';
-  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-  btn.classList.add('active');
+  document.querySelectorAll(".tab").forEach(t => t.classList.remove("active"));
+  btn.classList.add("active");
+  document.getElementById("panel-current").style.display = panel === "current" ? "" : "none";
+  document.getElementById("panel-alumni").style.display  = panel === "alumni"  ? "" : "none";
 }
 </script>
 

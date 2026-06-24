@@ -21,7 +21,7 @@
     .proj-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 1.25rem; }
     .proj-card {
       background: var(--white); border: 1px solid var(--gray-200);
-      border-radius: var(--radius-md); padding: 1.5rem;
+      border-radius: 6px; padding: 1.5rem;
       transition: all var(--transition); position: relative;
     }
     .proj-card:hover { box-shadow: var(--shadow-md); border-color: var(--gray-300); transform: translateY(-2px); }
@@ -31,23 +31,13 @@
       background: var(--gray-100); border-radius: var(--radius-full);
       padding: .2rem .65rem; white-space: nowrap; flex-shrink: 0;
     }
-    .proj-title {
-      font-family: var(--font-heading); font-weight: 700;
-      font-size: 1rem; color: var(--navy); line-height: 1.45;
-      margin-bottom: .4rem;
-    }
+    .proj-title { font-family: var(--font-heading); font-weight: 700; font-size: 1rem; color: var(--navy); line-height: 1.45; margin-bottom: .4rem; }
     .proj-agency { font-size: .9rem; color: var(--gray-500); margin-bottom: .6rem; }
     .proj-desc { font-size: .9rem; color: var(--gray-600); line-height: 1.6; }
-    .proj-status {
-      display: inline-flex; align-items: center; gap: .35rem;
-      font-size: .8rem; font-weight: 600; margin-top: .75rem;
-    }
+    .proj-status { display: inline-flex; align-items: center; gap: .35rem; font-size: .8rem; font-weight: 600; margin-top: .75rem; }
     .proj-status::before { content: '●'; font-size: .55rem; }
-    .active { color: #16a34a; }
-    .active::before { color: #16a34a; }
-    .completed { color: var(--gray-400); }
-    .completed::before { color: var(--gray-400); }
-
+    .active { color: #16a34a; } .active::before { color: #16a34a; }
+    .completed { color: var(--gray-400); } .completed::before { color: var(--gray-400); }
     @media (max-width: 640px) { .proj-grid { grid-template-columns: 1fr; } }
   </style>
 </head>
@@ -73,9 +63,7 @@
 
 <div class="page-header">
   <div class="page-header-inner">
-    <div class="breadcrumb">
-      <a href="../">Home</a><span>/</span><span>Projects</span>
-    </div>
+    <div class="breadcrumb"><a href="../">Home</a><span>/</span><span>Projects</span></div>
     <h1>Research Projects</h1>
     <p>Government-funded and university research projects since 2020</p>
   </div>
@@ -83,256 +71,7 @@
 
 <section>
   <div class="section-inner">
-
-    <!-- 2025 -->
-    <div class="year-group">
-      <h2 class="year-label">2025 <span class="year-count">5 projects</span></h2>
-      <div class="proj-grid">
-        <div class="proj-card">
-          <div class="proj-top">
-            <p class="proj-title">포천~철원 고속도로 건설 예비타당성조사</p>
-            <span class="proj-period">2025–2026</span>
-          </div>
-          <p class="proj-agency">Korea Development Institute (KDI)</p>
-          <p class="proj-desc">Traffic demand and benefit estimation for the Pocheong-Cheolwon highway construction project.</p>
-          <span class="proj-status active">Ongoing</span>
-        </div>
-        <div class="proj-card">
-          <div class="proj-top">
-            <p class="proj-title">화성시 교통약자 이동편의 서비스 운영체계 개선</p>
-            <span class="proj-period">2025</span>
-          </div>
-          <p class="proj-agency">Hwaseong City Hall</p>
-          <p class="proj-desc">Operations system improvement research for mobility services for the transportation-disadvantaged in Hwaseong City.</p>
-          <span class="proj-status active">Ongoing</span>
-        </div>
-        <div class="proj-card">
-          <div class="proj-top">
-            <p class="proj-title">제6차 국도건설 5개년계획 수립 예비타당성조사 (전북·전남)</p>
-            <span class="proj-period">2025–2026</span>
-          </div>
-          <p class="proj-agency">Korea Development Institute (KDI)</p>
-          <p class="proj-desc">Demand estimation and economic analysis for 6th National Road Construction 5-Year Plan projects in Jeollabuk-do and Jeollanam-do.</p>
-          <span class="proj-status active">Ongoing</span>
-        </div>
-        <div class="proj-card">
-          <div class="proj-top">
-            <p class="proj-title">경기도 철도 환승 손실 보전비 산정</p>
-            <span class="proj-period">2025</span>
-          </div>
-          <p class="proj-agency">Gyeonggi Research Institute</p>
-          <p class="proj-desc">Line-specific subsidy analysis for Gyeonggi Province railway transfer loss compensation.</p>
-          <span class="proj-status active">Ongoing</span>
-        </div>
-        <div class="proj-card">
-          <div class="proj-top">
-            <p class="proj-title">지방도 98호선 광주~여주 도로건설 예비타당성조사</p>
-            <span class="proj-period">2025–2026</span>
-          </div>
-          <p class="proj-agency">Korea Development Institute (KDI)</p>
-          <p class="proj-desc">Demand and benefit estimation, economic analysis for Local Road 98 Gwangju-Yeoju construction.</p>
-          <span class="proj-status active">Ongoing</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- 2024 -->
-    <div class="year-group">
-      <h2 class="year-label">2024 <span class="year-count">5 projects</span></h2>
-      <div class="proj-grid">
-        <div class="proj-card">
-          <div class="proj-top">
-            <p class="proj-title">창원 국가산업단지 재생사업 연결도로 확장</p>
-            <span class="proj-period">2024–2025</span>
-          </div>
-          <p class="proj-agency">Korea Development Institute (KDI)</p>
-          <p class="proj-desc">Demand, benefit, and economic analysis for bridge expansion in Changwon National Industrial Complex Regeneration Project.</p>
-          <span class="proj-status active">Ongoing</span>
-        </div>
-        <div class="proj-card">
-          <div class="proj-top">
-            <p class="proj-title">통행시간 신뢰성을 고려한 대중교통 네트워크 설계</p>
-            <span class="proj-period">2024–2025</span>
-          </div>
-          <p class="proj-agency">Korea University</p>
-          <p class="proj-desc">Public transportation network optimization considering travel time reliability.</p>
-          <span class="proj-status active">Ongoing</span>
-        </div>
-        <div class="proj-card">
-          <div class="proj-top">
-            <p class="proj-title">미래 철도운영기술 개발 수요조사</p>
-            <span class="proj-period">2024</span>
-          </div>
-          <p class="proj-agency">Korea Railroad Research Institute (KRRI)</p>
-          <p class="proj-desc">Technology trend and demand analysis for future railway operations technology development.</p>
-          <span class="proj-status completed">Completed</span>
-        </div>
-        <div class="proj-card">
-          <div class="proj-top">
-            <p class="proj-title">지방도 98호선 양근교 도로건설</p>
-            <span class="proj-period">2024–2025</span>
-          </div>
-          <p class="proj-agency">Korea Development Institute (KDI)</p>
-          <p class="proj-desc">Demand and benefit estimation for Local Road 98 Yanggeun Bridge Road Construction.</p>
-          <span class="proj-status active">Ongoing</span>
-        </div>
-        <div class="proj-card">
-          <div class="proj-top">
-            <p class="proj-title">경기도 도로 310호선 확장사업 타당성조사</p>
-            <span class="proj-period">2024</span>
-          </div>
-          <p class="proj-agency">Korea Local Administration Research Institute (KLAI)</p>
-          <p class="proj-desc">Demand and benefit analysis for Gyeonggi Provincial Road 310 expansion project.</p>
-          <span class="proj-status completed">Completed</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- 2023 -->
-    <div class="year-group">
-      <h2 class="year-label">2023 <span class="year-count">1 project</span></h2>
-      <div class="proj-grid">
-        <div class="proj-card">
-          <div class="proj-top">
-            <p class="proj-title">머신러닝 기반 자율주행 열차 통행시간 추정 모형 고도화</p>
-            <span class="proj-period">2023</span>
-          </div>
-          <p class="proj-agency">Korea Railroad Research Institute (KRRI)</p>
-          <p class="proj-desc">Enhancement of machine learning-based autonomous train travel time estimation model.</p>
-          <span class="proj-status completed">Completed</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- 2022 -->
-    <div class="year-group">
-      <h2 class="year-label">2022 <span class="year-count">2 projects</span></h2>
-      <div class="proj-grid">
-        <div class="proj-card">
-          <div class="proj-top">
-            <p class="proj-title">데이터 기반 자율주행 열차 시뮬레이션</p>
-            <span class="proj-period">2022</span>
-          </div>
-          <p class="proj-agency">Korea Railroad Research Institute (KRRI)</p>
-          <p class="proj-desc">Congestion and travel time analysis simulation for data-driven autonomous train operations.</p>
-          <span class="proj-status completed">Completed</span>
-        </div>
-        <div class="proj-card">
-          <div class="proj-top">
-            <p class="proj-title">Connected Highway 안전시스템</p>
-            <span class="proj-period">2022–2023</span>
-          </div>
-          <p class="proj-agency">Korea University</p>
-          <p class="proj-desc">Data analysis to modeling research for connected highway safety systems.</p>
-          <span class="proj-status completed">Completed</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- 2021 -->
-    <div class="year-group">
-      <h2 class="year-label">2021 <span class="year-count">3 projects</span></h2>
-      <div class="proj-grid">
-        <div class="proj-card">
-          <div class="proj-top">
-            <p class="proj-title">공유 모빌리티 서비스 플랫폼 네트워크 알고리즘 구축</p>
-            <span class="proj-period">2021–2026</span>
-          </div>
-          <p class="proj-agency">National Research Foundation of Korea (NRF)</p>
-          <p class="proj-desc">Algorithm development for O2O startup platforms — shared mobility services portal network algorithm.</p>
-          <span class="proj-status active">Ongoing</span>
-        </div>
-        <div class="proj-card">
-          <div class="proj-top">
-            <p class="proj-title">COVID-19 수도권 대중교통 이용행태 변화 분석</p>
-            <span class="proj-period">2021–2022</span>
-          </div>
-          <p class="proj-agency">Korea Transport Institute (KOTI)</p>
-          <p class="proj-desc">Travel pattern analysis of post-pandemic changes in Seoul metropolitan transit use behavior.</p>
-          <span class="proj-status completed">Completed</span>
-        </div>
-        <div class="proj-card">
-          <div class="proj-top">
-            <p class="proj-title">실시간 정차시간 예측 알고리즘 개발</p>
-            <span class="proj-period">2021</span>
-          </div>
-          <p class="proj-agency">Korea Railroad Research Institute (KRRI)</p>
-          <p class="proj-desc">Congestion-based real-time dwell time prediction algorithm development.</p>
-          <span class="proj-status completed">Completed</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- 2020 -->
-    <div class="year-group">
-      <h2 class="year-label">2020 <span class="year-count">7 projects</span></h2>
-      <div class="proj-grid">
-        <div class="proj-card">
-          <div class="proj-top">
-            <p class="proj-title">충주시 고속국도~역세권 연결도로 타당성조사</p>
-            <span class="proj-period">2020–2021</span>
-          </div>
-          <p class="proj-agency">Korea Local Administration Research Institute (KLAI)</p>
-          <p class="proj-desc">Demand and benefit estimation for Chungju City highway-to-station connection road.</p>
-          <span class="proj-status completed">Completed</span>
-        </div>
-        <div class="proj-card">
-          <div class="proj-top">
-            <p class="proj-title">지역 철도 역세권 접근성 분석</p>
-            <span class="proj-period">2020</span>
-          </div>
-          <p class="proj-agency">Korea Transport Institute (KOTI)</p>
-          <p class="proj-desc">Regional equity-based national railway network strategy research and station accessibility analysis.</p>
-          <span class="proj-status completed">Completed</span>
-        </div>
-        <div class="proj-card">
-          <div class="proj-top">
-            <p class="proj-title">김해~밀양 고속도로 예비타당성조사</p>
-            <span class="proj-period">2020–2022</span>
-          </div>
-          <p class="proj-agency">Korea Development Institute (KDI)</p>
-          <p class="proj-desc">Traffic demand and economic analysis for Gimhae-Miryang Expressway.</p>
-          <span class="proj-status completed">Completed</span>
-        </div>
-        <div class="proj-card">
-          <div class="proj-top">
-            <p class="proj-title">전라남도 지방도 확장사업 타당성조사</p>
-            <span class="proj-period">2020–2021</span>
-          </div>
-          <p class="proj-agency">Korea Local Administration Research Institute (KLAI)</p>
-          <p class="proj-desc">Pre-feasibility study for Jeollanam-do local road expansion project.</p>
-          <span class="proj-status completed">Completed</span>
-        </div>
-        <div class="proj-card">
-          <div class="proj-top">
-            <p class="proj-title">머신러닝 기반 열차 정차시간 예측</p>
-            <span class="proj-period">2020</span>
-          </div>
-          <p class="proj-agency">Korea Railroad Research Institute (KRRI)</p>
-          <p class="proj-desc">Real-time congestion-based machine learning algorithm for train dwell time prediction.</p>
-          <span class="proj-status completed">Completed</span>
-        </div>
-        <div class="proj-card">
-          <div class="proj-top">
-            <p class="proj-title">재난 대피 및 긴급차량 경로 통합 모형</p>
-            <span class="proj-period">2020–2021</span>
-          </div>
-          <p class="proj-agency">National Research Foundation of Korea (NRF)</p>
-          <p class="proj-desc">Transit-linked personalized real-time evacuation routing model for integrated disaster evacuation and emergency vehicle routing.</p>
-          <span class="proj-status completed">Completed</span>
-        </div>
-        <div class="proj-card">
-          <div class="proj-top">
-            <p class="proj-title">번영로 확장사업 수요 및 개선효과 추정</p>
-            <span class="proj-period">2020</span>
-          </div>
-          <p class="proj-agency">Seoul Research Institute</p>
-          <p class="proj-desc">Demand and improvement effect estimation for Beoman Road expansion project.</p>
-          <span class="proj-status completed">Completed</span>
-        </div>
-      </div>
-    </div>
-
+    <div id="proj-list"></div>
   </div>
 </section>
 
@@ -342,9 +81,9 @@
       <p class="footer-brand">SMOP Lab</p>
       <p class="footer-tagline">Smart Mobility Operations and Planning Laboratory<br>Korea University, Seoul, Korea</p>
       <p class="footer-info">
-        📧 <a href="mailto:s_kang@korea.ac.kr">s_kang@korea.ac.kr</a><br>
-        📞 +82-2-3290-4862<br>
-        📍 신공학관, Korea University, Seoul
+        <a href="mailto:s_kang@korea.ac.kr">s_kang@korea.ac.kr</a><br>
+        +82-2-3290-4862<br>
+        신공학관, Korea University, Seoul
       </p>
     </div>
     <div class="footer-col">
@@ -368,38 +107,48 @@
   <p class="footer-copy">© 2025 SMOP Lab · Korea University. All rights reserved.</p>
 </footer>
 
+<script src="../data/projects.js"></script>
 <script>
 const currentYear = new Date().getFullYear();
 
-// 연도별 프로젝트 수 자동 계산
-document.querySelectorAll('.year-group').forEach(group => {
-  const cards = group.querySelectorAll('.proj-card');
-  const countEl = group.querySelector('.year-count');
-  if (countEl) {
-    const n = cards.length;
-    countEl.textContent = `${n} project${n !== 1 ? 's' : ''}`;
-  }
-});
-
-// 기간 텍스트로 ongoing/completed 자동 판단
-document.querySelectorAll('.proj-card').forEach(card => {
-  const periodEl = card.querySelector('.proj-period');
-  const statusEl = card.querySelector('.proj-status');
-  if (!periodEl || !statusEl) return;
-
-  const parts = periodEl.textContent.trim().split(/[–\-]/);
+function isOngoing(period) {
+  const parts = period.split(/[–\-]/);
   const endYear = parseInt(parts[parts.length - 1].trim());
+  return !isNaN(endYear) && endYear >= currentYear;
+}
 
-  if (!isNaN(endYear)) {
-    if (endYear >= currentYear) {
-      statusEl.className = 'proj-status active';
-      statusEl.textContent = 'Ongoing';
-    } else {
-      statusEl.className = 'proj-status completed';
-      statusEl.textContent = 'Completed';
-    }
-  }
+// group by startYear descending
+const groups = {};
+PROJECTS.forEach(p => {
+  if (!groups[p.startYear]) groups[p.startYear] = [];
+  groups[p.startYear].push(p);
 });
+
+const years = Object.keys(groups).map(Number).sort((a,b) => b - a);
+let html = "";
+years.forEach(yr => {
+  const items = groups[yr];
+  html += `<div class="year-group">
+    <h2 class="year-label">${yr} <span class="year-count">${items.length} project${items.length !== 1 ? 's' : ''}</span></h2>
+    <div class="proj-grid">`;
+  items.forEach(p => {
+    const ongoing = isOngoing(p.period);
+    html += `
+      <div class="proj-card">
+        <div class="proj-top">
+          <p class="proj-title">${p.title}</p>
+          <span class="proj-period">${p.period}</span>
+        </div>
+        <p class="proj-agency">${p.agency}</p>
+        <p class="proj-desc">${p.desc}</p>
+        <span class="proj-status ${ongoing ? 'active' : 'completed'}">${ongoing ? 'Ongoing' : 'Completed'}</span>
+      </div>`;
+  });
+  html += `</div></div>`;
+});
+
+document.getElementById("proj-list").innerHTML = html;
 </script>
+
 </body>
 </html>
