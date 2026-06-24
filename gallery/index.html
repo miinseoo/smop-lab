@@ -46,20 +46,37 @@
   </div>
 </section>
 
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+  <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+  <button class="lightbox-nav lightbox-prev" onclick="event.stopPropagation(); shiftLightbox(-1)">&#8592;</button>
+  <button class="lightbox-nav lightbox-next" onclick="event.stopPropagation(); shiftLightbox(1)">&#8594;</button>
+  <div class="lightbox-inner" onclick="event.stopPropagation()">
+    <div id="lightbox-content"></div>
+    <div class="lightbox-caption">
+      <p class="lightbox-title" id="lightbox-title"></p>
+      <p class="lightbox-date"  id="lightbox-date"></p>
+    </div>
+  </div>
+</div>
+
 <div id="footer-root"></div>
 <script src="../components/footer.js"></script>
 
 <script src="../data/gallery.js"></script>
 <script>
+let currentItems = [];
+let currentIndex = 0;
+
 function renderGallery(filter) {
-  const items = filter === "all" ? GALLERY : GALLERY.filter(g => g.category === filter);
-  const html = items.map(g => {
+  currentItems = filter === "all" ? GALLERY : GALLERY.filter(g => g.category === filter);
+  const html = currentItems.map((g, i) => {
     const sizeClass = g.size ? ` ${g.size}` : "";
     const inner = g.image
       ? `<img src="../${g.image}" alt="${g.title}">`
       : `<div class="gallery-placeholder"><p>${g.title}</p></div>`;
     return `
-      <div class="gallery-item${sizeClass}" data-category="${g.category}">
+      <div class="gallery-item${sizeClass}" data-category="${g.category}" onclick="openLightbox(${i})">
         ${inner}
         <div class="gallery-overlay">
           <p class="gallery-overlay-title">${g.title}</p>
@@ -69,6 +86,46 @@ function renderGallery(filter) {
   }).join("");
   document.getElementById("gallery-grid").innerHTML = html;
 }
+
+function openLightbox(index) {
+  currentIndex = index;
+  showLightboxItem();
+  document.getElementById("lightbox").classList.add("open");
+  document.body.style.overflow = "hidden";
+}
+
+function showLightboxItem() {
+  const g = currentItems[currentIndex];
+  const content = g.image
+    ? `<img class="lightbox-img" src="../${g.image}" alt="${g.title}">`
+    : `<div class="lightbox-placeholder"><p>${g.title}</p></div>`;
+  document.getElementById("lightbox-content").innerHTML = content;
+  document.getElementById("lightbox-title").textContent = g.title;
+  document.getElementById("lightbox-date").textContent  = g.date;
+
+  // 이전/다음 버튼 숨기기 (항목이 1개면)
+  document.querySelector(".lightbox-prev").style.display = currentItems.length > 1 ? "" : "none";
+  document.querySelector(".lightbox-next").style.display = currentItems.length > 1 ? "" : "none";
+}
+
+function shiftLightbox(dir) {
+  currentIndex = (currentIndex + dir + currentItems.length) % currentItems.length;
+  showLightboxItem();
+}
+
+function closeLightbox(e) {
+  if (e && e.target !== document.getElementById("lightbox") && e.target !== document.querySelector(".lightbox-close")) return;
+  document.getElementById("lightbox").classList.remove("open");
+  document.body.style.overflow = "";
+}
+
+document.addEventListener("keydown", e => {
+  const lb = document.getElementById("lightbox");
+  if (!lb.classList.contains("open")) return;
+  if (e.key === "Escape")     closeLightbox();
+  if (e.key === "ArrowLeft")  shiftLightbox(-1);
+  if (e.key === "ArrowRight") shiftLightbox(1);
+});
 
 renderGallery("all");
 
