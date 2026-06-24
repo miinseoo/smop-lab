@@ -69,35 +69,7 @@
       <h2 class="section-title" style="margin-bottom:0;">Recent News</h2>
       <a href="publications/" class="btn btn-outline">All Publications →</a>
     </div>
-    <div class="news-list">
-      <div class="news-item">
-        <span class="news-date">2026</span>
-        <div class="news-body">
-          <p class="news-title">Paper accepted — <em>Transportation Research Record</em></p>
-          <p class="news-desc">Park, Hyun; Park, Hyuncheol; Kang, Seungmo. "Pickup and Delivery Problem with Synchronous and Asynchronous Transshipment for Q-Commerce Delivery."</p>
-        </div>
-      </div>
-      <div class="news-item">
-        <span class="news-date">2026</span>
-        <div class="news-body">
-          <p class="news-title">Paper accepted — <em>IEEE Transactions on Intelligent Transportation Systems</em></p>
-          <p class="news-desc">Sleiman, Wissam et al. "Diffusion process-based model for Network Trajectory Propagation."</p>
-        </div>
-      </div>
-      <div class="news-item">
-        <span class="news-date">NeurIPS 2025</span>
-        <div class="news-body">
-          <p class="news-title">BO4Mob: Bayesian Optimization Benchmarks for High-Dimensional Urban Mobility</p>
-          <p class="news-desc">Ryu, Seunghee et al. Accepted at NeurIPS 2025.</p>
-        </div>
-      </div>
-      <div class="news-item">
-        <span class="news-date">2025</span>
-        <div class="news-body">
-          <p class="news-title">Prof. Kang elected VP of Korean Society of Transportation (2025–2027)</p>
-        </div>
-      </div>
-    </div>
+    <div class="news-list" id="news-list"></div>
   </div>
 </section>
 
@@ -133,37 +105,22 @@
 <div id="footer-root"></div>
 <script src="components/footer.js"></script>
 
+<script src="data/publications.js"></script>
 <script>
-async function loadRecentPublications() {
-  try {
-    const res = await fetch('publications/');
-    if (!res.ok) return;
-    const html = await res.text();
-    const doc = new DOMParser().parseFromString(html, 'text/html');
-    const items = doc.querySelectorAll('.year-group .pub-item');
-    const newsList = document.querySelector('.news-list');
-    if (!newsList || items.length === 0) return;
-    newsList.innerHTML = '';
-    const count = Math.min(4, items.length);
-    for (let i = 0; i < count; i++) {
-      const item = items[i];
-      const title = item.querySelector('.pub-title')?.textContent.trim() || '';
-      const authors = item.querySelector('.pub-authors')?.textContent.trim() || '';
-      const venue = item.querySelector('.pub-venue')?.textContent.trim() || '';
-      const year = item.closest('.year-group')?.querySelector('.year-label')?.childNodes[0]?.textContent.trim() || '';
-      const el = document.createElement('div');
-      el.className = 'news-item';
-      el.innerHTML = `
-        <span class="news-date">${year}</span>
-        <div class="news-body">
-          <p class="news-title">${title}</p>
-          <p class="news-desc">${authors} &mdash; <em>${venue}</em></p>
-        </div>`;
-      newsList.appendChild(el);
-    }
-  } catch (e) {}
-}
-loadRecentPublications();
+// publications.js의 PUBLICATIONS 배열에서 최신 4개 자동 렌더링
+const recent = PUBLICATIONS.slice(0, 4);
+document.getElementById("news-list").innerHTML = recent.map(p => {
+  const authors = p.authors.join("; ");
+  const venue = p.accepted ? p.venue + " · Accepted" : p.venue;
+  return `
+    <div class="news-item">
+      <span class="news-date">${p.yearLabel}</span>
+      <div class="news-body">
+        <p class="news-title">${p.title}</p>
+        <p class="news-desc">${authors} — <em>${venue}</em></p>
+      </div>
+    </div>`;
+}).join("");
 </script>
 
 </body>
