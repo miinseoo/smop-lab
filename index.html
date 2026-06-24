@@ -123,12 +123,12 @@
     </button>
     <ul class="nav-links">
       <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="professor.html">Professor</a></li>
-      <li><a href="members.html">Members</a></li>
-      <li><a href="publications.html">Publications</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="gallery.html">Gallery</a></li>
-      <li><a href="contact.html">Contact</a></li>
+      <li><a href="professor/">Professor</a></li>
+      <li><a href="members/">Members</a></li>
+      <li><a href="publications/">Publications</a></li>
+      <li><a href="projects/">Projects</a></li>
+      <li><a href="gallery/">Gallery</a></li>
+      <li><a href="contact/">Contact</a></li>
     </ul>
   </div>
 </nav>
@@ -157,7 +157,7 @@
       We combine operations research, machine learning, and large-scale data analysis
       to create practical solutions.
     </p>
-    <a href="professor.html" class="btn btn-outline" style="margin-top:.5rem;">Meet Prof. Kang →</a>
+    <a href="professor/" class="btn btn-outline" style="margin-top:.5rem;">Meet Prof. Kang →</a>
   </div>
 </section>
 
@@ -166,7 +166,7 @@
   <div class="section-inner">
     <div class="research-head">
       <h2 class="section-title" style="margin-bottom:0;">Research Areas</h2>
-      <a href="projects.html" class="btn btn-outline">View Projects →</a>
+      <a href="projects/" class="btn btn-outline">View Projects →</a>
     </div>
     <div class="topic-list">
       <div class="topic-row"><span class="topic-num">01</span><span class="topic-name">Transportation Planning &amp; Operations</span></div>
@@ -188,7 +188,7 @@
   <div class="section-inner">
     <div class="news-head">
       <h2 class="section-title" style="margin-bottom:0;">Recent News</h2>
-      <a href="publications.html" class="btn btn-outline">All Publications →</a>
+      <a href="publications/" class="btn btn-outline">All Publications →</a>
     </div>
     <div class="news-list">
       <div class="news-item">
@@ -247,7 +247,7 @@
         <p class="recruit-role-desc">For candidates with strong publication records in related fields.</p>
       </div>
     </div>
-    <a href="contact.html" class="btn-recruit">Contact Us →</a>
+    <a href="contact/" class="btn-recruit">Contact Us →</a>
   </div>
 </section>
 
@@ -267,17 +267,17 @@
       <h4>Pages</h4>
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="professor.html">Professor</a></li>
-        <li><a href="members.html">Members</a></li>
-        <li><a href="publications.html">Publications</a></li>
+        <li><a href="professor/">Professor</a></li>
+        <li><a href="members/">Members</a></li>
+        <li><a href="publications/">Publications</a></li>
       </ul>
     </div>
     <div class="footer-col">
       <h4>&nbsp;</h4>
       <ul>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="projects/">Projects</a></li>
+        <li><a href="gallery/">Gallery</a></li>
+        <li><a href="contact/">Contact</a></li>
       </ul>
     </div>
   </div>
@@ -287,7 +287,7 @@
 <script>
 async function loadRecentPublications() {
   try {
-    const res = await fetch('publications.html');
+    const res = await fetch('publications/');
     if (!res.ok) return;
     const html = await res.text();
     const doc = new DOMParser().parseFromString(html, 'text/html');

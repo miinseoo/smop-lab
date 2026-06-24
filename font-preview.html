@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Font Preview</title>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700;800&family=DM+Sans:wght@400;700;800&family=Space+Grotesk:wght@400;700&family=Instrument+Sans:wght@400;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: #f8fafc; padding: 3rem 2rem; font-family: 'Inter', sans-serif; }
+
+    .options { display: flex; flex-direction: column; gap: 0; max-width: 860px; margin: 0 auto; }
+
+    .option {
+      background: #fff;
+      border: 1px solid #e2e8f0;
+      border-bottom: none;
+      padding: 2.5rem 3rem;
+    }
+    .option:first-child { border-radius: 14px 14px 0 0; }
+    .option:last-child  { border-radius: 0 0 14px 14px; border-bottom: 1px solid #e2e8f0; }
+
+    .label {
+      font-size: .72rem; font-weight: 600; letter-spacing: .12em;
+      text-transform: uppercase; color: #94a3b8; margin-bottom: 1rem;
+    }
+    .sample-heading {
+      font-size: 2.2rem; font-weight: 800; color: #0a1628;
+      line-height: 1.1; margin-bottom: .6rem;
+    }
+    .sample-body {
+      font-size: 1rem; color: #475569; line-height: 1.75;
+    }
+
+    .ibm     { font-family: 'IBM Plex Sans', sans-serif; }
+    .dm      { font-family: 'DM Sans', sans-serif; }
+    .space   { font-family: 'Space Grotesk', sans-serif; }
+    .instr   { font-family: 'Instrument Sans', sans-serif; }
+  </style>
+</head>
+<body>
+
+<div class="options">
+
+  <div class="option">
+    <p class="label">① IBM Plex Sans</p>
+    <p class="sample-heading ibm">Smart Mobility<br>Operations &amp; Planning</p>
+    <p class="sample-body ibm">We develop mathematical models and data-driven systems to address challenging transportation problems.</p>
+  </div>
+
+  <div class="option">
+    <p class="label">② DM Sans</p>
+    <p class="sample-heading dm">Smart Mobility<br>Operations &amp; Planning</p>
+    <p class="sample-body dm">We develop mathematical models and data-driven systems to address challenging transportation problems.</p>
+  </div>
+
+  <div class="option">
+    <p class="label">③ Space Grotesk</p>
+    <p class="sample-heading space">Smart Mobility<br>Operations &amp; Planning</p>
+    <p class="sample-body space">We develop mathematical models and data-driven systems to address challenging transportation problems.</p>
+  </div>
+
+  <div class="option">
+    <p class="label">④ Instrument Sans</p>
+    <p class="sample-heading instr">Smart Mobility<br>Operations &amp; Planning</p>
+    <p class="sample-body instr">We develop mathematical models and data-driven systems to address challenging transportation problems.</p>
+  </div>
+
+</div>
+
+</body>
+</html>

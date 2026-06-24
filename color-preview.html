@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Color Options — SMOP Lab</title>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Inter', sans-serif; background: #f1f5f9; padding: 2rem; }
+    h1 { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.1rem; font-weight: 700; color: #334155; margin-bottom: 1.5rem; text-align: center; }
+    .grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1.25rem; }
+
+    .swatch {
+      border-radius: 14px; overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0,0,0,.12);
+      cursor: pointer; transition: transform .15s; position: relative;
+    }
+    .swatch:hover { transform: translateY(-4px); }
+
+    .swatch-hero {
+      padding: 1.5rem;
+      display: flex; flex-direction: column; gap: .5rem;
+    }
+    .swatch-kicker { font-size: .6rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; opacity: .5; }
+    .swatch-title { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.15rem; font-weight: 800; line-height: 1.1; }
+    .swatch-title span { display: block; }
+    .swatch-btn {
+      margin-top: .75rem; display: inline-flex; align-items: center;
+      font-size: .7rem; font-weight: 700; padding: .4rem .85rem;
+      border-radius: 5px; width: fit-content;
+    }
+    .swatch-btn2 {
+      display: inline-flex; align-items: center;
+      font-size: .7rem; font-weight: 600; padding: .38rem .85rem;
+      border-radius: 5px; width: fit-content; margin-left: .4rem;
+    }
+    .swatch-btns { display: flex; margin-top: .5rem; }
+
+    .swatch-body { background: #fff; padding: 1rem 1.25rem; }
+    .swatch-nav {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: .5rem 1rem; border-bottom: 1px solid #e2e8f0;
+    }
+    .swatch-logo { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: .85rem; color: #0a1628; }
+    .swatch-links { display: flex; gap: .35rem; }
+    .swatch-link { font-size: .55rem; font-weight: 500; color: #94a3b8; padding: .2rem .4rem; border-radius: 3px; }
+    .swatch-link.active { color: #fff; border-radius: 3px; padding: .2rem .4rem; }
+
+    .swatch-section { padding: .85rem 1.25rem; }
+    .swatch-tag { display: inline-flex; font-size: .55rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; padding: .18rem .5rem; border-radius: 100px; margin-bottom: .4rem; }
+    .swatch-h { font-family: 'Plus Jakarta Sans', sans-serif; font-size: .85rem; font-weight: 800; color: #0a1628; margin-bottom: .25rem; }
+    .swatch-p { font-size: .6rem; color: #64748b; line-height: 1.5; }
+    .swatch-card { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: .65rem; margin-top: .5rem; }
+    .swatch-card-num { font-size: .55rem; font-weight: 700; color: #94a3b8; margin-bottom: .2rem; }
+    .swatch-card-name { font-size: .65rem; font-weight: 700; color: #0a1628; }
+
+    .label {
+      text-align: center; padding: .75rem;
+      font-size: .72rem; font-weight: 700; color: #64748b;
+      background: #f8fafc; border-top: 1px solid #e2e8f0;
+    }
+    .label strong { display: block; font-size: .8rem; color: #1e293b; margin-bottom: .1rem; }
+  </style>
+</head>
+<body>
+
+<h1>포인트 컬러 옵션 — 마음에 드는 거 골라줘요!</h1>
+
+<div class="grid">
+
+  <!-- 1. 기존 파란색 (절제) -->
+  <div class="swatch">
+    <div class="swatch-nav" style="background:#fff;">
+      <div class="swatch-logo">SMOP<span style="color:#1a5cf8">.</span>Lab</div>
+      <div class="swatch-links">
+        <span class="swatch-link active" style="background:#1a5cf8">Home</span>
+        <span class="swatch-link">Prof</span>
+        <span class="swatch-link">Members</span>
+      </div>
+    </div>
+    <div class="swatch-hero" style="background:linear-gradient(140deg,#0a1628,#0f2a5c); color:#fff;">
+      <p class="swatch-kicker">Korea University</p>
+      <div class="swatch-title">
+        Smart Mobility<br>
+        <span style="color:#60a5fa">Operations &amp;<br>Planning</span>
+      </div>
+      <div class="swatch-btns">
+        <span class="swatch-btn" style="background:#1a5cf8;color:#fff;">Our Research</span>
+        <span class="swatch-btn2" style="background:rgba(255,255,255,.1);color:rgba(255,255,255,.8);border:1px solid rgba(255,255,255,.2)">Join Lab</span>
+      </div>
+    </div>
+    <div class="swatch-body">
+      <div class="swatch-section">
+        <div class="swatch-tag" style="background:#eff6ff;color:#1a5cf8">Research</div>
+        <div class="swatch-h">Main Topics</div>
+        <div class="swatch-card">
+          <div class="swatch-card-num">01</div>
+          <div class="swatch-card-name">Transportation Planning</div>
+        </div>
+        <div class="swatch-card" style="margin-top:.35rem">
+          <div class="swatch-card-num">02</div>
+          <div class="swatch-card-name">Logistics Optimization</div>
+        </div>
+      </div>
+    </div>
+    <div class="label"><strong>① 파란색 유지</strong>#1a5cf8 · 절제해서 사용</div>
+  </div>
+
+  <!-- 2. 인디고 -->
+  <div class="swatch">
+    <div class="swatch-nav" style="background:#fff;">
+      <div class="swatch-logo">SMOP<span style="color:#4f46e5">.</span>Lab</div>
+      <div class="swatch-links">
+        <span class="swatch-link active" style="background:#4f46e5">Home</span>
+        <span class="swatch-link">Prof</span>
+        <span class="swatch-link">Members</span>
+      </div>
+    </div>
+    <div class="swatch-hero" style="background:linear-gradient(140deg,#0a0e2a,#1a1060); color:#fff;">
+      <p class="swatch-kicker">Korea University</p>
+      <div class="swatch-title">
+        Smart Mobility<br>
+        <span style="color:#a5b4fc">Operations &amp;<br>Planning</span>
+      </div>
+      <div class="swatch-btns">
+        <span class="swatch-btn" style="background:#4f46e5;color:#fff;">Our Research</span>
+        <span class="swatch-btn2" style="background:rgba(255,255,255,.1);color:rgba(255,255,255,.8);border:1px solid rgba(255,255,255,.2)">Join Lab</span>
+      </div>
+    </div>
+    <div class="swatch-body">
+      <div class="swatch-section">
+        <div class="swatch-tag" style="background:#eef2ff;color:#4f46e5">Research</div>
+        <div class="swatch-h">Main Topics</div>
+        <div class="swatch-card">
+          <div class="swatch-card-num">01</div>
+          <div class="swatch-card-name">Transportation Planning</div>
+        </div>
+        <div class="swatch-card" style="margin-top:.35rem">
+          <div class="swatch-card-num">02</div>
+          <div class="swatch-card-name">Logistics Optimization</div>
+        </div>
+      </div>
+    </div>
+    <div class="label"><strong>② 인디고</strong>#4f46e5 · 차분하고 고급스러운</div>
+  </div>
+
+  <!-- 3. 에메랄드 그린 -->
+  <div class="swatch">
+    <div class="swatch-nav" style="background:#fff;">
+      <div class="swatch-logo">SMOP<span style="color:#059669">.</span>Lab</div>
+      <div class="swatch-links">
+        <span class="swatch-link active" style="background:#059669">Home</span>
+        <span class="swatch-link">Prof</span>
+        <span class="swatch-link">Members</span>
+      </div>
+    </div>
+    <div class="swatch-hero" style="background:linear-gradient(140deg,#0a1628,#062a1f); color:#fff;">
+      <p class="swatch-kicker">Korea University</p>
+      <div class="swatch-title">
+        Smart Mobility<br>
+        <span style="color:#6ee7b7">Operations &amp;<br>Planning</span>
+      </div>
+      <div class="swatch-btns">
+        <span class="swatch-btn" style="background:#059669;color:#fff;">Our Research</span>
+        <span class="swatch-btn2" style="background:rgba(255,255,255,.1);color:rgba(255,255,255,.8);border:1px solid rgba(255,255,255,.2)">Join Lab</span>
+      </div>
+    </div>
+    <div class="swatch-body">
+      <div class="swatch-section">
+        <div class="swatch-tag" style="background:#ecfdf5;color:#059669">Research</div>
+        <div class="swatch-h">Main Topics</div>
+        <div class="swatch-card">
+          <div class="swatch-card-num">01</div>
+          <div class="swatch-card-name">Transportation Planning</div>
+        </div>
+        <div class="swatch-card" style="margin-top:.35rem">
+          <div class="swatch-card-num">02</div>
+          <div class="swatch-card-name">Logistics Optimization</div>
+        </div>
+      </div>
+    </div>
+    <div class="label"><strong>③ 에메랄드</strong>#059669 · 신선하고 차별화</div>
+  </div>
+
+  <!-- 4. 앰버 -->
+  <div class="swatch">
+    <div class="swatch-nav" style="background:#fff;">
+      <div class="swatch-logo">SMOP<span style="color:#d97706">.</span>Lab</div>
+      <div class="swatch-links">
+        <span class="swatch-link active" style="background:#d97706">Home</span>
+        <span class="swatch-link">Prof</span>
+        <span class="swatch-link">Members</span>
+      </div>
+    </div>
+    <div class="swatch-hero" style="background:linear-gradient(140deg,#0a1628,#1c1200); color:#fff;">
+      <p class="swatch-kicker">Korea University</p>
+      <div class="swatch-title">
+        Smart Mobility<br>
+        <span style="color:#fcd34d">Operations &amp;<br>Planning</span>
+      </div>
+      <div class="swatch-btns">
+        <span class="swatch-btn" style="background:#d97706;color:#fff;">Our Research</span>
+        <span class="swatch-btn2" style="background:rgba(255,255,255,.1);color:rgba(255,255,255,.8);border:1px solid rgba(255,255,255,.2)">Join Lab</span>
+      </div>
+    </div>
+    <div class="swatch-body">
+      <div class="swatch-section">
+        <div class="swatch-tag" style="background:#fffbeb;color:#d97706">Research</div>
+        <div class="swatch-h">Main Topics</div>
+        <div class="swatch-card">
+          <div class="swatch-card-num">01</div>
+          <div class="swatch-card-name">Transportation Planning</div>
+        </div>
+        <div class="swatch-card" style="margin-top:.35rem">
+          <div class="swatch-card-num">02</div>
+          <div class="swatch-card-name">Logistics Optimization</div>
+        </div>
+      </div>
+    </div>
+    <div class="label"><strong>④ 앰버</strong>#d97706 · 에디토리얼, 따뜻한</div>
+  </div>
+
+  <!-- 5. 모노크롬 (색 없음) -->
+  <div class="swatch">
+    <div class="swatch-nav" style="background:#fff;">
+      <div class="swatch-logo" style="color:#0a1628">SMOP<span style="color:#0a1628">.</span>Lab</div>
+      <div class="swatch-links">
+        <span class="swatch-link active" style="background:#0a1628;color:#fff;">Home</span>
+        <span class="swatch-link">Prof</span>
+        <span class="swatch-link">Members</span>
+      </div>
+    </div>
+    <div class="swatch-hero" style="background:#0a1628; color:#fff;">
+      <p class="swatch-kicker">Korea University</p>
+      <div class="swatch-title">
+        Smart Mobility<br>
+        <span style="color:rgba(255,255,255,.5)">Operations &amp;<br>Planning</span>
+      </div>
+      <div class="swatch-btns">
+        <span class="swatch-btn" style="background:#fff;color:#0a1628;">Our Research</span>
+        <span class="swatch-btn2" style="background:rgba(255,255,255,.1);color:rgba(255,255,255,.8);border:1px solid rgba(255,255,255,.2)">Join Lab</span>
+      </div>
+    </div>
+    <div class="swatch-body">
+      <div class="swatch-section">
+        <div class="swatch-tag" style="background:#f1f5f9;color:#475569">Research</div>
+        <div class="swatch-h">Main Topics</div>
+        <div class="swatch-card">
+          <div class="swatch-card-num">01</div>
+          <div class="swatch-card-name">Transportation Planning</div>
+        </div>
+        <div class="swatch-card" style="margin-top:.35rem">
+          <div class="swatch-card-num">02</div>
+          <div class="swatch-card-name">Logistics Optimization</div>
+        </div>
+      </div>
+    </div>
+    <div class="label"><strong>⑤ 모노크롬</strong>색 없음 · 가장 미니멀</div>
+  </div>
+
+</div>
+
+<p style="text-align:center;margin-top:1.5rem;font-size:.82rem;color:#94a3b8;">마음에 드는 번호를 Claude에게 알려주세요!</p>
+
+</body>
+</html>
