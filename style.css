@@ -38,7 +38,7 @@ html { scroll-behavior: smooth; }
 body {
   font-family: var(--font-body);
   color: var(--ink);
-  background: #F4F5F4;
+  background: #ffffff;
   line-height: 1.75;
   font-size: 1.1rem;
   -webkit-font-smoothing: antialiased;
@@ -84,17 +84,17 @@ footer { background: #F4F5F4; padding: 3.5rem 2rem 2rem; }
   max-width: 1200px; margin: 0 auto;
   display: grid; grid-template-columns: 2fr 1fr 1fr;
   gap: 3rem; padding-bottom: 2.5rem;
-  border-bottom: 1px solid rgba(255,255,255,.08);
+  border-bottom: 1px solid var(--gray-200);
 }
-.footer-brand { font-family: var(--font-heading); font-weight: 700; font-size: 1.15rem; color: var(--white); margin-bottom: .5rem; }
-.footer-tagline { font-size: .88rem; color: rgba(255,255,255,.4); line-height: 1.7; margin-bottom: 1rem; }
-.footer-info { font-size: .85rem; color: rgba(255,255,255,.45); line-height: 1.9; }
-.footer-info a:hover { color: rgba(255,255,255,.8); }
-.footer-col h4 { color: rgba(255,255,255,.5); font-size: .8rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; margin-bottom: 1rem; }
+.footer-brand { font-family: var(--font-heading); font-weight: 700; font-size: 1.15rem; color: var(--navy); margin-bottom: .5rem; }
+.footer-tagline { font-size: .88rem; color: var(--gray-600); line-height: 1.7; margin-bottom: 1rem; }
+.footer-info { font-size: .85rem; color: var(--gray-600); line-height: 1.9; }
+.footer-info a:hover { color: var(--navy); }
+.footer-col h4 { color: var(--gray-400); font-size: .8rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; margin-bottom: 1rem; }
 .footer-col li { margin-bottom: .45rem; }
-.footer-col a { font-size: .88rem; color: rgba(255,255,255,.4); transition: color var(--transition); }
-.footer-col a:hover { color: rgba(255,255,255,.8); }
-.footer-copy { max-width: 1200px; margin: 1.5rem auto 0; font-size: .8rem; color: rgba(255,255,255,.18); }
+.footer-col a { font-size: .88rem; color: var(--gray-600); transition: color var(--transition); }
+.footer-col a:hover { color: var(--navy); }
+.footer-copy { max-width: 1200px; margin: 1.5rem auto 0; font-size: .8rem; color: var(--gray-400); }
 
 /* ── SECTION ──────────────────────── */
 section { padding: 6rem 2rem; }
@@ -109,7 +109,7 @@ section { padding: 6rem 2rem; }
 }
 .section-title {
   font-family: var(--font-heading);
-  font-size: clamp(2.2rem, 3.5vw, 3rem);
+  font-size: clamp(1.8rem, 2.8vw, 2.4rem);
   font-weight: 700; color: var(--navy);
   line-height: 1.15; letter-spacing: -.2px; margin-bottom: .75rem;
 }

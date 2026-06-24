@@ -29,7 +29,7 @@
 .about-body { font-size: 1.15rem; color: var(--gray-600); line-height: 1.9; margin-bottom: 1.5rem; }
 
 /* RESEARCH AREAS */
-.research { background: var(--gray-50); }
+.research { background: #F4F5F4; }
 .research-head { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 2.5rem; }
 .topic-list { display: grid; grid-template-columns: 1fr 1fr; }
 .topic-row {
@@ -38,8 +38,8 @@
   transition: padding-left var(--transition);
 }
 .topic-row:hover { padding-left: .5rem; }
-.topic-num { font-size: .75rem; font-weight: 700; color: var(--gray-300); letter-spacing: .05em; flex-shrink: 0; }
-.topic-name { font-size: 1.05rem; font-weight: 500; color: var(--gray-700); }
+.topic-num { font-size: 1.2rem; font-weight: 700; color: #747474; letter-spacing: .05em; flex-shrink: 0; }
+.topic-name { font-size: 1.2rem; font-weight: 500; color: var(--gray-700); }
 
 /* NEWS */
 .news-head { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 2rem; }
@@ -57,16 +57,16 @@
 /* RECRUITING */
 .recruiting { background: #F4F5F4; color: var(--navy); }
 .recruit-top { margin-bottom: 3rem; }
-.recruit-sub { font-size: 1.05rem; color: rgba(255,255,255,.55); max-width: 600px; line-height: 1.8; }
+.recruit-sub { font-size: 1.05rem; color: var(--gray-600); max-width: 600px; line-height: 1.8; }
 .recruit-roles {
   display: grid; grid-template-columns: repeat(4,1fr);
-  gap: 0; border-top: 1px solid rgba(255,255,255,.1);
+  gap: 0; border-top: 1px solid var(--gray-200);
 }
-.recruit-role-item { padding: 2rem 2rem 2rem 1.75rem; border-right: 1px solid rgba(255,255,255,.08); }
+.recruit-role-item { padding: 2rem 2rem 2rem 1.75rem; border-right: 1px solid var(--gray-200); }
 .recruit-role-item:first-child { padding-left: 0; }
 .recruit-role-item:last-child { border-right: none; padding-right: 0; }
-.recruit-role-name { font-family: var(--font-heading); font-weight: 600; font-size: 1.1rem; color: #fff; margin-bottom: .5rem; }
-.recruit-role-desc { font-size: .95rem; color: rgba(255,255,255,.45); line-height: 1.75; }
+.recruit-role-name { font-family: var(--font-heading); font-weight: 600; font-size: 1.1rem; color: var(--navy); margin-bottom: .5rem; }
+.recruit-role-desc { font-size: .95rem; color: var(--gray-600); line-height: 1.75; }
 .btn-recruit {
   display: inline-flex; align-items: center;
   margin-top: 2.5rem; background: #fff; color: var(--navy);
@@ -82,6 +82,6 @@
 }
 @media (max-width: 640px) {
   .recruit-roles { grid-template-columns: 1fr; }
-  .recruit-role-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,.08); padding-right: 0; }
+  .recruit-role-item { border-right: none; border-bottom: 1px solid var(--gray-200); padding-right: 0; }
   .news-item { grid-template-columns: 1fr; gap: .4rem; }
 }
