@@ -48,6 +48,8 @@
   font-size: .75rem; font-weight: 700; color: var(--gray-400);
 }
 
+.tab-panel-hidden { display: none !important; }
+
 @media (max-width: 960px) { .member-grid { grid-template-columns: repeat(3,1fr); } }
 @media (max-width: 680px) { .member-grid { grid-template-columns: repeat(2,1fr); } }
 @media (max-width: 420px) { .member-grid { grid-template-columns: 1fr; } }
