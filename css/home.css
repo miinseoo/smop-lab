@@ -1,0 +1,94 @@
+/* ── index.html (홈) 페이지 전용 스타일 ── */
+
+/* HERO */
+.hero {
+  position: relative; color: #fff;
+  padding: 12rem 2rem 8rem; overflow: hidden;
+  min-height: 560px; display: flex; align-items: flex-end;
+}
+.hero-bg {
+  position: absolute; inset: 0;
+  background-image: url('../images/hero.jpg');
+  background-size: cover; background-position: center 30%;
+  background-color: var(--navy); z-index: 0;
+}
+.hero-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(10,22,40,.88) 0%, rgba(10,22,40,.4) 60%, rgba(10,22,40,.15) 100%);
+  z-index: 1;
+}
+.hero-inner { max-width: 1200px; margin: 0 auto; position: relative; z-index: 2; width: 100%; }
+.hero-kicker {
+  display: inline-flex; align-items: center; gap: .6rem;
+  font-size: .8rem; font-weight: 600; letter-spacing: .16em;
+  text-transform: uppercase; color: rgba(255,255,255,.5); margin-bottom: 1.1rem;
+}
+.hero-kicker::before { content: ''; width: 20px; height: 1px; background: rgba(255,255,255,.35); }
+.hero-title {
+  font-family: var(--font-heading);
+  font-size: clamp(3rem, 6vw, 5rem);
+  font-weight: 700; line-height: 1.06; letter-spacing: -.3px;
+}
+.hero-title .line2 { color: rgba(255,255,255,.6); }
+
+/* ABOUT */
+.about-section { border-bottom: 1px solid var(--gray-200); }
+.about-body { font-size: 1.15rem; color: var(--gray-600); line-height: 1.9; margin-bottom: 1.5rem; }
+
+/* RESEARCH AREAS */
+.research { background: var(--gray-50); }
+.research-head { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 2.5rem; }
+.topic-list { display: grid; grid-template-columns: 1fr 1fr; }
+.topic-row {
+  display: flex; align-items: baseline; gap: 1.25rem;
+  padding: 1.1rem 0; border-bottom: 1px solid var(--gray-200);
+  transition: padding-left var(--transition);
+}
+.topic-row:hover { padding-left: .5rem; }
+.topic-num { font-size: .75rem; font-weight: 700; color: var(--gray-300); letter-spacing: .05em; flex-shrink: 0; }
+.topic-name { font-size: 1.05rem; font-weight: 500; color: var(--gray-700); }
+
+/* NEWS */
+.news-head { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 2rem; }
+.news-list { display: flex; flex-direction: column; }
+.news-item {
+  display: grid; grid-template-columns: 120px 1fr;
+  gap: 2rem; padding: 1.5rem 0; border-bottom: 1px solid var(--gray-100);
+}
+.news-item:last-child { border-bottom: none; }
+.news-date { font-size: .8rem; font-weight: 600; color: var(--gray-400); letter-spacing: .03em; padding-top: .2rem; }
+.news-title { font-size: 1.05rem; font-weight: 600; color: var(--navy); line-height: 1.5; margin-bottom: .35rem; }
+.news-title em { font-style: italic; font-weight: 400; }
+.news-desc { font-size: .95rem; color: var(--gray-600); line-height: 1.7; }
+
+/* RECRUITING */
+.recruiting { background: var(--navy); color: #fff; }
+.recruit-top { margin-bottom: 3rem; }
+.recruit-sub { font-size: 1.05rem; color: rgba(255,255,255,.55); max-width: 600px; line-height: 1.8; }
+.recruit-roles {
+  display: grid; grid-template-columns: repeat(4,1fr);
+  gap: 0; border-top: 1px solid rgba(255,255,255,.1);
+}
+.recruit-role-item { padding: 2rem 2rem 2rem 1.75rem; border-right: 1px solid rgba(255,255,255,.08); }
+.recruit-role-item:first-child { padding-left: 0; }
+.recruit-role-item:last-child { border-right: none; padding-right: 0; }
+.recruit-role-name { font-family: var(--font-heading); font-weight: 600; font-size: 1.1rem; color: #fff; margin-bottom: .5rem; }
+.recruit-role-desc { font-size: .95rem; color: rgba(255,255,255,.45); line-height: 1.75; }
+.btn-recruit {
+  display: inline-flex; align-items: center;
+  margin-top: 2.5rem; background: #fff; color: var(--navy);
+  padding: .85rem 2rem; font-size: .95rem; font-weight: 600;
+  border-radius: var(--radius-xs); transition: all var(--transition);
+}
+.btn-recruit:hover { background: rgba(255,255,255,.88); transform: translateY(-1px); }
+
+@media (max-width: 960px) {
+  .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  .topic-list { grid-template-columns: 1fr; }
+  .recruit-roles { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+  .recruit-roles { grid-template-columns: 1fr; }
+  .recruit-role-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,.08); padding-right: 0; }
+  .news-item { grid-template-columns: 1fr; gap: .4rem; }
+}

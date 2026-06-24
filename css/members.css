@@ -1,0 +1,44 @@
+/* ── members/index.html 페이지 전용 스타일 ── */
+
+.tab-bar { display: flex; gap: .5rem; margin-bottom: 3rem; border-bottom: 1px solid var(--gray-200); }
+.tab {
+  font-size: 1.05rem; font-weight: 600; color: var(--gray-400);
+  padding: .65rem 1.25rem; border-bottom: 2px solid transparent;
+  cursor: pointer; transition: all var(--transition);
+  margin-bottom: -1px; background: none; border-top: none; border-left: none; border-right: none;
+}
+.tab.active { color: var(--navy); border-bottom-color: var(--navy); }
+.tab:hover { color: var(--gray-700); }
+
+.member-section { margin-bottom: 3.5rem; }
+.member-section-title {
+  font-family: var(--font-heading); font-weight: 700; font-size: 1.25rem;
+  letter-spacing: .06em; text-transform: uppercase; color: var(--gray-400);
+  margin-bottom: 1.25rem; padding-bottom: .5rem; border-bottom: 1px solid var(--gray-200);
+}
+.member-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 1.25rem; }
+.member-card { background: var(--white); border: 1px solid var(--gray-200); border-radius: 6px; overflow: hidden; transition: all var(--transition); }
+.member-card:hover { box-shadow: var(--shadow-md); transform: translateY(-3px); border-color: var(--gray-300); }
+.member-avatar { background: linear-gradient(135deg, var(--gray-100) 0%, var(--gray-200) 100%); aspect-ratio: 1/1; overflow: hidden; }
+.member-avatar img { width: 100%; height: 100%; object-fit: cover; }
+.member-info { padding: 1.1rem; }
+.member-name { font-family: var(--font-heading); font-weight: 700; font-size: 1.05rem; color: var(--navy); margin-bottom: .2rem; }
+.member-name-kr { font-size: .88rem; color: var(--gray-400); margin-bottom: .6rem; }
+.member-role { display: inline-block; font-size: .8rem; font-weight: 700; }
+.member-interest { font-size: .88rem; color: var(--gray-600); margin-top: .6rem; line-height: 1.5; }
+.member-email { font-size: .85rem; color: var(--gray-400); margin-top: .5rem; }
+.member-email a { color: var(--navy); }
+.member-email a:hover { text-decoration: underline; }
+
+.alumni-list { display: flex; flex-direction: column; gap: 0; }
+.alumni-item { display: flex; align-items: center; gap: 1.5rem; padding: .9rem 0; border-bottom: 1px solid var(--gray-100); }
+.alumni-item:last-child { border-bottom: none; }
+.alumni-year { min-width: 50px; font-size: .78rem; font-weight: 700; color: var(--gray-400); }
+.alumni-name { font-weight: 600; font-size: .88rem; color: var(--navy); flex: 1; }
+.alumni-where { font-size: .8rem; color: var(--gray-600); }
+
+#panel-alumni { display: none; }
+
+@media (max-width: 960px) { .member-grid { grid-template-columns: repeat(3,1fr); } }
+@media (max-width: 680px) { .member-grid { grid-template-columns: repeat(2,1fr); } }
+@media (max-width: 420px) { .member-grid { grid-template-columns: 1fr; } }

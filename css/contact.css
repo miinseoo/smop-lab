@@ -1,0 +1,64 @@
+/* ── contact/index.html 페이지 전용 스타일 ── */
+
+.contact-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; margin-top: 3rem; align-items: start; }
+
+/* Info side */
+.contact-block { margin-bottom: 2.5rem; }
+.contact-block-title {
+  font-family: var(--font-heading); font-weight: 700; font-size: 1.1rem;
+  letter-spacing: .08em; text-transform: uppercase; color: var(--gray-500);
+  margin-bottom: 1rem; padding-bottom: .5rem; border-bottom: 1px solid var(--gray-200);
+}
+.contact-row { display: flex; gap: 1rem; padding: .75rem 0; border-bottom: 1px solid var(--gray-100); align-items: flex-start; }
+.contact-row:last-child { border-bottom: none; }
+.contact-label { font-size: .82rem; font-weight: 600; color: var(--gray-400); text-transform: uppercase; letter-spacing: .06em; margin-bottom: .1rem; }
+.contact-value { font-size: 1rem; color: var(--navy); font-weight: 500; }
+.contact-value a { color: var(--navy); }
+.contact-value a:hover { text-decoration: underline; }
+
+/* Map */
+.map-embed {
+  width: 100%; height: 280px; background: var(--gray-100);
+  border-radius: var(--radius-md); border: 1px solid var(--gray-200);
+  display: flex; flex-direction: column; align-items: center;
+  justify-content: center; gap: .5rem; overflow: hidden; margin-top: 1.5rem;
+}
+.map-embed iframe { width: 100%; height: 100%; border: none; display: block; }
+
+/* Form side */
+.form-card { background: var(--gray-50); border: 1px solid var(--gray-200); border-radius: var(--radius-lg); padding: 2.5rem; }
+.form-title { font-family: var(--font-heading); font-weight: 700; font-size: 1.25rem; color: var(--navy); margin-bottom: .5rem; }
+.form-desc { font-size: .875rem; color: var(--gray-600); line-height: 1.7; margin-bottom: 2rem; }
+.form-group { margin-bottom: 1.25rem; }
+label { display: block; font-size: .78rem; font-weight: 600; color: var(--gray-700); margin-bottom: .4rem; letter-spacing: .02em; }
+input, select, textarea {
+  width: 100%; padding: .7rem .9rem;
+  border: 1.5px solid var(--gray-200); border-radius: var(--radius-xs);
+  font-family: var(--font-body); font-size: .875rem; color: var(--gray-800);
+  background: var(--white); transition: border-color var(--transition), box-shadow var(--transition);
+  outline: none; resize: vertical;
+}
+input:focus, select:focus, textarea:focus { border-color: var(--navy); box-shadow: 0 0 0 3px rgba(10,22,40,.08); }
+textarea { min-height: 120px; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.form-submit {
+  width: 100%; background: var(--navy); color: #fff;
+  padding: .85rem; font-size: .9rem; font-weight: 700;
+  border-radius: var(--radius-xs); border: none;
+  cursor: pointer; transition: all var(--transition);
+  font-family: var(--font-body); margin-top: .5rem;
+}
+.form-submit:hover { background: var(--ink); transform: translateY(-1px); box-shadow: 0 4px 20px rgba(10,22,40,.2); }
+.form-note { font-size: .75rem; color: var(--gray-400); text-align: center; margin-top: .85rem; }
+
+/* Recruiting callout */
+.recruit-callout { border-top: 1.5px solid var(--gray-200); padding-top: 1.75rem; margin-top: 2.5rem; }
+.recruit-callout h3 { font-family: var(--font-heading); font-weight: 700; font-size: 1.1rem; color: var(--navy); margin-bottom: .5rem; }
+.recruit-callout p { font-size: .92rem; color: var(--gray-600); line-height: 1.75; margin-bottom: 1.25rem; }
+.recruit-roles-inline { font-size: .9rem; color: var(--ink); }
+.recruit-roles-inline span { color: var(--gray-300); margin: 0 .5rem; }
+
+@media (max-width: 860px) {
+  .contact-layout { grid-template-columns: 1fr; gap: 2.5rem; }
+  .form-row { grid-template-columns: 1fr; }
+}

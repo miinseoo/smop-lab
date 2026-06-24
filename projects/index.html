@@ -5,61 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Projects — SMOP Lab</title>
   <link rel="stylesheet" href="../style.css" />
-  <style>
-    .year-group { margin-bottom: 3rem; }
-    .year-label {
-      font-family: var(--font-heading); font-weight: 700;
-      font-size: 1.4rem; color: var(--navy); margin-bottom: 1.25rem;
-      padding-bottom: .75rem; border-bottom: 2px solid var(--gray-200);
-      display: flex; align-items: center; gap: .75rem;
-    }
-    .year-count {
-      font-size: .75rem; font-weight: 600; color: var(--gray-400);
-      background: var(--gray-100); border-radius: var(--radius-full);
-      padding: .2rem .65rem;
-    }
-    .proj-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 1.25rem; }
-    .proj-card {
-      background: var(--white); border: 1px solid var(--gray-200);
-      border-radius: 6px; padding: 1.5rem;
-      transition: all var(--transition); position: relative;
-    }
-    .proj-card:hover { box-shadow: var(--shadow-md); border-color: var(--gray-300); transform: translateY(-2px); }
-    .proj-top { display: flex; justify-content: space-between; align-items: flex-start; gap: .75rem; margin-bottom: .85rem; }
-    .proj-period {
-      font-size: .82rem; font-weight: 600; color: var(--gray-500);
-      background: var(--gray-100); border-radius: var(--radius-full);
-      padding: .2rem .65rem; white-space: nowrap; flex-shrink: 0;
-    }
-    .proj-title { font-family: var(--font-heading); font-weight: 700; font-size: 1rem; color: var(--navy); line-height: 1.45; margin-bottom: .4rem; }
-    .proj-agency { font-size: .9rem; color: var(--gray-500); margin-bottom: .6rem; }
-    .proj-desc { font-size: .9rem; color: var(--gray-600); line-height: 1.6; }
-    .proj-status { display: inline-flex; align-items: center; gap: .35rem; font-size: .8rem; font-weight: 600; margin-top: .75rem; }
-    .proj-status::before { content: '●'; font-size: .55rem; }
-    .active { color: #16a34a; } .active::before { color: #16a34a; }
-    .completed { color: var(--gray-400); } .completed::before { color: var(--gray-400); }
-    @media (max-width: 640px) { .proj-grid { grid-template-columns: 1fr; } }
-  </style>
+  <link rel="stylesheet" href="../css/projects.css" />
 </head>
 <body>
 
-<nav class="navbar">
-  <div class="nav-inner">
-    <a href="../" class="nav-logo"><div class="logo-icon"><div class="logo-sm">SM</div><div class="logo-op">OP</div></div></a>
-    <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Toggle menu">
-      <span></span><span></span><span></span>
-    </button>
-    <ul class="nav-links">
-      <li><a href="../">Home</a></li>
-      <li><a href="../professor/">Professor</a></li>
-      <li><a href="../members/">Members</a></li>
-      <li><a href="../publications/">Publications</a></li>
-      <li><a href="../projects/" class="active">Projects</a></li>
-      <li><a href="../gallery/">Gallery</a></li>
-      <li><a href="../contact/">Contact</a></li>
-    </ul>
-  </div>
-</nav>
+<div id="nav-root"></div>
+<script src="../components/nav.js"></script>
 
 <div class="page-header">
   <div class="page-header-inner">
@@ -75,37 +26,8 @@
   </div>
 </section>
 
-<footer>
-  <div class="footer-inner">
-    <div>
-      <p class="footer-brand">SMOP Lab</p>
-      <p class="footer-tagline">Smart Mobility Operations and Planning Laboratory<br>Korea University, Seoul, Korea</p>
-      <p class="footer-info">
-        <a href="mailto:s_kang@korea.ac.kr">s_kang@korea.ac.kr</a><br>
-        +82-2-3290-4862<br>
-        신공학관, Korea University, Seoul
-      </p>
-    </div>
-    <div class="footer-col">
-      <h4>Pages</h4>
-      <ul>
-        <li><a href="../">Home</a></li>
-        <li><a href="../professor/">Professor</a></li>
-        <li><a href="../members/">Members</a></li>
-        <li><a href="../publications/">Publications</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h4>&nbsp;</h4>
-      <ul>
-        <li><a href="../projects/">Projects</a></li>
-        <li><a href="../gallery/">Gallery</a></li>
-        <li><a href="../contact/">Contact</a></li>
-      </ul>
-    </div>
-  </div>
-  <p class="footer-copy">© 2025 SMOP Lab · Korea University. All rights reserved.</p>
-</footer>
+<div id="footer-root"></div>
+<script src="../components/footer.js"></script>
 
 <script src="../data/projects.js"></script>
 <script>
@@ -117,7 +39,6 @@ function isOngoing(period) {
   return !isNaN(endYear) && endYear >= currentYear;
 }
 
-// group by startYear descending
 const groups = {};
 PROJECTS.forEach(p => {
   if (!groups[p.startYear]) groups[p.startYear] = [];

@@ -5,67 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Gallery — SMOP Lab</title>
   <link rel="stylesheet" href="../style.css" />
-  <style>
-    .filter-bar { display: flex; gap: .5rem; flex-wrap: wrap; margin-bottom: 2.5rem; }
-    .filter-btn {
-      font-family: var(--font-heading);
-      font-size: .95rem; font-weight: 600; padding: .45rem 1.2rem;
-      border-radius: var(--radius-full); border: 1.5px solid var(--gray-200);
-      background: var(--white); color: var(--gray-600);
-      cursor: pointer; transition: all var(--transition);
-    }
-    .filter-btn.active, .filter-btn:hover { border-color: var(--navy); color: var(--navy); background: var(--gray-100); }
-
-    .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); grid-auto-rows: 240px; gap: 1rem; }
-    .gallery-item {
-      background: var(--gray-100); border-radius: 6px;
-      overflow: hidden; cursor: pointer; position: relative;
-      transition: all var(--transition); display: flex; align-items: center; justify-content: center;
-    }
-    .gallery-item.wide { grid-column: span 2; }
-    .gallery-item.tall { grid-row: span 2; }
-    .gallery-item.hidden { display: none; }
-    .gallery-item img { width: 100%; height: 100%; object-fit: cover; display: block; }
-    .gallery-item:hover { transform: scale(1.02); box-shadow: var(--shadow-lg); }
-    .gallery-item:hover .gallery-overlay { opacity: 1; }
-    .gallery-placeholder { display: flex; flex-direction: column; align-items: center; gap: .5rem; }
-    .gallery-placeholder p { font-size: .9rem; color: var(--gray-400); font-weight: 500; }
-    .gallery-overlay {
-      position: absolute; inset: 0; background: rgba(10,22,40,.6);
-      display: flex; flex-direction: column; align-items: center; justify-content: center;
-      opacity: 0; transition: opacity var(--transition); padding: 1.5rem; text-align: center;
-    }
-    .gallery-overlay-title { font-family: var(--font-heading); font-weight: 700; font-size: 1.05rem; color: #fff; margin-bottom: .3rem; }
-    .gallery-overlay-date { font-size: .88rem; color: rgba(255,255,255,.6); }
-
-    .add-photo-notice { background: var(--gray-50); border: 1.5px dashed var(--gray-300); border-radius: 6px; padding: 1.5rem 2rem; margin-bottom: 2rem; }
-    .add-photo-notice strong { font-size: 1rem; color: var(--navy); display: block; margin-bottom: .5rem; }
-    .add-photo-notice p { font-size: .92rem; color: var(--gray-600); line-height: 1.75; }
-    .add-photo-notice code { background: var(--gray-200); padding: .1rem .4rem; border-radius: 4px; font-size: .88rem; color: var(--navy); }
-
-    @media (max-width: 768px) { .gallery-grid { grid-template-columns: repeat(2,1fr); grid-auto-rows: 180px; } .gallery-item.wide { grid-column: span 1; } }
-    @media (max-width: 480px) { .gallery-grid { grid-template-columns: 1fr; grid-auto-rows: 200px; } .gallery-item.tall { grid-row: span 1; } }
-  </style>
+  <link rel="stylesheet" href="../css/gallery.css" />
 </head>
 <body>
 
-<nav class="navbar">
-  <div class="nav-inner">
-    <a href="../" class="nav-logo"><div class="logo-icon"><div class="logo-sm">SM</div><div class="logo-op">OP</div></div></a>
-    <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Toggle menu">
-      <span></span><span></span><span></span>
-    </button>
-    <ul class="nav-links">
-      <li><a href="../">Home</a></li>
-      <li><a href="../professor/">Professor</a></li>
-      <li><a href="../members/">Members</a></li>
-      <li><a href="../publications/">Publications</a></li>
-      <li><a href="../projects/">Projects</a></li>
-      <li><a href="../gallery/" class="active">Gallery</a></li>
-      <li><a href="../contact/">Contact</a></li>
-    </ul>
-  </div>
-</nav>
+<div id="nav-root"></div>
+<script src="../components/nav.js"></script>
 
 <div class="page-header">
   <div class="page-header-inner">
@@ -81,9 +26,9 @@
     <div class="add-photo-notice">
       <strong>사진 추가 방법 — data/gallery.js 파일만 수정하면 됩니다</strong>
       <p>
-        1. 이미지 파일을 <code>images/</code> 폴더에 넣기<br>
+        1. 이미지 파일을 <code>images/gallery/</code> 폴더에 넣기<br>
         2. <code>data/gallery.js</code>를 열어 GALLERY 배열 맨 앞에 항목 추가:<br>
-        &nbsp;&nbsp;&nbsp;<code>{ title:"제목", date:"2025", category:"lab-life", image:"images/파일.jpg", size:null }</code><br>
+        &nbsp;&nbsp;&nbsp;<code>{ title:"제목", date:"2025", category:"lab-life", image:"images/gallery/파일.jpg", size:null }</code><br>
         카테고리: <code>lab-life</code> / <code>conferences</code> / <code>field-trips</code> / <code>celebrations</code><br>
         size: <code>null</code>(기본) / <code>"wide"</code>(가로 2칸) / <code>"tall"</code>(세로 2칸)
       </p>
@@ -101,37 +46,8 @@
   </div>
 </section>
 
-<footer>
-  <div class="footer-inner">
-    <div>
-      <p class="footer-brand">SMOP Lab</p>
-      <p class="footer-tagline">Smart Mobility Operations and Planning Laboratory<br>Korea University, Seoul, Korea</p>
-      <p class="footer-info">
-        <a href="mailto:s_kang@korea.ac.kr">s_kang@korea.ac.kr</a><br>
-        +82-2-3290-4862<br>
-        신공학관, Korea University, Seoul
-      </p>
-    </div>
-    <div class="footer-col">
-      <h4>Pages</h4>
-      <ul>
-        <li><a href="../">Home</a></li>
-        <li><a href="../professor/">Professor</a></li>
-        <li><a href="../members/">Members</a></li>
-        <li><a href="../publications/">Publications</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h4>&nbsp;</h4>
-      <ul>
-        <li><a href="../projects/">Projects</a></li>
-        <li><a href="../gallery/">Gallery</a></li>
-        <li><a href="../contact/">Contact</a></li>
-      </ul>
-    </div>
-  </div>
-  <p class="footer-copy">© 2025 SMOP Lab · Korea University. All rights reserved.</p>
-</footer>
+<div id="footer-root"></div>
+<script src="../components/footer.js"></script>
 
 <script src="../data/gallery.js"></script>
 <script>

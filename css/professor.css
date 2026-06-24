@@ -1,0 +1,47 @@
+/* ── professor/index.html 페이지 전용 스타일 ── */
+
+.prof-grid { display: grid; grid-template-columns: 280px 1fr; gap: 4rem; align-items: start; margin-top: 3.5rem; }
+.prof-sidebar { position: sticky; top: 86px; }
+.prof-photo { width: 100%; aspect-ratio: 3/4; background: var(--gray-100); border-radius: var(--radius-md); overflow: hidden; margin-bottom: 1.5rem; border: 1px solid var(--gray-200); }
+.prof-photo img { width: 100%; height: 100%; object-fit: cover; }
+.prof-name { font-family: var(--font-heading); font-weight: 700; font-size: 1.5rem; color: var(--navy); }
+.prof-title { font-size: .95rem; color: var(--gray-600); margin-top: .3rem; line-height: 1.6; }
+.prof-contacts { margin-top: 1.25rem; display: flex; flex-direction: column; gap: .5rem; }
+.contact-pill { display: flex; align-items: center; gap: .6rem; font-size: .85rem; color: var(--gray-600); padding: .5rem .75rem; background: var(--gray-50); border: 1px solid var(--gray-200); border-radius: var(--radius-xs); transition: all var(--transition); }
+.contact-pill:hover { border-color: var(--navy); color: var(--navy); background: var(--gray-100); }
+.contact-pill svg { flex-shrink: 0; }
+
+.prof-main { display: flex; flex-direction: column; gap: 3rem; }
+.prof-section-title { font-family: var(--font-heading); font-weight: 700; font-size: 1.1rem; color: var(--navy); margin-bottom: 1.25rem; padding-bottom: .75rem; border-bottom: 1px solid var(--gray-200); }
+
+.bio-text { font-size: 1.05rem; color: var(--gray-600); line-height: 1.9; }
+.bio-text + .bio-text { margin-top: 1rem; }
+
+.edu-item { display: flex; gap: 1.5rem; padding: 1rem 0; border-bottom: 1px solid var(--gray-100); }
+.edu-item:last-child { border-bottom: none; }
+.edu-degree { min-width: 48px; font-family: var(--font-heading); font-weight: 700; font-size: .8rem; color: var(--gray-500); background: var(--gray-100); border-radius: var(--radius-xs); padding: .35rem .5rem; text-align: center; height: fit-content; flex-shrink: 0; letter-spacing: .03em; }
+.edu-school { font-weight: 600; font-size: 1rem; color: var(--navy); margin-bottom: .2rem; }
+.edu-field { font-size: .9rem; color: var(--gray-600); }
+.edu-year { font-size: .85rem; color: var(--gray-400); margin-top: .15rem; }
+
+.career-item { display: flex; gap: 1.5rem; padding: 1rem 0; border-bottom: 1px solid var(--gray-100); }
+.career-item:last-child { border-bottom: none; }
+.career-year { min-width: 110px; font-size: .85rem; font-weight: 500; color: var(--gray-400); padding-top: .15rem; flex-shrink: 0; }
+.career-role { font-weight: 600; font-size: 1rem; color: var(--navy); margin-bottom: .2rem; }
+.career-org { font-size: .9rem; color: var(--gray-600); }
+
+.award-item { display: flex; gap: 1.5rem; padding: 1rem 0; border-bottom: 1px solid var(--gray-100); }
+.award-item:last-child { border-bottom: none; }
+.award-year { min-width: 44px; font-size: .82rem; color: var(--gray-400); font-weight: 500; padding-top: .15rem; flex-shrink: 0; }
+.award-name { font-weight: 600; font-size: 1rem; color: var(--navy); }
+.award-org { font-size: .9rem; color: var(--gray-600); margin-top: .2rem; }
+
+.interest-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: .6rem; }
+.interest-pill { padding: .8rem 1.1rem; background: var(--gray-50); border: 1px solid var(--gray-200); border-radius: var(--radius-sm); font-size: .95rem; font-weight: 500; color: var(--gray-700); }
+
+@media (max-width: 800px) {
+  .prof-grid { grid-template-columns: 1fr; }
+  .prof-sidebar { position: static; }
+  .prof-photo { aspect-ratio: 1/1; max-width: 220px; }
+  .interest-grid { grid-template-columns: 1fr; }
+}
