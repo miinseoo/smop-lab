@@ -1,6 +1,8 @@
 /* ── professor/index.html 페이지 전용 스타일 ── */
 
-.prof-grid { display: grid; grid-template-columns: 280px 1fr; gap: 4rem; align-items: start; margin-top: 1.5rem; }
+section { padding-top: 2.5rem; }
+
+.prof-grid { display: grid; grid-template-columns: 280px 1fr; gap: 4rem; align-items: start; }
 .prof-sidebar { position: sticky; top: 86px; }
 .prof-photo { width: 100%; aspect-ratio: 3/4; background: var(--gray-100); border-radius: var(--radius-md); overflow: hidden; margin-bottom: 1.5rem; border: 1px solid var(--gray-200); }
 .prof-photo img { width: 100%; height: 100%; object-fit: cover; }
