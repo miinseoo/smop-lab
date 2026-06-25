@@ -55,7 +55,7 @@ textarea { min-height: 120px; }
 
 /* Recruiting callout */
 .recruit-callout { border-top: 1.5px solid #80350E; padding-top: 1.75rem; margin-top: 2.5rem; }
-.recruit-callout h3 { font-family: var(--font-heading); font-weight: 700; font-size: 1.1rem; color: var(--navy); margin-bottom: .5rem; }
+.recruit-callout h3 { font-family: var(--font-heading); font-weight: 700; font-size: 1.1rem; color: #747474; margin-bottom: .5rem; }
 .recruit-callout p { font-size: .92rem; color: var(--gray-600); line-height: 1.75; margin-bottom: 1.25rem; }
 .recruit-roles-inline { font-size: .9rem; color: var(--ink); }
 .recruit-roles-inline span { color: var(--gray-300); margin: 0 .5rem; }
