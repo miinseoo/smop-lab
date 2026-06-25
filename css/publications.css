@@ -1,5 +1,7 @@
 /* ── publications/index.html 페이지 전용 스타일 ── */
 
+section { padding-top: 2.5rem; }
+
 .filter-bar { display: flex; gap: .5rem; flex-wrap: wrap; margin-bottom: 2.5rem; }
 .filter-btn {
   font-family: var(--font-heading);

@@ -1,5 +1,7 @@
 /* ── projects/index.html 페이지 전용 스타일 ── */
 
+section { padding-top: 2.5rem; }
+
 .year-group { margin-bottom: 3rem; }
 .year-label {
   font-family: var(--font-heading); font-weight: 700;
