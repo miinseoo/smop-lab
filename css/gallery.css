@@ -4,7 +4,7 @@
 .filter-btn {
   font-family: var(--font-heading);
   font-size: .95rem; font-weight: 600; padding: .45rem 1.2rem;
-  border-radius: var(--radius-full); border: 1.5px solid var(--gray-200);
+  border-radius: 8px; border: 2px solid var(--gray-200);
   background: var(--white); color: var(--gray-600);
   cursor: pointer; transition: all var(--transition);
 }
