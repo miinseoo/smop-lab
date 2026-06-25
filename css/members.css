@@ -30,9 +30,21 @@ section { padding-top: 2.5rem; }
 .member-name-kr { font-size: .88rem; color: var(--gray-400); margin-bottom: .6rem; }
 .member-role { display: inline-block; font-size: .8rem; font-weight: 700; }
 .member-interest { font-size: .88rem; color: var(--gray-600); margin-top: .6rem; line-height: 1.5; }
-.member-email { font-size: .85rem; color: var(--gray-400); margin-top: .5rem; }
+.member-footer { display: flex; align-items: center; justify-content: space-between; margin-top: .5rem; gap: .5rem; }
+.member-email { font-size: .85rem; color: var(--gray-400); }
 .member-email a { color: var(--navy); }
 .member-email a:hover { text-decoration: underline; }
+.member-links { display: flex; gap: .35rem; }
+.member-link {
+  display: flex; align-items: center; justify-content: center;
+  width: 28px; height: 28px; border-radius: 6px;
+  background: var(--gray-100); color: var(--gray-500);
+  border: 1px solid var(--gray-200); transition: all var(--transition);
+}
+.member-link:hover { background: #F4F5F4; color: #0a66c2; border-color: #0a66c2; }
+.member-link-github:hover { color: #333; border-color: #333; }
+.member-link-googlescholar:hover { color: #4285f4; border-color: #4285f4; }
+.member-link-website:hover { color: var(--navy); border-color: var(--navy); }
 
 .alumni-list { display: flex; flex-direction: column; gap: 0; }
 .alumni-item { display: flex; align-items: center; gap: 1.5rem; padding: .9rem 0; border-bottom: 1px solid var(--gray-100); }

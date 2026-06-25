@@ -10,6 +10,14 @@
      interest: "Research Interest: ...",
      email:    "email@korea.ac.kr",
      photo:    "images/members/파일명.jpg",  // 없으면 null
+     links: [
+       // 개인 홈페이지/SNS 링크 목록. 없으면 [] 또는 항목 삭제
+       // type: "linkedin" | "github" | "googlescholar" | "website"
+       { type: "linkedin", url: "https://linkedin.com/in/username" },
+       { type: "github",   url: "https://github.com/username" },
+       { type: "googlescholar", url: "https://scholar.google.com/..." },
+       { type: "website",  url: "https://개인홈페이지.com" },
+     ],
    }
 
    졸업생 추가 방법 (ALUMNI):
@@ -34,6 +42,7 @@ const CURRENT_MEMBERS = [
     interest: "Research Interest: [Add here]",
     email:    "[email]@korea.ac.kr",
     photo:    null,
+    links:    [],
   },
 
   // ── Ph.D. Candidates ──────────────────────────────────────────
@@ -44,6 +53,7 @@ const CURRENT_MEMBERS = [
     interest: "Research Interest: [Add here]",
     email:    "[email]@korea.ac.kr",
     photo:    null,
+    links:    [],
   },
   {
     name:     "[Name]",
@@ -52,6 +62,7 @@ const CURRENT_MEMBERS = [
     interest: "Research Interest: [Add here]",
     email:    "[email]@korea.ac.kr",
     photo:    null,
+    links:    [],
   },
 
   // ── Master's Students ─────────────────────────────────────────
@@ -62,6 +73,9 @@ const CURRENT_MEMBERS = [
     interest: "Research Interest: [Add here]",
     email:    "miiiin@korea.ac.kr",
     photo:    null,
+    links:    [
+      { type: "linkedin", url: "https://www.linkedin.com" },
+    ],
   },
   {
     name:     "[Name]",
@@ -70,6 +84,7 @@ const CURRENT_MEMBERS = [
     interest: "Research Interest: [Add here]",
     email:    "[email]@korea.ac.kr",
     photo:    null,
+    links:    [],
   },
 
   // ── Undergraduate Researchers ──────────────────────────────────
@@ -80,6 +95,7 @@ const CURRENT_MEMBERS = [
     interest: "Research Interest: [Add here]",
     email:    "[email]@korea.ac.kr",
     photo:    null,
+    links:    [],
   },
 
 ];
