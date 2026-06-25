@@ -22,8 +22,9 @@ section { padding-top: 2.5rem; }
   display: flex; align-items: center; gap: .75rem;
 }
 .year-count {
-  font-size: .75rem; font-weight: 600; color: var(--gray-400);
-  background: var(--gray-100); border-radius: var(--radius-full);
+  font-size: .75rem; font-weight: 600; color: #80350E;
+  background: var(--white); border-radius: 8px;
+  border: 2px solid #80350E;
   padding: .2rem .65rem;
 }
 .pub-item {
