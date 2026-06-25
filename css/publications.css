@@ -4,12 +4,12 @@
 .filter-btn {
   font-family: var(--font-heading);
   font-size: .9rem; font-weight: 600; padding: .4rem 1rem;
-  border-radius: var(--radius-full); border: 1.5px solid var(--gray-200);
+  border-radius: 8px; border: 2px solid var(--gray-200);
   background: var(--white); color: var(--gray-600);
   cursor: pointer; transition: all var(--transition);
 }
 .filter-btn.active,
-.filter-btn:hover { border-color: var(--navy); color: var(--navy); background: var(--gray-100); }
+.filter-btn:hover { border-color: #80350E; color: #80350E; background: var(--gray-100); }
 
 .year-group { margin-bottom: 3rem; }
 .year-label {
