@@ -44,13 +44,13 @@ input:focus, select:focus, textarea:focus { border-color: var(--navy); box-shado
 textarea { min-height: 120px; }
 .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
 .form-submit {
-  width: 100%; background: var(--navy); color: #fff;
+  width: 100%; background: #747474; color: #fff;
   padding: .85rem; font-size: .9rem; font-weight: 700;
   border-radius: var(--radius-xs); border: none;
   cursor: pointer; transition: all var(--transition);
   font-family: var(--font-body); margin-top: .5rem;
 }
-.form-submit:hover { background: var(--ink); transform: translateY(-1px); box-shadow: 0 4px 20px rgba(10,22,40,.2); }
+.form-submit:hover { background: #5a5a5a; transform: translateY(-1px); box-shadow: 0 4px 20px rgba(0,0,0,.15); }
 .form-note { font-size: .75rem; color: var(--gray-400); text-align: center; margin-top: .85rem; }
 
 /* Recruiting callout */
