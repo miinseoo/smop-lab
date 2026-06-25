@@ -8,7 +8,7 @@
   background: var(--white); color: var(--gray-600);
   cursor: pointer; transition: all var(--transition);
 }
-.filter-btn.active, .filter-btn:hover { border-color: var(--navy); color: var(--navy); background: var(--gray-100); }
+.filter-btn.active, .filter-btn:hover { border-color: #80350E; color: #80350E; background: var(--gray-100); }
 
 .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); grid-auto-rows: 240px; gap: 1rem; }
 .gallery-item {
