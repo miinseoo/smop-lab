@@ -14,9 +14,9 @@
 .year-group { margin-bottom: 3rem; }
 .year-label {
   font-family: var(--font-heading); font-weight: 700;
-  font-size: 1.5rem; color: var(--navy);
+  font-size: 1.7rem; color: #747474;
   margin-bottom: 1.25rem; padding-bottom: .75rem;
-  border-bottom: 2px solid var(--gray-200);
+  border-bottom: 2px solid #80350E;
   display: flex; align-items: center; gap: .75rem;
 }
 .year-count {
