@@ -39,7 +39,7 @@ section { padding-top: 2.5rem; }
 .award-org { font-size: .9rem; color: var(--gray-600); margin-top: .2rem; }
 
 .interest-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: .6rem; }
-.interest-pill { padding: .8rem 1.1rem; background: var(--gray-50); border: 1px solid var(--gray-200); border-radius: var(--radius-sm); font-size: .95rem; font-weight: 500; color: var(--gray-700); }
+.interest-pill { padding: .8rem 1.1rem; background: #F4F5F4; border: 1px solid var(--gray-200); border-radius: var(--radius-sm); font-size: .95rem; font-weight: 500; color: var(--gray-700); }
 
 @media (max-width: 800px) {
   .prof-grid { grid-template-columns: 1fr; }
