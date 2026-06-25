@@ -17,8 +17,8 @@ section { padding-top: 2.5rem; }
 .member-section { margin-bottom: 3.5rem; }
 .member-section-title {
   font-family: var(--font-heading); font-weight: 700; font-size: 1.25rem;
-  letter-spacing: .06em; text-transform: uppercase; color: var(--gray-400);
-  margin-bottom: 1.25rem; padding-bottom: .5rem; border-bottom: 1px solid var(--gray-200);
+  letter-spacing: .06em; text-transform: uppercase; color: #747474;
+  margin-bottom: 1.25rem; padding-bottom: .5rem; border-bottom: 2px solid #80350E;
 }
 .member-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 1.25rem; }
 .member-card { background: var(--white); border: 1px solid var(--gray-200); border-radius: 6px; overflow: hidden; transition: all var(--transition); }
