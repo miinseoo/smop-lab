@@ -28,7 +28,7 @@ section { padding-top: 2.5rem; }
 .map-embed iframe { width: 100%; height: 100%; border: none; display: block; }
 
 /* Form side */
-.form-card { background: var(--gray-50); border: 1px solid var(--gray-200); border-radius: var(--radius-lg); padding: 2.5rem; }
+.form-card { background: #F4F5F4; border: 1px solid var(--gray-200); border-radius: var(--radius-lg); padding: 2.5rem; }
 .form-title { font-family: var(--font-heading); font-weight: 700; font-size: 1.25rem; color: var(--navy); margin-bottom: .5rem; }
 .form-desc { font-size: .875rem; color: var(--gray-600); line-height: 1.7; margin-bottom: 2rem; }
 .form-group { margin-bottom: 1.25rem; }
