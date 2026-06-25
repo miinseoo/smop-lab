@@ -1,14 +1,18 @@
-/* ── members/index.html 페이지 전용 스타일 ── */
+/* ── members 페이지 전용 스타일 ── */
 
-.tab-bar { display: flex; gap: .5rem; margin-bottom: 3rem; border-bottom: 1px solid var(--gray-200); }
-.tab {
-  font-size: 1.05rem; font-weight: 600; color: var(--gray-400);
-  padding: .65rem 1.25rem; border-bottom: 2px solid transparent;
-  cursor: pointer; transition: all var(--transition);
-  margin-bottom: -1px; background: none; border-top: none; border-left: none; border-right: none;
+section { padding-top: 2.5rem; }
+
+/* Sub-nav (Current Members / Alumni 전환) */
+.members-subnav { background: var(--white); border-bottom: 1px solid var(--gray-200); padding: 0 2rem; }
+.members-subnav-inner { max-width: 1200px; margin: 0 auto; display: flex; }
+.members-subnav a {
+  padding: .85rem 1.25rem; font-weight: 600; font-size: .95rem;
+  color: var(--gray-400); text-decoration: none;
+  border-bottom: 3px solid transparent; margin-bottom: -1px;
+  transition: all var(--transition);
 }
-.tab.active { color: var(--navy); border-bottom-color: var(--navy); }
-.tab:hover { color: var(--gray-700); }
+.members-subnav a.active { color: var(--navy); border-bottom-color: #7c2d12; }
+.members-subnav a:hover:not(.active) { color: var(--navy); }
 
 .member-section { margin-bottom: 3.5rem; }
 .member-section-title {
@@ -48,7 +52,6 @@
   font-size: .75rem; font-weight: 700; color: var(--gray-400);
 }
 
-.tab-panel-hidden { display: none !important; }
 
 @media (max-width: 960px) { .member-grid { grid-template-columns: repeat(3,1fr); } }
 @media (max-width: 680px) { .member-grid { grid-template-columns: repeat(2,1fr); } }

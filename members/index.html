@@ -20,18 +20,17 @@
   </div>
 </div>
 
+<!-- Sub-nav: Current Members / Alumni 전환 -->
+<div class="members-subnav">
+  <div class="members-subnav-inner">
+    <a href="./" class="active">Current Members</a>
+    <a href="alumni/">Alumni</a>
+  </div>
+</div>
+
 <section>
   <div class="section-inner">
-    <div class="tab-bar">
-      <button class="tab active" onclick="switchTab('current', this)">Current Members</button>
-      <button class="tab" onclick="switchTab('alumni', this)">Alumni</button>
-    </div>
-
     <div id="panel-current"></div>
-    <div id="panel-alumni" class="tab-panel-hidden">
-      <p class="section-sub" style="margin-bottom:2rem;">Former members of SMOP Lab and their current positions.</p>
-      <div class="alumni-list" id="alumni-list"></div>
-    </div>
   </div>
 </section>
 
@@ -74,33 +73,7 @@ function renderCurrent() {
   document.getElementById("panel-current").innerHTML = html;
 }
 
-function renderAlumni() {
-  const sorted = [...ALUMNI].sort((a,b) => b.year - a.year);
-  const html = sorted.map(a => {
-    const initials = a.name.split(/[\s,]+/).filter(Boolean).slice(0,2).map(s => s[0]).join("");
-    const avatar = a.photo
-      ? `<div class="alumni-avatar"><img src="../${a.photo}" alt="${a.name}"></div>`
-      : `<div class="alumni-avatar"><div class="alumni-avatar-initials">${initials}</div></div>`;
-    return `
-      <div class="alumni-item">
-        ${avatar}
-        <span class="alumni-year">${a.year}</span>
-        <span class="alumni-name">${a.name}${a.nameKr ? ` · <span style="font-weight:400;color:var(--gray-500)">${a.nameKr}</span>` : ""} · <span style="font-weight:400;color:var(--gray-600)">${a.degree}</span></span>
-        <span class="alumni-where">→ ${a.position}</span>
-      </div>`;
-  }).join("");
-  document.getElementById("alumni-list").innerHTML = html;
-}
-
 renderCurrent();
-renderAlumni();
-
-function switchTab(panel, btn) {
-  document.querySelectorAll(".tab").forEach(t => t.classList.remove("active"));
-  btn.classList.add("active");
-  document.getElementById("panel-current").classList.toggle("tab-panel-hidden", panel !== "current");
-  document.getElementById("panel-alumni").classList.toggle("tab-panel-hidden",  panel !== "alumni");
-}
 </script>
 
 </body>

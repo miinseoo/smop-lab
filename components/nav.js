@@ -31,13 +31,18 @@ const NAV_ITEMS = [
 // ── 아래는 수정하지 마세요 ──────────────────────────────────────
 
 (function () {
-  // URL에서 현재 페이지 감지 (예: /smop-lab/professor/ → "professor")
+  // URL에서 현재 페이지 감지 (예: /smop-lab/members/alumni/ → currentKey="members", depth=2)
   const knownKeys = NAV_ITEMS.map(i => i.key).filter(k => k !== "home");
-  const lastSeg = window.location.pathname.replace(/\/$/, "").split("/").pop() || "";
-  const currentKey = knownKeys.includes(lastSeg) ? lastSeg : "home";
+  const segs = window.location.pathname.replace(/\/$/, "").split("/").filter(Boolean);
+  const lastSeg = segs[segs.length - 1] || "";
+  const prevSeg = segs[segs.length - 2] || "";
 
-  // 루트 페이지인지 서브페이지인지에 따라 경로 prefix 자동 결정
-  const prefix = currentKey === "home" ? "" : "../";
+  let currentKey = "home", depth = 0;
+  if (knownKeys.includes(lastSeg))      { currentKey = lastSeg; depth = 1; }
+  else if (knownKeys.includes(prevSeg)) { currentKey = prevSeg; depth = 2; }
+
+  // 깊이에 따라 루트까지의 상대 경로 prefix 결정
+  const prefix = depth === 0 ? "" : "../".repeat(depth);
 
   const items = NAV_ITEMS.map(i => {
     const href = i.key === "home" ? (prefix || "./") : `${prefix}${i.key}/`;

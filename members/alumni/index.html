@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alumni — SMOP Lab</title>
+  <link rel="stylesheet" href="../../style.css" />
+  <link rel="stylesheet" href="../../css/members.css" />
+</head>
+<body>
+
+<div id="nav-root"></div>
+<script src="../../components/nav.js"></script>
+
+<div class="page-header">
+  <div class="page-header-inner">
+    <div class="breadcrumb"><a href="../../">Home</a><span>/</span><a href="../">Members</a><span>/</span><span>Alumni</span></div>
+    <h1>Alumni</h1>
+    <p>Former members of SMOP Lab and their current positions</p>
+  </div>
+</div>
+
+<!-- Sub-nav: Current Members / Alumni 전환 -->
+<div class="members-subnav">
+  <div class="members-subnav-inner">
+    <a href="../">Current Members</a>
+    <a href="./" class="active">Alumni</a>
+  </div>
+</div>
+
+<section>
+  <div class="section-inner">
+    <div class="alumni-list" id="alumni-list"></div>
+  </div>
+</section>
+
+<div id="footer-root"></div>
+<script src="../../components/footer.js"></script>
+
+<script src="../../data/members.js"></script>
+<script>
+const sorted = [...ALUMNI].sort((a, b) => b.year - a.year);
+const html = sorted.map(a => {
+  const initials = a.name.split(/[\s,]+/).filter(Boolean).slice(0,2).map(s => s[0]).join("");
+  const avatar = a.photo
+    ? `<div class="alumni-avatar"><img src="../../${a.photo}" alt="${a.name}"></div>`
+    : `<div class="alumni-avatar"><div class="alumni-avatar-initials">${initials}</div></div>`;
+  return `
+    <div class="alumni-item">
+      ${avatar}
+      <span class="alumni-year">${a.year}</span>
+      <span class="alumni-name">${a.name}${a.nameKr ? ` · <span style="font-weight:400;color:var(--gray-500)">${a.nameKr}</span>` : ""} · <span style="font-weight:400;color:var(--gray-600)">${a.degree}</span></span>
+      <span class="alumni-where">→ ${a.position}</span>
+    </div>`;
+}).join("");
+document.getElementById("alumni-list").innerHTML = html;
+</script>
+
+</body>
+</html>
