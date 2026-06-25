@@ -61,6 +61,8 @@ textarea { min-height: 110px; }
   font-family: var(--font-body); transition: background var(--transition);
 }
 .form-submit:hover { background: #1e3a5f; }
+.form-success { text-align: center; padding: 2rem 1rem; color: #747474; }
+.form-success p:first-child { font-size: 1.3rem; font-weight: 700; color: #80350E; margin-bottom: .5rem; }
 
 /* Recruiting callout */
 .recruit-callout { border-top: 1.5px solid #80350E; padding-top: 1.75rem; margin-top: 2.5rem; }
