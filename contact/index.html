@@ -140,7 +140,19 @@ async function handleSubmit(e) {
   const json = await res.json();
 
   if (json.success) {
-    e.target.innerHTML = `<div class="form-success"><p>✓ 문의가 접수되었습니다.</p><p>빠른 시일 내에 답변드리겠습니다.</p></div>`;
+    e.target.innerHTML = `
+      <div class="form-success">
+        <div class="fs-ring">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <h3>문의가 접수되었습니다</h3>
+        <p>빠른 시일 내에 답변드리겠습니다.</p>
+        <div class="fs-steps">
+          <div class="fs-step"><div class="fs-dot filled"></div><span>접수<br>완료</span></div>
+          <div class="fs-step"><div class="fs-dot"></div><span>검토<br>중</span></div>
+          <div class="fs-step"><div class="fs-dot"></div><span>답변<br>예정</span></div>
+        </div>
+      </div>`;
   } else {
     btn.textContent = "전송 →";
     btn.disabled = false;
