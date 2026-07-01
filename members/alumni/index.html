@@ -47,10 +47,10 @@ const html = sorted.map(a => {
     : `<div class="alumni-avatar"><div class="alumni-avatar-initials">${initials}</div></div>`;
   return `
     <div class="alumni-item">
-      ${avatar}
       <span class="alumni-year">${a.year}</span>
       <span class="alumni-name">${a.name}${a.nameKr ? ` · <span style="font-weight:400;color:var(--gray-500)">${a.nameKr}</span>` : ""} · <span style="font-weight:400;color:var(--gray-600)">${a.degree}</span></span>
       <span class="alumni-where">→ ${a.position}</span>
+      ${avatar}
     </div>`;
 }).join("");
 document.getElementById("alumni-list").innerHTML = html;
