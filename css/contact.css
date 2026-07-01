@@ -27,55 +27,9 @@ section { padding-top: 2.5rem; }
 }
 .map-embed iframe { width: 100%; height: 100%; border: none; display: block; }
 
-/* Form side — opt3 테이블형 스타일 */
-.form-card { background: #F4F5F4; border: 2.5px solid #80350E; border-radius: 16px; padding: 2rem 2.5rem; }
-.form-header {
-  display: flex; align-items: flex-end; justify-content: space-between;
-  padding-bottom: .75rem; margin-bottom: 0;
-}
-.form-title { font-family: var(--font-heading); font-weight: 700; font-size: 1.3rem; color: #747474; }
-.form-subtitle { font-size: .8rem; color: #80350E; }
-
-.form-field {
-  display: grid; grid-template-columns: 110px 1fr; gap: 1rem; align-items: center;
-  padding: .85rem 0; border-bottom: 1px solid var(--gray-100);
-}
-.form-field:last-of-type { border-bottom: none; }
-label { font-size: .78rem; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; color: var(--gray-400); }
-input, select, textarea {
-  width: 100%; padding: .55rem .75rem;
-  border: 1.5px solid var(--gray-200); border-radius: 6px;
-  font-family: var(--font-body); font-size: .9rem; color: var(--gray-800);
-  background: var(--white); outline: none; resize: vertical;
-  transition: border-color var(--transition);
-}
-input:focus, select:focus, textarea:focus { border-color: #80350E; }
-textarea { min-height: 110px; }
-
-.form-footer { display: flex; align-items: center; justify-content: space-between; margin-top: 1.5rem; }
-.form-note { font-size: .78rem; color: var(--gray-400); }
-.form-submit {
-  background: #0a1628; color: #fff;
-  padding: .75rem 2rem; font-size: .88rem; font-weight: 700;
-  border-radius: 6px; border: none; cursor: pointer;
-  font-family: var(--font-body); transition: background var(--transition);
-}
-.form-submit:hover { background: #1e3a5f; }
-.form-success { text-align: center; padding: 2rem 1.5rem; }
-.fs-ring {
-  width: 70px; height: 70px; border-radius: 50%;
-  border: 3px solid #80350E; margin: 0 auto 1.5rem;
-  display: flex; align-items: center; justify-content: center;
-}
-.fs-ring svg { width: 34px; height: 34px; color: #80350E; }
-.form-success h3 { font-size: 1.15rem; font-weight: 700; color: #215F9A; margin-bottom: .5rem; }
-.form-success > p { font-size: .88rem; color: #747474; margin-bottom: 1.75rem; }
-.fs-steps { display: flex; justify-content: center; }
-.fs-step { display: flex; flex-direction: column; align-items: center; gap: .4rem; flex: 1; position: relative; }
-.fs-step:not(:last-child)::after { content: ""; position: absolute; top: 10px; left: 50%; width: 100%; height: 2px; background: #e2e8f0; z-index: 0; }
-.fs-dot { width: 20px; height: 20px; border-radius: 50%; background: #fff; border: 2px solid #80350E; z-index: 1; }
-.fs-dot.filled { background: #80350E; }
-.fs-step span { font-size: .7rem; color: #94a3b8; text-align: center; line-height: 1.4; }
+/* Recruiting (right column) */
+.recruit-block { }
+.recruit-body { font-size: .92rem; color: var(--gray-600); line-height: 1.75; margin-bottom: 1.25rem; }
 
 /* Recruiting callout */
 .recruit-callout { border-top: 1.5px solid #80350E; padding-top: 1.75rem; margin-top: 2.5rem; }

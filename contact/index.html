@@ -24,7 +24,7 @@
   <div class="section-inner">
     <div class="contact-layout">
 
-      <!-- LEFT: Info -->
+      <!-- LEFT: Info + Map -->
       <div>
         <div class="contact-block">
           <p class="contact-block-title">Contact Information</p>
@@ -54,14 +54,6 @@
           </div>
         </div>
 
-        <div class="recruit-callout">
-          <h3>We Are Recruiting</h3>
-          <p>고려대학교 스마트모빌리티 운영·계획 연구실에서는 Postdoc, 대학원생 및 학부 연구생을 모집하고 있습니다. 스마트 모빌리티, 교통공학, 교통계획, 물류 혹은 최적화 분야의 <strong>박사 후 과정, 대학원 과정(석사, 박사, 석박사 통합과정) 및 학부 연구생에 관심있는 학생은 강승모 교수(s_kang@korea.ac.kr)에게 연락주시기 바랍니다.</strong> 다양한 장학금 및 프로젝트 참여 기회가 준비되어 있으니, 특히 교통, 물류, 토목, 통계, 산업공학, 경영학, OR, 컴퓨터공학 등 전공분야에 상관없이 관심있는 분들의 많은 지원바랍니다.</p>
-          <p class="recruit-roles-inline">
-            Ph.D. Students<span>/</span>Master's Students<span>/</span>Undergraduate Researchers<span>/</span>Postdoctoral Researchers
-          </p>
-        </div>
-
         <div class="map-embed" style="margin-top:1.5rem;">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3161.948!2d127.0283!3d37.5894!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357cbce6f4e8e2d5%3A0x8fd5b3d8ca02f2b6!2sKorea%20University!5e0!3m2!1sen!2skr!4v1234567890"
@@ -70,50 +62,14 @@
         </div>
       </div>
 
-      <!-- RIGHT: Form -->
+      <!-- RIGHT: Recruiting -->
       <div>
-        <div class="form-card">
-          <div class="form-header">
-            <h2 class="form-title">Contact Form</h2>
-            <span class="form-subtitle">SMOP Lab · 고려대학교</span>
-          </div>
-          <form onsubmit="handleSubmit(event)">
-            <input type="hidden" name="access_key" value="032fcab8-9e2c-4663-bb23-dbfb8d5afe70" />
-            <input type="hidden" name="subject" value="[SMOP Lab] 새 문의가 도착했습니다" />
-            <div class="form-field">
-              <label for="name">이름 *</label>
-              <input type="text" id="name" name="name" placeholder="홍길동" required />
-            </div>
-            <div class="form-field">
-              <label for="affiliation">소속</label>
-              <input type="text" id="affiliation" name="affiliation" placeholder="학교 / 기관" />
-            </div>
-            <div class="form-field">
-              <label for="email">이메일 *</label>
-              <input type="email" id="email" name="email" placeholder="your@email.com" required />
-            </div>
-            <div class="form-field">
-              <label for="subject">문의 목적 *</label>
-              <select id="subject" name="purpose" required>
-                <option value="" disabled selected>선택하세요</option>
-                <option value="phd">박사과정 지원</option>
-                <option value="ms">석사과정 지원</option>
-                <option value="ug">학부 연구생</option>
-                <option value="postdoc">박사후 연구원</option>
-                <option value="collab">연구 협력</option>
-                <option value="visit">연구실 방문</option>
-                <option value="other">기타</option>
-              </select>
-            </div>
-            <div class="form-field">
-              <label for="message">내용 *</label>
-              <textarea id="message" name="message" placeholder="본인 소개 및 문의 내용을 작성해주세요..." required></textarea>
-            </div>
-            <div class="form-footer">
-              <span class="form-note">보통 2–3일 내로 답변드립니다.</span>
-              <button type="submit" class="form-submit">전송 →</button>
-            </div>
-          </form>
+        <div class="recruit-block">
+          <p class="contact-block-title">We Are Recruiting</p>
+          <p class="recruit-body">고려대학교 스마트모빌리티 운영·계획 연구실에서는 Postdoc, 대학원생 및 학부 연구생을 모집하고 있습니다. 스마트 모빌리티, 교통공학, 교통계획, 물류 혹은 최적화 분야의 <strong>박사 후 과정, 대학원 과정(석사, 박사, 석박사 통합과정) 및 학부 연구생에 관심있는 학생은 강승모 교수(s_kang@korea.ac.kr)에게 연락주시기 바랍니다.</strong> 다양한 장학금 및 프로젝트 참여 기회가 준비되어 있으니, 특히 교통, 물류, 토목, 통계, 산업공학, 경영학, OR, 컴퓨터공학 등 전공분야에 상관없이 관심있는 분들의 많은 지원바랍니다.</p>
+          <p class="recruit-roles-inline">
+            Ph.D. Students<span>/</span>Master's Students<span>/</span>Undergraduate Researchers<span>/</span>Postdoctoral Researchers
+          </p>
         </div>
       </div>
 
@@ -124,42 +80,6 @@
 <div id="footer-root"></div>
 <script src="../components/footer.js"></script>
 
-<script>
-async function handleSubmit(e) {
-  e.preventDefault();
-  const btn = e.target.querySelector(".form-submit");
-  btn.textContent = "전송 중...";
-  btn.disabled = true;
-
-  const data = Object.fromEntries(new FormData(e.target));
-  const res = await fetch("https://api.web3forms.com/submit", {
-    method: "POST",
-    headers: { "Content-Type": "application/json", "Accept": "application/json" },
-    body: JSON.stringify(data),
-  });
-  const json = await res.json();
-
-  if (json.success) {
-    e.target.innerHTML = `
-      <div class="form-success">
-        <div class="fs-ring">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-        </div>
-        <h3>문의가 접수되었습니다</h3>
-        <p>빠른 시일 내에 답변드리겠습니다.</p>
-        <div class="fs-steps">
-          <div class="fs-step"><div class="fs-dot filled"></div><span>접수<br>완료</span></div>
-          <div class="fs-step"><div class="fs-dot"></div><span>검토<br>중</span></div>
-          <div class="fs-step"><div class="fs-dot"></div><span>답변<br>예정</span></div>
-        </div>
-      </div>`;
-  } else {
-    btn.textContent = "전송 →";
-    btn.disabled = false;
-    alert("전송에 실패했습니다. 다시 시도해주세요.");
-  }
-}
-</script>
 
 </body>
 </html>
