@@ -49,6 +49,11 @@ section { padding-top: 2.5rem; }
 .alumni-list { display: flex; flex-direction: column; gap: 0; }
 .alumni-item { display: flex; align-items: center; gap: 1.5rem; padding: .9rem 0; border-bottom: 1px solid var(--gray-100); }
 .alumni-item:last-child { border-bottom: none; }
+.alumni-degree-badge {
+  display: inline-block; font-size: .75rem; font-weight: 600;
+  color: #80350E; border: 2px solid #80350E; border-radius: 8px;
+  padding: .1rem .55rem; background: var(--white); vertical-align: middle; margin-left: .3rem;
+}
 .alumni-year { min-width: 50px; font-size: .95rem; font-weight: 700; color: var(--gray-400); }
 .alumni-name { font-weight: 600; font-size: 1.05rem; color: var(--navy); flex: 1; }
 .alumni-where { font-size: .95rem; color: var(--gray-600); }
