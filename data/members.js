@@ -76,7 +76,7 @@ const CURRENT_MEMBERS = [
     links:    [],
   },
 
-  // ── Master's Students ─────────────────────────────────────────
+  // ── Master's Course ───────────────────────────────────────────
   {
     name:     "Minseo Park",
     nameKr:   "박민서",
