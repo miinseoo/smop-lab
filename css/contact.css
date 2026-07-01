@@ -29,7 +29,7 @@ section { padding-top: 2.5rem; }
 
 /* Recruiting (right column) */
 .recruit-block { }
-.recruit-body { font-size: .85rem; color: var(--gray-600); line-height: 1.75; margin-bottom: 1.25rem; }
+.recruit-body { font-size: 1rem; color: var(--gray-600); line-height: 1.75; margin-bottom: 1.25rem; }
 
 .recruit-roles { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: 1.25rem; }
 .recruit-badge {
