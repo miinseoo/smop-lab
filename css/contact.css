@@ -29,7 +29,7 @@ section { padding-top: 2.5rem; }
 
 /* Recruiting (right column) */
 .recruit-block { }
-.recruit-body { font-size: .92rem; color: var(--gray-600); line-height: 1.75; margin-bottom: 1.25rem; }
+.recruit-body { font-size: .85rem; color: var(--gray-600); line-height: 1.75; margin-bottom: 1.25rem; }
 
 /* Recruiting callout */
 .recruit-callout { border-top: 1.5px solid #80350E; padding-top: 1.75rem; margin-top: 2.5rem; }
