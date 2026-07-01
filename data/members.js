@@ -6,7 +6,7 @@
    {
      name:     "English Name",
      nameKr:   "한국어 이름",
-     role:     "postdoc" | "phd" | "masters" | "undergrad",
+     role:     "postdoc" | "phd" | "phdcourse" | "masters" | "undergrad",
      interest: "Research Interest: ...",
      email:    "email@korea.ac.kr",
      photo:    "images/members/파일명.jpg",  // 없으면 null
@@ -59,6 +59,17 @@ const CURRENT_MEMBERS = [
     name:     "[Name]",
     nameKr:   "[Korean Name]",
     role:     "phd",
+    interest: "Research Interest: [Add here]",
+    email:    "[email]@korea.ac.kr",
+    photo:    null,
+    links:    [],
+  },
+
+  // ── Ph.D. Course ──────────────────────────────────────────────
+  {
+    name:     "[Name]",
+    nameKr:   "[Korean Name]",
+    role:     "phdcourse",
     interest: "Research Interest: [Add here]",
     email:    "[email]@korea.ac.kr",
     photo:    null,
