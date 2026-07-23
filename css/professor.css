@@ -44,6 +44,6 @@ section { padding-top: 2.5rem; }
 @media (max-width: 800px) {
   .prof-grid { grid-template-columns: 1fr; }
   .prof-sidebar { position: static; }
-  .prof-photo { aspect-ratio: 1/1; max-width: 220px; }
+  .prof-photo { aspect-ratio: 3/4; max-width: 220px; }
   .interest-grid { grid-template-columns: 1fr; }
 }
