@@ -146,10 +146,8 @@ const CURRENT_MEMBERS = [
     role:     "masters",
     interest: "Research Interest: Locations & Routing Optimization, Data Analysis",
     email:    "1004oeb@korea.ac.kr",
-    photo:    null,
-    links:    [
-      {},
-    ],
+    photo:    "images/members/current/오은빛_250117.jpg",
+    links:    [],
   },
   {
     name:     "Doyeon Kim",
@@ -157,25 +155,25 @@ const CURRENT_MEMBERS = [
     role:     "masters",
     interest: "Research Interest: Location optimization with gis",
     email:    "dodo171709@gmail.com",
-    photo:    null,
+    photo:    "images/members/current/김도연_250325.jpg",
     links:    [],
   },
-   {
+  {
     name:     "Joowan Kim",
     nameKr:   "김주완",
     role:     "masters",
     interest: "Research Interest: Transportation Planning & Optimization, Data Analysis",
     email:    "kj010622@korea.ac.kr",
-    photo:    null,
+    photo:    "images/members/current/김주완_250117.jpg",
     links:    [],
   },
-   {
+  {
     name:     "Minseo Park",
     nameKr:   "박민서",
     role:     "masters",
     interest: "Research Interest: [Add here]",
     email:    "miinseo324@korea.ac.kr",
-    photo:    null,
+    photo:    "images/members/current/박민서_260310.jpg",
     links:    [],
   },
 
