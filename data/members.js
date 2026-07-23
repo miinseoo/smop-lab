@@ -41,7 +41,7 @@ const CURRENT_MEMBERS = [
     role:     "postdoc",
     interest: "Research Interest: [Add here]",
     email:    "seongjongwoo@korea.ac.kr",
-    photo:    null,
+    photo:    "images/members/current/우성종.JPG",
     links:    [],
   },
 
@@ -70,7 +70,7 @@ const CURRENT_MEMBERS = [
     role:     "phd",
     interest: "Research Interest: Transportation Planning, Demand-Responsive Transport(DRT), On-Demand Mobility",
     email:    "hc_park@korea.ac.kr",
-    photo:    null,
+    photo:    "images/members/current/박현철_증명사진-241203.jpg",
     links:    [],
   },
      {
@@ -79,7 +79,7 @@ const CURRENT_MEMBERS = [
     role:     "phd",
     interest: "Research Interest: Transportation Planning, Public Transportation, Accelerated Rail Transit Operation & Optimization",
     email:    "jhlee0789@korea.ac.kr",
-    photo:    null,
+    photo:    "images/members/current/이준희-210812.jpg",
     links:    [],
   },
      {
@@ -97,7 +97,7 @@ const CURRENT_MEMBERS = [
     role:     "phd",
     interest: "Research Interest: Mobility Data Intelligence, Public Transportation, Intelligent Transportation Systems, Optimization",
     email:    "seunghee38@korea.ac.kr",
-    photo:    null,
+    photo:    "images/members/current/유승희.jpg",
     links:    [],
   },
      {
@@ -115,7 +115,7 @@ const CURRENT_MEMBERS = [
     role:     "phd",
     interest: "Research Interest: Traffic Simulation, Urban Mobility",
     email:    "fermathooni88@korea.ac.kr",
-    photo:    null,
+    photo:    "images/members/current/권동훈220314.JPG",
     links:    [],
   },
      {
@@ -124,7 +124,7 @@ const CURRENT_MEMBERS = [
     role:     "phd",
     interest: "Research Interest: Transportation Planning, Optimization, Public Transportation",
     email:    "kssh9071@korea.ac.kr",
-    photo:    null,
+    photo:    "images/members/current/강상혁220314.jpg",
     links:    [],
   },
 
@@ -135,7 +135,7 @@ const CURRENT_MEMBERS = [
     role:     "phdcourse",
     interest: "Research Interest: [Add here]",
     email:    "jameslht@korea.ac.kr",
-    photo:    null,
+    photo:    "images/members/current/임현태.jpg",
     links:    [],
   },
 
