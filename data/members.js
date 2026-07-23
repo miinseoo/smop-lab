@@ -192,10 +192,3 @@ const CURRENT_MEMBERS = [
 
 ];
 
-const ALUMNI = [
-  // { name:"Name", nameKr:"한국이름", year:2024, degree:"Ph.D.", position:"Current position" },
-  { name:"[Name]", nameKr:null, year:2024, degree:"Ph.D.", position:"[Current position / company]" },
-  { name:"[Name]", nameKr:null, year:2023, degree:"M.S.",  position:"[Current position / company]" },
-  { name:"[Name]", nameKr:null, year:2022, degree:"Ph.D.", position:"[Current position / company]" },
-  { name:"[Name]", nameKr:null, year:2022, degree:"M.S.",  position:"[Current position / company]" },
-];
