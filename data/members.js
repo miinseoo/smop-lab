@@ -36,19 +36,19 @@ const CURRENT_MEMBERS = [
 
   // ── Postdoctoral Researchers ───────────────────────────────────
   {
-    name:     "[Name]",
-    nameKr:   "[Korean Name]",
+    name:     "Seongjong Woo",
+    nameKr:   "우성종",
     role:     "postdoc",
     interest: "Research Interest: [Add here]",
-    email:    "[email]@korea.ac.kr",
+    email:    "seongjongwoo@korea.ac.kr",
     photo:    null,
     links:    [],
   },
 
   // ── Ph.D. Candidates ──────────────────────────────────────────
   {
-    name:     "[Name]",
-    nameKr:   "[Korean Name]",
+    name:     "Hun Jeong",
+    nameKr:   "정헌",
     role:     "phd",
     interest: "Research Interest: [Add here]",
     email:    "[email]@korea.ac.kr",
@@ -56,20 +56,20 @@ const CURRENT_MEMBERS = [
     links:    [],
   },
   {
-    name:     "[Name]",
-    nameKr:   "[Korean Name]",
+    name:     "Haru Min",
+    nameKr:   "민하루",
     role:     "phd",
     interest: "Research Interest: [Add here]",
-    email:    "[email]@korea.ac.kr",
+    email:    "mm1nha@naver.com",
     photo:    null,
     links:    [],
   },
      {
-    name:     "[Name]",
+    name:     "Hyuncheol Park",
     nameKr:   "박현철",
     role:     "phd",
-    interest: "Research Interest: [Add here]",
-    email:    "[email]@korea.ac.kr",
+    interest: "Research Interest: Transportation Planning, Demand-Responsive Transport(DRT), On-Demand Mobility",
+    email:    "hc_park@korea.ac.kr",
     photo:    null,
     links:    [],
   },
